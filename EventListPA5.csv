@@ -1,0 +1,73 @@
+Event Type,Name,Capacity,Fireworks Planned,Date,Time,VIP Price,Silver Price,Silver Pct,Fireworks Cost,General Admission Price,Event ID,Pct Seats Unavailable,Venue Type,Reserved Extra Pct,Cost,Venue Name,VIP Pct,General Admission Pct,Gold Pct,Bronze Pct,Bronze Price,Gold Price
+Festival,Minerpalooza,5000,No,5/21/24,6:00 PM,0,0,15,,0,68,0,Open Air,5,58750,Centenial Plaza,5,45,10,20,0,0
+Festival,UTEP Commencement 1,12800,,3/26/24,9:00 AM,0,0,15,,0,69,0,Arena,5,150400,Don Haskins Center,5,45,10,20,0,0
+Festival,UTEP Commencement 2,12800,,1/25/24,2:00 PM,0,0,15,,0,70,0,Arena,5,150400,Don Haskins Center,5,45,10,20,0,0
+Festival,UTEP Commencement 3,12800,,5/2/24,7:00 PM,0,0,15,,0,71,0,Arena,5,150400,Don Haskins Center,5,45,10,20,0,0
+Festival,UTEP Commencement 3,12800,,4/26/24,2:00 PM,0,0,15,,0,72,0,Arena,5,150400,Don Haskins Center,5,45,10,20,0,0
+Concert,UTEP Wind Symphony 1,1152,,10/10/23,6:00 PM,82.88,48.45,15,,12.75,45,0,Auditorium,5,13536,Magoffin Auditorium,5,45,10,20,31.88,54.83
+Concert,UTEP Wind Symphony 2,1152,,1/21/24,6:00 PM,82.88,48.45,15,,12.75,46,0,Auditorium,5,13536,Magoffin Auditorium,5,45,10,20,31.88,54.83
+Concert,UTEP Wind Symphony 3,1152,,9/21/23,6:00 PM,82.88,48.45,15,,12.75,47,0,Auditorium,5,13536,Magoffin Auditorium,5,45,10,20,31.88,54.83
+Concert,UTEP Wind Symphony 4,1152,,12/7/23,6:00 PM,82.88,48.45,15,,12.75,48,0,Auditorium,5,13536,Magoffin Auditorium,5,45,10,20,31.88,54.83
+Concert,UTEP Wind Symphony 5,1152,,9/26/23,6:00 PM,82.88,48.45,15,,12.75,49,0,Auditorium,5,13536,Magoffin Auditorium,5,45,10,20,31.88,54.83
+Concert,UTEP Wind Symphony 6,1152,,1/26/24,6:00 PM,82.88,48.45,15,,12.75,50,0,Auditorium,5,13536,Magoffin Auditorium,5,45,10,20,31.88,54.83
+Concert,UTEP Wind Symphony 7,1152,,3/22/24,6:00 PM,82.88,48.45,15,,12.75,51,0,Auditorium,5,13536,Magoffin Auditorium,5,45,10,20,31.88,54.83
+Concert,UTEP Wind Symphony 8,1152,,3/26/24,6:00 PM,82.88,48.45,15,,12.75,52,0,Auditorium,5,13536,Magoffin Auditorium,5,45,10,20,31.88,54.83
+Concert,UTEP Wind Symphony 9,1152,,10/17/23,6:00 PM,82.88,48.45,15,,12.75,53,0,Auditorium,5,13536,Magoffin Auditorium,5,45,10,20,31.88,54.83
+Concert,UTEP Wind Symphony 10,1152,,5/18/24,6:00 PM,82.88,48.45,15,,12.75,54,0,Auditorium,5,13536,Magoffin Auditorium,5,45,10,20,31.88,54.83
+Concert,UTEP Wind Symphony 11,1152,,10/9/23,6:00 PM,82.88,48.45,15,,12.75,55,0,Auditorium,5,13536,Magoffin Auditorium,5,45,10,20,31.88,54.83
+Concert,UTEP Wind Symphony 12,1152,,11/27/23,6:00 PM,82.88,48.45,15,,12.75,56,0,Auditorium,5,13536,Magoffin Auditorium,5,45,10,20,31.88,54.83
+Sport,UTEP Football 1,58000,No,9/4/23,7:05 PM,63,45,15,,30,1,0,Stadium,5,681500,Sun Bowl Stadium,5,45,10,20,39,54
+Sport,UTEP Football 2,58000,No,9/11/23,7:05 PM,63,45,15,,30,2,0,Stadium,5,681500,Sun Bowl Stadium,5,45,10,20,39,54
+Sport,UTEP Football 3,58000,Yes,9/18/23,7:05 PM,63,45,15,34800,30,3,0,Stadium,5,681500,Sun Bowl Stadium,5,45,10,20,39,54
+Sport,UTEP Football 4,58000,Yes,9/25/23,7:05 PM,63,45,15,34800,30,4,0,Stadium,5,681500,Sun Bowl Stadium,5,45,10,20,39,54
+Sport,UTEP Football 5,58000,No,10/2/23,7:05 PM,63,45,15,,30,5,0,Stadium,5,681500,Sun Bowl Stadium,5,45,10,20,39,54
+Sport,UTEP Football 6,58000,No,10/9/23,7:05 PM,63,45,15,,30,6,0,Stadium,5,681500,Sun Bowl Stadium,5,45,10,20,39,54
+Sport,UTEP Football 7,58000,No,10/16/23,7:05 PM,63,45,15,,30,7,0,Stadium,5,681500,Sun Bowl Stadium,5,45,10,20,39,54
+Sport,UTEP Football 8,58000,Yes,10/23/23,7:05 PM,63,45,15,34800,30,8,0,Stadium,5,681500,Sun Bowl Stadium,5,45,10,20,39,54
+Sport,UTEP Football 9,58000,No,10/30/23,7:05 PM,63,45,15,,30,9,0,Stadium,5,681500,Sun Bowl Stadium,5,45,10,20,39,54
+Sport,UTEP Football 10,58000,Yes,11/6/23,7:05 PM,63,45,15,34800,30,10,0,Stadium,5,681500,Sun Bowl Stadium,5,45,10,20,39,54
+Sport,UTEP Football 11,58000,Yes,11/13/23,7:05 PM,63,45,15,34800,30,11,0,Stadium,5,681500,Sun Bowl Stadium,5,45,10,20,39,54
+Sport,UTEP Football 12,58000,No,11/20/23,7:05 PM,63,45,15,,30,12,0,Stadium,5,681500,Sun Bowl Stadium,5,45,10,20,39,54
+Sport,UTEP Football 13,58000,Yes,11/27/23,7:05 PM,63,45,15,34800,30,13,0,Stadium,5,681500,Sun Bowl Stadium,5,45,10,20,39,54
+Sport,UTEP Basketball 1,12800,,11/20/23,6:30 PM,63,45,15,,30,14,0,Arena,5,150400,Don Haskins Center,5,45,10,20,39,54
+Sport,UTEP Basketball 2,12800,,11/22/23,7:15 PM,63,45,15,,30,15,0,Arena,5,150400,Don Haskins Center,5,45,10,20,39,54
+Sport,UTEP Basketball 3,12800,,11/27/23,6:30 PM,63,45,15,,30,16,0,Arena,5,150400,Don Haskins Center,5,45,10,20,39,54
+Sport,UTEP Basketball 4,12800,,11/29/23,7:15 PM,63,45,15,,30,17,0,Arena,5,150400,Don Haskins Center,5,45,10,20,39,54
+Sport,UTEP Basketball 5,12800,,12/4/23,6:30 PM,63,45,15,,30,18,0,Arena,5,150400,Don Haskins Center,5,45,10,20,39,54
+Sport,UTEP Basketball 6,12800,,12/6/23,7:15 PM,63,45,15,,30,19,0,Arena,5,150400,Don Haskins Center,5,45,10,20,39,54
+Sport,UTEP Basketball 7,12800,,12/11/23,6:30 PM,63,45,15,,30,20,0,Arena,5,150400,Don Haskins Center,5,45,10,20,39,54
+Sport,UTEP Basketball 8,12800,,12/13/23,7:15 PM,63,45,15,,30,21,0,Arena,5,150400,Don Haskins Center,5,45,10,20,39,54
+Sport,UTEP Basketball 9,12800,,12/18/23,6:30 PM,63,45,15,,30,22,0,Arena,5,150400,Don Haskins Center,5,45,10,20,39,54
+Sport,UTEP Basketball 10,12800,,12/20/23,7:15 PM,63,45,15,,30,23,0,Arena,5,150400,Don Haskins Center,5,45,10,20,39,54
+Sport,UTEP Basketball 11,12800,,12/25/23,6:30 PM,63,45,15,,30,24,0,Arena,5,150400,Don Haskins Center,5,45,10,20,39,54
+Sport,UTEP Basketball 12,12800,,12/27/23,7:15 PM,63,45,15,,30,25,0,Arena,5,150400,Don Haskins Center,5,45,10,20,39,54
+Sport,UTEP Basketball 13,12800,,1/1/24,6:30 PM,63,45,15,,30,26,0,Arena,5,150400,Don Haskins Center,5,45,10,20,39,54
+Sport,UTEP Basketball 14,12800,,1/3/24,7:15 PM,63,45,15,,30,27,0,Arena,5,150400,Don Haskins Center,5,45,10,20,39,54
+Sport,UTEP Basketball 15,12800,,1/8/24,6:30 PM,63,45,15,,30,28,0,Arena,5,150400,Don Haskins Center,5,45,10,20,39,54
+Sport,UTEP Basketball 16,12800,,1/10/24,7:15 PM,63,45,15,,30,29,0,Arena,5,150400,Don Haskins Center,5,45,10,20,39,54
+Sport,UTEP Basketball 17,12800,,1/15/24,6:30 PM,63,45,15,,30,30,0,Arena,5,150400,Don Haskins Center,5,45,10,20,39,54
+Sport,UTEP Basketball 18,12800,,1/17/24,7:15 PM,63,45,15,,30,31,0,Arena,5,150400,Don Haskins Center,5,45,10,20,39,54
+Sport,UTEP Basketball 19,12800,,1/22/24,6:30 PM,63,45,15,,30,32,0,Arena,5,150400,Don Haskins Center,5,45,10,20,39,54
+Sport,UTEP Basketball 20,12800,,1/24/24,7:15 PM,63,45,15,,30,33,0,Arena,5,150400,Don Haskins Center,5,45,10,20,39,54
+Sport,UTEP Basketball 21,12800,,1/29/24,6:30 PM,63,45,15,,30,34,0,Arena,5,150400,Don Haskins Center,5,45,10,20,39,54
+Sport,UTEP Basketball 22,12800,,1/31/24,7:15 PM,63,45,15,,30,35,0,Arena,5,150400,Don Haskins Center,5,45,10,20,39,54
+Sport,UTEP Basketball 23,12800,,2/5/24,6:30 PM,63,45,15,,30,36,0,Arena,5,150400,Don Haskins Center,5,45,10,20,39,54
+Sport,UTEP Basketball 24,12800,,2/7/24,7:15 PM,63,45,15,,30,37,0,Arena,5,150400,Don Haskins Center,5,45,10,20,39,54
+Sport,UTEP Basketball 25,12800,,2/12/24,6:30 PM,63,45,15,,30,38,0,Arena,5,150400,Don Haskins Center,5,45,10,20,39,54
+Sport,UTEP Basketball 26,12800,,2/14/24,7:15 PM,63,45,15,,30,39,0,Arena,5,150400,Don Haskins Center,5,45,10,20,39,54
+Sport,UTEP Basketball 27,12800,,2/19/24,6:30 PM,63,45,15,,30,40,0,Arena,5,150400,Don Haskins Center,5,45,10,20,39,54
+Sport,UTEP Basketball 28,12800,,2/21/24,7:15 PM,63,45,15,,30,41,0,Arena,5,150400,Don Haskins Center,5,45,10,20,39,54
+Sport,UTEP Basketball 29,12800,,2/26/24,6:30 PM,63,45,15,,30,42,0,Arena,5,150400,Don Haskins Center,5,45,10,20,39,54
+Sport,UTEP Basketball 30,12800,,2/28/24,7:15 PM,63,45,15,,30,43,0,Arena,5,150400,Don Haskins Center,5,45,10,20,39,54
+Sport,UTEP Basketball 31,12800,,3/4/24,6:30 PM,63,45,15,,30,44,0,Arena,5,150400,Don Haskins Center,5,45,10,20,39,54
+Festival,ACL,15000,Yes,1/26/24,9:00 AM,650,380,15,30000,100,67,0,Open Air,5,176250,San Jacinto Plaza,5,45,10,20,250,430
+Festival,Coachella 1,15000,No,4/25/24,9:00 AM,3900,2280,15,,600,65,0,Open Air,5,176250,San Jacinto Plaza,5,45,10,20,1500,2580
+Festival,Coachella 2,15000,No,12/9/23,9:00 AM,3900,2280,15,,600,66,0,Open Air,5,176250,San Jacinto Plaza,5,45,10,20,1500,2580
+Concert,Drake Live,14000,,3/11/24,8:30 PM,6522.17,3812.96,15,,1003.41,58,8,Arena,5,164500,Don Haskins Center,5,45,10,20,2508.53,4314.66
+Concert,Shakira Live,64000,Yes,5/31/24,8:00 PM,6948.18,4062.01,15,1368256,1068.95,63,4,Stadium,5,752000,Sun Bowl Stadium,5,45,10,20,2672.38,4596.49
+Concert,Karol G Live,64000,No,10/16/23,8:00 PM,7073.69,4135.39,15,,1088.26,60,4,Stadium,5,752000,Sun Bowl Stadium,5,45,10,20,2720.65,4679.52
+Concert,Taylor Swift Live,64000,No,11/4/23,8:00 PM,7095.4,4148.08,15,,1091.6,57,4,Stadium,5,752000,Sun Bowl Stadium,5,45,10,20,2729,4693.88
+Concert,Justin Timberlake Live,64000,Yes,1/17/24,8:00 PM,7268.17,4249.08,15,1431271,1118.18,64,4,Stadium,5,752000,Sun Bowl Stadium,5,45,10,20,2795.45,4808.17
+Concert,Olivia Rodrigo Live,14000,,3/4/24,8:00 PM,7471.75,4368.1,15,,1149.5,62,8,Arena,5,164500,Don Haskins Center,5,45,10,20,2873.75,4942.85
+Concert,RBD Live,14000,,9/27/23,7:15 PM,7520.11,4396.37,15,,1156.94,61,8,Arena,5,164500,Don Haskins Center,5,45,10,20,2892.35,4974.84
+Concert,Bad Bunny Live,14000,,3/19/24,8:00 PM,7765.49,4539.82,15,,1194.69,59,8,Arena,5,164500,Don Haskins Center,5,45,10,20,2986.73,5137.17
