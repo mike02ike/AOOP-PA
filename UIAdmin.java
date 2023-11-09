@@ -1,63 +1,36 @@
-/*
- * Honesty Statement
- * This work was done individually and completely on my own. I did not share, reproduce, or alter
- * any part of this assignment for any purpose. I did not share code, upload this assignment online
- * in any form, or view/received/modified code written from anyone else. All deliverables were
- * produced entirely on my own. This assignment is part of an academic course at The University
- * of Texas at El Paso and a grade will be assigned for the work I produced.
-*/
-
-import java.util.InputMismatchException;
-import java.util.LinkedHashMap;
-import java.util.ArrayList;
-import java.util.Scanner;
-import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.*;
 import java.util.Map.Entry;
-
-/**
- * Course: Adv. Object-Oriented Programming
- * <p>
- * Instructor: Daniel Mejia
- * <p>
- * Class Purpose: The UIAdmin class represents the user interface for administrators in the
- * TicketMiner application.
- * Administrators can inquire about events by ID or name, view basic event
- * information, and access additional calculated information.
- * <p>
- * @since 11/06/2023
- * @author Erik LaNeave
- * @version 2.4
- * <p>
- * @since 10/25/2023
- * @author Michael Ike
- * @version 1.8
- * 
- * @author Ian Gutierrez
-*/
 
 public class UIAdmin {
 
-    private Scanner myScanner = new Scanner(System.in);
-    // Intialization of RecordMake class
-    private Log logFile = Log.getInstance();
+    public static UIAdmin uiAdmin;
 
-    /**
-     * Empty Constructor
-     */
-    public UIAdmin() {
+    private LinkedHashMap<Integer, Event> events;
+    private LinkedHashMap<Integer, Customer> customers;
+    private Event selectedEvent;
+    private Log logFile = Log.getInstance();
+    private Scanner myScanner = new Scanner(System.in);
+
+    public static synchronized UIAdmin getInstance() {
+        if (uiAdmin == null) {
+            uiAdmin = new UIAdmin();
+        }
+        return uiAdmin;
     }
 
-    /**
-     * Displays the main menu for the admin UI and handles user input.
-     *
-     * @param eventMap A LinkedHashMap containing events mapped by their unique IDs.
-     * @return boolean Returns `false` to indicate completion and return to the
-     *         RunTicket class.
-     */
-    public boolean menu(LinkedHashMap<Integer, Event> eventMap, LinkedHashMap<Integer, Customer> customerMap) {
+    public UIAdmin() {
+
+    }
+
+    public void setHashMaps(LinkedHashMap<Integer, Event> eventMap, LinkedHashMap<Integer, Customer> customerMap) {
+        this.events = eventMap;
+        this.customers = customerMap;
+    }
+
+    public boolean menu() {
         boolean control = true;
         while (control) {
             // Prints the menu options and ask for user input as option
@@ -69,23 +42,23 @@ public class UIAdmin {
             switch (inputUser.toLowerCase()) {
                 case "1": // 1 - inquire event by ID
                     logFile.save(logFile.time() + " Admin picked menu option 1 to Inquire Event by ID\n");
-                    inquireEventByID(eventMap);
+                    inquireEventByID();
                     break;
                 case "2": // 2 - inquire event by name
                     logFile.save(logFile.time() + " Admin picked menu option 2 to Inquire Event by Name\n");
-                    inquireEventByName(eventMap);
+                    inquireEventByName();
                     break;
                 case "3": // 3 - Create a new event
                     logFile.save(logFile.time() + " Admin picked menu option 3 to create an Event\n");
-                    createEvent(eventMap);
+                    createEvent();
                     break;
                 case "4": // 4 - Auto purchase for customers
                     logFile.save(logFile.time() + " Admin picked menu option 4 to run the auto purchase\n");
-                    autoPurchase(customerMap, eventMap);
+                    autoPurchase();
                     break;
                 case "5": // 5 - Save invoice for customer
                     logFile.save(logFile.time() + " Admin picked menu option 5 to save an invoice for a user\n");
-                    saveInvoiceForCustomer(customerMap);
+                    saveInvoiceForCustomer();
                     break;
                 case "exit":
                     System.out.println("\nThank you for using TicketMiner!\nTerminating program...");
@@ -108,13 +81,13 @@ public class UIAdmin {
      * @param eventMap hashmap containing all events
      * @return updated hashmap
      */
-    public LinkedHashMap<Integer, Event> createEvent(LinkedHashMap<Integer, Event> eventMap) {
+    public void createEvent() {
         Scanner scn = new Scanner(System.in);
 
         Event newEvent = createBlankEvent();
         newEvent.setVenue(createBlankVenue());
 
-        newEvent.setId(calculateEventID(eventMap));
+        newEvent.setId(calculateEventID());
 
         System.out.print("\nEnter the name of the event\n--> ");
         newEvent.setName(scn.nextLine());
@@ -141,10 +114,8 @@ public class UIAdmin {
         newEvent.setGoldPrice(generalAdmissionPrice * 3);
         newEvent.setVipPrice(generalAdmissionPrice * 5);
 
-        eventMap.put(newEvent.getId(), newEvent);
+        this.events.put(newEvent.getId(), newEvent);
         System.out.println("\nEvent added!");
-
-        return eventMap;
 
     }
 
@@ -315,9 +286,9 @@ public class UIAdmin {
      * @param eventMap Hashmap of all events
      * @return newest event id
      */
-    public int calculateEventID(LinkedHashMap<Integer, Event> eventMap) {
+    public int calculateEventID() {
         int largestID = Integer.MIN_VALUE;
-        for (Entry<Integer, Event> event : eventMap.entrySet()) {
+        for (Entry<Integer, Event> event : this.events.entrySet()) {
             int currID = event.getKey();
 
             if (currID > largestID) {
@@ -329,19 +300,14 @@ public class UIAdmin {
 
     }
 
-    /**
-     * Allows the admin to inquire about an event by its ID.
-     *
-     * @param eventMap A LinkedHashMap containing events mapped by their unique IDs.
-     */
-    public void inquireEventByID(LinkedHashMap<Integer, Event> eventMap) {
+    public void inquireEventByID() {
         while (true) {
             try {
                 System.out.print("Enter the Event ID\n--> ");
                 String userInput = myScanner.nextLine();
                 int eventID = Integer.parseInt(userInput);
                 // Uses .get from the map to find the event based of ID
-                Event currEvent = eventMap.get(eventID);
+                Event currEvent = this.events.get(eventID);
                 // Checks that the event was found and does not give null
                 if (currEvent == null) {
                     logFile.save(logFile.time() + " Admin entered an invalid event ID of " + eventID + "\n");
@@ -349,7 +315,8 @@ public class UIAdmin {
                     continue;
                 }
                 logFile.save(logFile.time() + " Admin entered a correct event ID of " + eventID + "\n");
-                subMenu(currEvent);
+                this.selectedEvent = currEvent;
+                subMenu();
                 break;
             } catch (NumberFormatException e) {
                 logFile.save(logFile.time() + " Admin did not enter a number for the event ID\n");
@@ -359,18 +326,13 @@ public class UIAdmin {
         }
     }
 
-    /**
-     * Allows the admin to inquire about an event by its name.
-     *
-     * @param eventMap A LinkedHashMap containing events mapped by their unique IDs.
-     */
-    public void inquireEventByName(LinkedHashMap<Integer, Event> eventMap) {
+    public void inquireEventByName() {
         while (true) {
             System.out.print("Enter the Event Name\n--> ");
             String input = myScanner.nextLine();
             Event currEvent = null;
             // Runs through all the events in the map and checks the name
-            for (Event curr : eventMap.values()) {
+            for (Event curr : this.events.values()) {
                 if (input.equalsIgnoreCase(curr.getName())) {
                     currEvent = curr;
                 }
@@ -383,23 +345,17 @@ public class UIAdmin {
             }
 
             logFile.save(logFile.time() + " Admin entered a corret event name of " + input + "\n");
-            subMenu(currEvent);
+            subMenu();
             break;
         }
     }
 
-    /**
-     * Displays a submenu for the admin to access additional information about an
-     * event.
-     *
-     * @param currEvent The event for which additional information is displayed.
-     */
-    public void subMenu(Event currEvent) {
+    public void subMenu() {
         // Displays standard event and then ask if they want to see the calculated
         // information
         System.out.println("\nStandard Event Information");
         System.out.println("================================");
-        currEvent.eventBasicInfo();
+        this.selectedEvent.eventBasicInfo();
         System.out.println("================================\n");
         while (true) {
             System.out.print("Submenu for Additional Information\n");
@@ -410,9 +366,9 @@ public class UIAdmin {
                     logFile.save(logFile.time()
                             + " Admin picked submenu option 1 to view event calculated information\n");
                     System.out.println("================================\nAvailable Seats");
-                    currEvent.adminPrintAvailableSeats();
+                    this.selectedEvent.adminPrintAvailableSeats();
                     System.out.println("Total Revenue");
-                    currEvent.adminPrintRevenueInfo();
+                    this.selectedEvent.adminPrintRevenueInfo();
                     break;
                 case "2": // Exit subMenu
                     logFile.save(logFile.time() + " Admin picked submenu option 2 to exit submenu\n");
@@ -426,14 +382,7 @@ public class UIAdmin {
         }
     }
 
-    /**
-     * Does the auto purchase based of the given csv file and completes the purchase
-     * from the user.
-     * 
-     * @param customerMap
-     * @param eventMap
-     */
-    public void autoPurchase(LinkedHashMap<Integer, Customer> customerMap, LinkedHashMap<Integer, Event> eventMap) {
+    public void autoPurchase() {
         Purchase completPurchase = new Purchase();
         ArrayList<AutoPurchaseInstruction> autoPurchases = getAutoPurchaseInfo();
         if (autoPurchases == null) {
@@ -441,22 +390,17 @@ public class UIAdmin {
         }
         logFile.save(logFile.time() + " AutoPurchse CSV read\n");
         for (AutoPurchaseInstruction currAuto : autoPurchases) {
-            Customer currCustomer = findCustomer(currAuto.getCustomerFName(), currAuto.getCustomerLName(), customerMap);
+            Customer currCustomer = findCustomer(currAuto.getCustomerFName(), currAuto.getCustomerLName());
             completPurchase.setCurrentCustomer(currCustomer);
-            completPurchase.setCurrentEvent(eventMap.get(currAuto.getEventID()));
+            completPurchase.setCurrentEvent(this.events.get(currAuto.getEventID()));
             completPurchase.autoPurchaseAdmin(currAuto.getTicketQuantity(), currAuto.getTicketType());
         }
         createAutoPurchaseInvoicesDir();
-        writeNewAutoPurchaseInvoices(customerMap);
+        writeNewAutoPurchaseInvoices();
         logFile.save(logFile.time() + " Auto purchase complete and all invoices saved\n");
         System.out.println("Auto purchase complete and Invoices have been saved");
     }
 
-    /**
-     * Reads the given csv file and returns information
-     * 
-     * @return Returns an arraylist filled with all the auto purchase objects.
-     */
     public ArrayList<AutoPurchaseInstruction> getAutoPurchaseInfo() {
         try {
             AutoPurchaseReader autoPurchaseReader = new AutoPurchaseReader();
@@ -469,27 +413,16 @@ public class UIAdmin {
         }
     }
 
-    /**
-     * Takes given customer first and last name and returns that customer object.
-     * 
-     * @param firstName
-     * @param lastName
-     * @param customerMap
-     * @return currentCustomer that was found from the auto-purchase
-     */
-    public Customer findCustomer(String firstName, String lastName, LinkedHashMap<Integer, Customer> customerMap) {
-        for (Customer currCust : customerMap.values()) {
-            if (currCust.getFirstName().equalsIgnoreCase(firstName) && currCust.getLastName().equalsIgnoreCase(lastName)) {
+    public Customer findCustomer(String firstName, String lastName) {
+        for (Customer currCust : this.customers.values()) {
+            if (currCust.getFirstName().equalsIgnoreCase(firstName)
+                    && currCust.getLastName().equalsIgnoreCase(lastName)) {
                 return currCust;
             }
         }
         return null;
     }
 
-    /**
-     * Creates the Auto-Purchase-Invoices directory. If the dir exists then it is
-     * deleted and remade.
-     */
     public void createAutoPurchaseInvoicesDir() {
         if (Files.exists(Paths.get("Auto-Purchase-Invoices"))) {
             logFile.save(logFile.time() + " Old Auto-Purchase-Invoices directory found and deleted\n");
@@ -505,13 +438,8 @@ public class UIAdmin {
         logFile.save(logFile.time() + " Auto-Purchase-Invoices directory created\n");
     }
 
-    /**
-     * Runs through the customer list and creates the invoices
-     * 
-     * @param customerMap
-     */
-    public void writeNewAutoPurchaseInvoices(LinkedHashMap<Integer, Customer> customerMap) {
-        for (Customer currCust : customerMap.values()) {
+    public void writeNewAutoPurchaseInvoices() {
+        for (Customer currCust : this.customers.values()) {
             if (!currCust.getInvoiceList().isEmpty()) {
                 currCust.invoiceSummary(currCust.getInvoiceList(), "Auto-Purchase-Invoices\\");
             }
@@ -519,27 +447,29 @@ public class UIAdmin {
         logFile.save(logFile.time() + " All auto purchase invoices have been saved\n");
     }
 
-    /**
-     * Searchs for customer and then saves that customers invoices
-     */
-    public void saveInvoiceForCustomer(LinkedHashMap<Integer, Customer> customerMap) {
+    public void saveInvoiceForCustomer() {
         System.out.println("Enter the First and Last name of the user you want to save an invoice for");
         System.out.print("First Name\n--> ");
         String firstName = myScanner.nextLine();
         System.out.print("Last Name\n--> ");
         String lastName = myScanner.nextLine();
-        Customer tempCustomer = findCustomer(firstName, lastName, customerMap);
+        Customer tempCustomer = findCustomer(firstName, lastName);
         if (tempCustomer == null) {
-            logFile.save(logFile.time() + " Admin entered the incorrect customer name of " + firstName + " " + lastName + "\n");
+            logFile
+                    .save(logFile.time() + " Admin entered the incorrect customer name of " + firstName + " " + lastName
+                            + "\n");
             System.out.println("Incorrect customer name");
             return;
         }
         if (!tempCustomer.getInvoiceList().isEmpty()) {
             tempCustomer.invoiceSummary(tempCustomer.getInvoiceList(), "");
-            logFile.save(logFile.time() + " Admin entered the correct customer name of " + firstName + " " + lastName + " and saved an invoice\n");
-            System.out.println("Invoice saved for customer " + firstName + " " +lastName);
+            logFile.save(logFile.time() + " Admin entered the correct customer name of " + firstName + " " + lastName
+                    + " and saved an invoice\n");
+            System.out.println("Invoice saved for customer " + firstName + " " + lastName);
         }
-        logFile.save(logFile.time() + " Admin entered the correct customer name of " + firstName + " " + lastName + " but invoice list was empty\n");
-        System.out.println("No invoice for customer " + firstName + " " +lastName);
+        logFile.save(logFile.time() + " Admin entered the correct customer name of " + firstName + " " + lastName
+                + " but invoice list was empty\n");
+        System.out.println("No invoice for customer " + firstName + " " + lastName);
     }
+
 }
