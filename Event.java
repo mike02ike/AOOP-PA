@@ -20,6 +20,7 @@ public abstract class Event {
   /**
    * Class attributes
    */
+  private boolean isCanceled;
   private int id;
   private String eventType;
   private String name;
@@ -36,9 +37,7 @@ public abstract class Event {
   private double actualProfit;
   private double totalMemberDiscount; // Total amount customers have saved due to membership
   private double totalTax; // Total tax collected
-  private double convenienceFees;
-  //TODO: Create a hashmap for fees in event
-
+  private HashMap<String, Double> collectedFees = new HashMap<>();
 
   /**
    * Constructor
@@ -48,6 +47,7 @@ public abstract class Event {
     initializePurchasedTickets();
     initializeNumSeatsSold();
     initializeSeatRevenue();
+    initializeCollectedFees();
   }
 
   /**
@@ -100,6 +100,12 @@ public abstract class Event {
     this.seatRevenue.put("bronze", 0.0);
     this.seatRevenue.put("genadmission", 0.0);
     this.seatRevenue.put("total", 0.0);
+  }
+
+  public void initializeCollectedFees() {
+    this.collectedFees.put("convenience", 0.0);
+    this.collectedFees.put("service", 0.0);
+    this.collectedFees.put("charity", 0.0);
   }
 
   /**
@@ -612,4 +618,41 @@ public abstract class Event {
   public double getTotalRevenue() {
     return this.seatRevenue.get("total");
   }
+
+  public double getConvenienceFee() {
+    return this.collectedFees.get("convenience");
+  }
+
+  public void setConvenienceFee(double feeIn) {
+    this.collectedFees.put("convenience", feeIn);
+  }
+
+  public void addToConvenienceFee(double feeIn) {
+    this.collectedFees.put("convenience", this.getConvenienceFee() + feeIn);
+  }
+
+  public double getServiceFee() {
+    return this.collectedFees.get("service");
+  }
+
+  public void setServiceFee(double feeIn) {
+    this.collectedFees.put("service", feeIn);
+  }
+
+  public void addToServiceFee(double feeIn) {
+    this.collectedFees.put("service", this.getServiceFee() + feeIn);
+  }
+
+  public double getCharityFee() {
+    return this.collectedFees.get("charity");
+  }
+
+  public void setCharityFee(double feeIn) {
+    this.collectedFees.put("charity", feeIn);
+  }
+
+  public void addToCharityFee(double feeIn) {
+    this.collectedFees.put("charity", this.getCharityFee() + feeIn);
+  }
+
 }

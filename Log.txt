@@ -1,10 +1,7 @@
-11-09-2023 11:28:42 Program start
-11-09-2023 11:28:42 Event and Customer maps made from csv files
-11-09-2023 11:28:42 Starting the login process
-11-09-2023 11:28:45 User is an administrator
-11-09-2023 11:28:47 Admin picked menu option 3 to create an Event
-11-09-2023 11:29:20 Admin picked menu option 1 to Inquire Event by ID
-11-09-2023 11:29:23 Admin entered a correct event ID of 73
-11-09-2023 11:29:45 Admin picked submenu option 2 to exit submenu
-11-09-2023 11:29:48 Admin terminated the program
-11-09-2023 11:29:48 Updated Event and Customer csv made
+11-09-2023 12:17:02 Program start
+11-09-2023 12:17:02 Event and Customer maps made from csv files
+11-09-2023 12:17:02 Starting the login process
+11-09-2023 12:17:05 User is a customer and will attempt to login
+11-09-2023 12:17:10 User with ID 62 signed in successfully with credentials Ian and Gutierrez
+11-09-2023 12:17:12 User Ian terminated the program
+11-09-2023 12:17:14 Updated Event and Customer csv made
