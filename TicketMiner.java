@@ -20,9 +20,19 @@
  * @version 1.0
  */
 
+
+//TODO: Create a hashmap that has a key -> eventId and value -> hashmap of event fees
+
+
 public class TicketMiner{
     //attributes
     private static TicketMiner obj;
+    private double convenienceFee = 2.50;
+    private double serviceFee;
+    private double charityFee;
+
+
+
 
     //constructors
     private TicketMiner(){}
@@ -35,5 +45,22 @@ public class TicketMiner{
         return obj;
     }
 
+    public double getAllFees(int ticketAmount, double ticketPrice){
+        return getConvenienceFee() + getServiceFee(ticketAmount, ticketPrice) + getCharityFee(ticketAmount, ticketPrice);
+    }
+
+    public double getConvenienceFee() {
+        return convenienceFee;
+    }
+
+    public double getServiceFee(int ticketAmount, double ticketPrice) {
+        serviceFee = ticketAmount * ticketPrice * .005;
+        return serviceFee;
+    }
+
+    public double getCharityFee(int ticketAmount, double ticketPrice) {
+        charityFee = ticketAmount * ticketPrice * .0075;
+        return charityFee;
+    }
 
 }

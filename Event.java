@@ -12,7 +12,8 @@
  *         IA.
  */
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public abstract class Event {
 
@@ -35,6 +36,9 @@ public abstract class Event {
   private double actualProfit;
   private double totalMemberDiscount; // Total amount customers have saved due to membership
   private double totalTax; // Total tax collected
+  private double convenienceFees;
+  //TODO: Create a hashmap for fees in event
+
 
   /**
    * Constructor
