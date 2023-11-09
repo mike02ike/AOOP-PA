@@ -1,30 +1,10 @@
-11-06-2023 20:13:23 Program start
-11-06-2023 20:13:23 Event and Customer maps made from csv files
-11-06-2023 20:13:23 Starting the login process
-11-06-2023 20:13:35 User is a customer and will attempt to login
-11-06-2023 20:13:50 User with ID 2 signed in successfully with credentials Donald and Duck
-11-06-2023 20:13:53 User picked menu option 3 to purchase event tickets
-11-06-2023 20:13:54 User is trying to purchase tickets for event with ID 1
-11-06-2023 20:13:57 User input was correct with ticket name of Vip
-11-06-2023 20:13:59 Invoice with confimation number 1601920470 created for user purchase
-11-06-2023 20:13:59 User with ID 2 purchased 1 tickets for event with ID 1 spending $34.09
-11-06-2023 20:13:59 User with ID 2 current funds: $3189.74
-11-06-2023 20:13:59 Available ticket type Vip for event ID 1 is now tickets
-11-06-2023 20:14:00 User picked menu option 3 to purchase event tickets
-11-06-2023 20:14:02 User is trying to purchase tickets for event with ID 2
-11-06-2023 20:14:05 User input was correct with ticket name of Gold
-11-06-2023 20:14:05 Invoice with confimation number -1048573004 created for user purchase
-11-06-2023 20:14:05 User with ID 2 purchased 2 tickets for event with ID 2 spending $58.45
-11-06-2023 20:14:05 User with ID 2 current funds: $3131.29
-11-06-2023 20:14:05 Available ticket type Gold for event ID 2 is now tickets
-11-06-2023 20:14:08 User picked menu option 3 to purchase event tickets
-11-06-2023 20:14:10 User is trying to purchase tickets for event with ID 3
-11-06-2023 20:14:13 User input was correct with ticket name of Silver
-11-06-2023 20:14:15 Invoice with confimation number -543358183 created for user purchase
-11-06-2023 20:14:15 User with ID 2 purchased 3 tickets for event with ID 3 spending $73.06
-11-06-2023 20:14:15 User with ID 2 current funds: $3058.23
-11-06-2023 20:14:15 Available ticket type Silver for event ID 3 is now tickets
-11-06-2023 20:14:17 User picked menu option 5 to save invoices
-11-06-2023 20:14:17 Invoice list has been saved
-11-06-2023 20:14:25 User Donald terminated the program
-11-06-2023 20:14:28 Updated Event and Customer csv made
+11-09-2023 11:28:42 Program start
+11-09-2023 11:28:42 Event and Customer maps made from csv files
+11-09-2023 11:28:42 Starting the login process
+11-09-2023 11:28:45 User is an administrator
+11-09-2023 11:28:47 Admin picked menu option 3 to create an Event
+11-09-2023 11:29:20 Admin picked menu option 1 to Inquire Event by ID
+11-09-2023 11:29:23 Admin entered a correct event ID of 73
+11-09-2023 11:29:45 Admin picked submenu option 2 to exit submenu
+11-09-2023 11:29:48 Admin terminated the program
+11-09-2023 11:29:48 Updated Event and Customer csv made
