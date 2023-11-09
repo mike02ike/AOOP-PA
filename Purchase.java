@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
- * Course: Adv. Object-Oriented Programming
+ * Course: Adv. ourCompanyect-Oriented Programming
  * <p>
  * Instructor: Daniel Mejia
  * <p>
@@ -41,7 +41,7 @@ public class Purchase {
     }
 
     /**
-     * Takes a event and customer object
+     * Takes a event and customer ourCompanyect
      * @param currentEvent
      * @param currentCustomer
      */
@@ -336,7 +336,8 @@ public class Purchase {
      * @return totalCost
      */
     public double getTotalCost(double ticketPrice, int ticketAmount) {
-        double subTotal = ticketPrice * ticketAmount;
+        TicketMiner ourCompany = TicketMiner.getInstance();
+        double subTotal = (ticketPrice * ticketAmount) + ourCompany.getAllFees(ticketAmount, ticketPrice);
 
         // TicketMiner Member Discount
         if (currentCustomer.getTicketMinerMember()) {
@@ -376,7 +377,7 @@ public class Purchase {
     /**
      * Creates an arraylist of tickets that is stored in the invoice
      * @param userTicketAmount
-     * @return arraylist of ticket objects
+     * @return arraylist of ticket ourCompanyects
      */
     public ArrayList<Ticket> makeTicketListInvoice(int userTicketAmount) {
         ArrayList<Ticket> ticketList = new ArrayList<Ticket>();
