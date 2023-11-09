@@ -232,4 +232,45 @@ public class Invoice {
         this.date = date;
     }
 
+    /**
+     * @return convenience fee
+     */
+    public Double getConvenience() {
+        return this.convenience;
+    }
+
+    /**
+     * @param convenience
+     */
+    public void setConvenience(Double convenience) {
+        this.convenience = convenience;
+    }
+
+    /**
+     * @return service fee
+     */
+    public Double getService() {
+        return this.service;
+    }
+
+    /**
+     * @param service
+     */
+    public void setService(Double service) {
+        this.service = service;
+    }
+
+    /**
+     * @return charity fee
+     */
+    public Double getCharity() {
+        return this.charity;
+    }
+
+    /**
+     * @param charity
+     */
+    public void setCharity(Double charity) {
+        this.charity = charity;
+    }
 }

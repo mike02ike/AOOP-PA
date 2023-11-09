@@ -54,7 +54,7 @@ public class UICustomer {
         while (true) {
             // Prints the menu options and ask for user input as number
             System.out.print(
-                    "Miner Menu\n1 - View Single Event Information\n2 - View All Events\n3 - Purchase Event Tickets\n4 - View Invoices\n5 - Save Invoices\n or Type \"Exit\" to exit the program\n--> ");
+                    "Miner Menu\n1 - View Single Event Information\n2 - View All Events\n3 - Purchase Event Tickets\n4 - View Invoices\n5 - Save Invoices\n6 - Cancel Purchase\nor Type \"Exit\" to exit the program\n--> ");
             // Only takes in strings to help with exceptions
             String input = scnr.nextLine().toLowerCase();
             // switch case used to cut down on possible exceptions and clean look
@@ -102,7 +102,7 @@ public class UICustomer {
      */
     public int getIdFromUser() {
         try {
-                System.out.print("Enter the ID of the event you would like to see information on\n--> ");
+                System.out.print("Enter the event ID\n--> ");
                 String userInput = scnr.nextLine();
                 int eventID = Integer.parseInt(userInput);
                 return eventID;
@@ -240,7 +240,31 @@ public class UICustomer {
     }
 
     public void cancelPurchase() {
+        if (currCustomer.getInvoiceList().isEmpty()) {
+            logFile.save(logFile.time() + " User tried to cancel a purchase but has not invoices\n");
+            System.out.println("No tickets have been purchased\n");
+            return;
+        }
         printInvoices();
+        System.out.print("Enter the confirmation number of the purchase you would like to cancel\n--> ");
+        String confirString = scnr.nextLine();
+        try {
+            int confirInt = Integer.parseInt(confirString);
+            for (Invoice currInv : currCustomer.getInvoiceList()) {
+                if (currInv.getConfirmationNum() == confirInt) {
+                    //Not done but will zero out total cost and change name
+                    currInv.setTotalPrice(0.0);
+                    currInv.setTax(0.0);
+                    currInv.setEventName("Purchase Canceled " + currInv.getEventName());
+                    System.out.println("Purchase with confirmation number " + currInv.getConfirmationNum() + " Canceled\n");
+                    return;
+                }
+            }
+        } catch (NumberFormatException e) {
+            logFile.save(logFile.time() + " User input was not an integer\n");
+            System.out.println("Not a vaild confimation number\n");
+        }
+
 
     }
 
