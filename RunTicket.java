@@ -50,8 +50,8 @@ public class RunTicket {
 
             logFile.save(logFile.time() + " Program start\n");
             // Creates the maps with given file name
-            eventMap = eventHandler.readFile("EventListPA4.csv");
-            customerMap = customerHandler.readFile("CustomerListPA4.csv");
+            eventMap = eventHandler.readFile("EventListPA5.csv");
+            customerMap = customerHandler.readFile("CustomerListPA5.csv");
             logFile.save(logFile.time() + " Event and Customer maps made from csv files\n");
             // boolean used to control the driving while loop
             boolean mainMenuControl = true;
