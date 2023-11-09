@@ -1,0 +1,18 @@
+-----------Invoice 1-----------
+Event Type: Festival
+Event Name: Coachella 1
+Event Date: 2/17/24
+Ticket Type: bronze
+Number of Tickets: 2
+Total Price: 2435.62
+Confirmation Number: -335897179
+-------------------------------
+-----------Invoice 2-----------
+Event Type: Sport
+Event Name: UTEP Football 13
+Event Date: 11/27/23
+Ticket Type: general admission
+Number of Tickets: 2
+Total Price: 35.07
+Confirmation Number: 523516312
+-------------------------------

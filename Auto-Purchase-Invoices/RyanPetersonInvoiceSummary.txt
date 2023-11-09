@@ -1,0 +1,9 @@
+-----------Invoice 1-----------
+Event Type: Festival
+Event Name: UTEP Commencement 2
+Event Date: 10/14/23
+Ticket Type: Silver
+Number of Tickets: 3
+Total Price: 0.0
+Confirmation Number: -791434403
+-------------------------------

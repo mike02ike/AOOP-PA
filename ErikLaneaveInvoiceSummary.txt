@@ -1,0 +1,27 @@
+-----------Invoice 1-----------
+Event Type: Sport
+Event Name: UTEP Basketball 21
+Event Date: 1/29/24
+Ticket Type: Vip
+Number of Tickets: 3
+Total Price: 102.29
+Confirmation Number: -1458614144
+-------------------------------
+-----------Invoice 2-----------
+Event Type: Sport
+Event Name: UTEP Basketball 11
+Event Date: 12/25/23
+Ticket Type: Gold
+Number of Tickets: 5
+Total Price: 146.13
+Confirmation Number: -1017427040
+-------------------------------
+-----------Invoice 3-----------
+Event Type: Festival
+Event Name: UTEP Commencement 1
+Event Date: 1/5/24
+Ticket Type: Vip
+Number of Tickets: 2
+Total Price: 0.0
+Confirmation Number: -684776210
+-------------------------------

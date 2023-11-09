@@ -1,0 +1,9 @@
+-----------Invoice 1-----------
+Event Type: Festival
+Event Name: ACL
+Event Date: 11/18/23
+Ticket Type: Gold
+Number of Tickets: 5
+Total Price: 1047.31
+Confirmation Number: 954952819
+-------------------------------

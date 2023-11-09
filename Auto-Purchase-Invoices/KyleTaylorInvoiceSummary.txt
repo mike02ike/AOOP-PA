@@ -1,0 +1,9 @@
+-----------Invoice 1-----------
+Event Type: Sport
+Event Name: UTEP Basketball 1
+Event Date: 11/20/23
+Ticket Type: Bronze
+Number of Tickets: 2
+Total Price: 37.99
+Confirmation Number: 1990197123
+-------------------------------

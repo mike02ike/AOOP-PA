@@ -1,0 +1,27 @@
+-----------Invoice 1-----------
+Event Type: Concert
+Event Name: Drake Live
+Event Date: 10/5/23
+Ticket Type: general admission
+Number of Tickets: 2
+Total Price: 1789.09
+Confirmation Number: 1829120329
+-------------------------------
+-----------Invoice 2-----------
+Event Type: Festival
+Event Name: ACL
+Event Date: 11/18/23
+Ticket Type: gold
+Number of Tickets: 1
+Total Price: 232.73
+Confirmation Number: -1399170422
+-------------------------------
+-----------Invoice 3-----------
+Event Type: Sport
+Event Name: UTEP Football 1
+Event Date: 9/4/23
+Ticket Type: bronze
+Number of Tickets: 4
+Total Price: 84.43
+Confirmation Number: -304932133
+-------------------------------

@@ -1,0 +1,9 @@
+-----------Invoice 1-----------
+Event Type: Sport
+Event Name: UTEP Basketball 31
+Event Date: 3/4/24
+Ticket Type: VIP
+Number of Tickets: 3
+Total Price: 102.29
+Confirmation Number: 456824403
+-------------------------------

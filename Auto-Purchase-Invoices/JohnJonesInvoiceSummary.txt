@@ -1,0 +1,9 @@
+-----------Invoice 1-----------
+Event Type: Festival
+Event Name: Minerpalooza
+Event Date: 10/15/23
+Ticket Type: Bronze
+Number of Tickets: 3
+Total Price: 0.0
+Confirmation Number: -1360577719
+-------------------------------

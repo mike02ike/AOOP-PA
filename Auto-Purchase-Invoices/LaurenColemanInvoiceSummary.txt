@@ -1,0 +1,9 @@
+-----------Invoice 1-----------
+Event Type: Concert
+Event Name: UTEP Wind Symphony 1
+Event Date: 2/1/24
+Ticket Type: VIP
+Number of Tickets: 3
+Total Price: 118.75
+Confirmation Number: -1564961870
+-------------------------------

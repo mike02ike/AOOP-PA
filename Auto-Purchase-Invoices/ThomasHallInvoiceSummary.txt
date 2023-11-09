@@ -1,0 +1,9 @@
+-----------Invoice 1-----------
+Event Type: Sport
+Event Name: UTEP Basketball 2
+Event Date: 11/22/23
+Ticket Type: General Admission
+Number of Tickets: 5
+Total Price: 82.81
+Confirmation Number: 1918007792
+-------------------------------
