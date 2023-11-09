@@ -20,9 +20,9 @@ import java.util.Scanner;
  * Class Purpose: The UICustomer class handles the menu options for the customer.
  * The log and invoices for the user are kept and updated inside of the UI.
  * <p>
- * @since 11/06/2023
+ * @since 11/09/2023
  * @author Erik LaNeave
- * @version 2.3
+ * @version 2.4
  * <p>
  * @since 10/27/2023
  * @author Michael Ike
@@ -35,6 +35,8 @@ public class UICustomer {
     private Log logFile = Log.getInstance();
     // Keeps track of currCustomer
     private Customer currCustomer;
+    // The map that contains all the events
+    private LinkedHashMap<Integer, Event> eventMap;
 
     /**
      * Main menu for the customer UI
@@ -43,8 +45,10 @@ public class UICustomer {
      * @param currCustomerIn
      * @return Boolean back to RunTicket to stop main while loop
      */
-    public void menu(LinkedHashMap<Integer, Event> eventMap, Customer currCustomerIn) {
+    public void menu(LinkedHashMap<Integer, Event> eventMapIn, Customer currCustomerIn) {
+        //Set the class attributes to the given eventMapIn and the currCustomerIn
         currCustomer = currCustomerIn;
+        eventMap = eventMapIn;
 
         System.out.println("Hello " + currCustomerIn.getFirstName() + "\n");
         while (true) {
@@ -57,15 +61,15 @@ public class UICustomer {
             switch (input) {
                 case "1": // 1 - View Event Information
                     logFile.save(logFile.time() + " User picked menu option 1 to view event information\n");
-                    getIdFromUser(eventMap);
+                    singleEventPrintInfo();
                     break;
                 case "2": // 2 - View all events
                     logFile.save(logFile.time() + " User picked menu option 2 to view all events\n");
-                    viewAllEvents(eventMap);
+                    viewAllEvents();
                     break;
                 case "3": // 3 - Purchase Event Tickets
                     logFile.save(logFile.time() + " User picked menu option 3 to purchase event tickets\n");
-                    getIdFromUser(eventMap, currCustomer);
+                    purchaseTickets();
                     break;
                 case "4": // 4 - View Invoices
                     logFile.save(logFile.time() + " User picked menu option 4 to view customer invoice\n");
@@ -90,30 +94,42 @@ public class UICustomer {
     }
 
     /**
-     * User is ask for event ID
-     * 
-     * @param eventMap
+     * @return The event ID of a single event or -1 if event not found
      */
-    public void getIdFromUser(LinkedHashMap<Integer, Event> eventMap) {
-        while(true){
-            try {
+    public int getIdFromUser() {
+        try {
                 System.out.print("Enter the ID of the event you would like to see information on\n--> ");
                 String userInput = scnr.nextLine();
                 int eventID = Integer.parseInt(userInput);
-                Event tempEvent = eventMap.get(eventID);
-                // Checks that the key is in the map
-                if (tempEvent == null) {
-                    System.out.println("Not a vaild event ID\n");
-                    logFile.save(logFile.time() + " User input was an incorrect event ID of " + eventID + "\n");
-                    continue;
-                }
-                viewEventInfo(tempEvent);
-                break;
+                return eventID;
             } catch (NumberFormatException e) {
                 System.out.println("Not a vaild event ID\n");
                 logFile.save(logFile.time() + " User input for event ID was not a number\n");
+                return -1;
             }
+    }
+
+    /**
+     * Prints the information for a single event
+     */
+    public void singleEventPrintInfo() {
+        int eventID = getIdFromUser();
+        if (eventID == -1) {
+            System.out.println("Not a vaild event ID\n");
+            logFile.save(logFile.time() + " User input for event ID was an incorrect Number\n");
+            singleEventPrintInfo();
+            return;
         }
+        Event tempEvent = eventMap.get(eventID);
+        // Checks that the key is in the map
+        if (tempEvent == null) {
+            System.out.println("Not a vaild event ID\n");
+            logFile.save(logFile.time() + " User input was an incorrect event ID of " + eventID + "\n");
+            singleEventPrintInfo();
+            return;
+        }
+        viewEventInfo(tempEvent);
+        return;
     }
 
     /**
@@ -128,14 +144,13 @@ public class UICustomer {
         System.out.println("-------------------------\n");
         System.out.print("\n-------EVENT TICKET INFORMATION-------");
         displayEventTicketAmount(tempEvent);
-        System.out.println("-------------------------\n");
+        System.out.println("--------------------------------------\n");
     }
 
     /**
      * Prints all the event IDs and names
-     * @param eventMap
      */
-    public void viewAllEvents(LinkedHashMap<Integer, Event> eventMap) {
+    public void viewAllEvents() {
         for (Entry<Integer, Event> event : eventMap.entrySet()) {
             Event currEvent = event.getValue();
             System.out.println("\n-------------------------");
@@ -145,32 +160,28 @@ public class UICustomer {
     }
 
     /**
-     * User is ask for event ID
-     * 
-     * @param eventMap
-     * @param currCustomer
+     * Calls purchase class and lets customer purchase tickets for a single event
      */
-    public void getIdFromUser(LinkedHashMap<Integer, Event> eventMap, Customer currCustomer) {
-        try {
-            System.out.print("Enter the ID of the event you would like to purchase tickets for\n--> ");
-            String userInput = scnr.nextLine();
-            int eventID = Integer.parseInt(userInput);
-            Event tempEvent = eventMap.get(eventID);
-            // Checks that the user input is key in the map
-            if (tempEvent == null) {
-                System.out.println("Not a vaild event ID\n");
-                logFile.save(logFile.time() + " User input was an incorrect event ID of " + userInput + "\n");
-                getIdFromUser(eventMap,currCustomer);
-                return;
-            }
-            logFile.save(logFile.time() + " User is trying to purchase tickets for event with ID " + tempEvent.getId() + "\n");
-            Purchase completePurchase = new Purchase(tempEvent, currCustomer);
-            completePurchase.purchaseTicketsCustomer();
-        } catch (NumberFormatException e) {
+    public void purchaseTickets() {
+        int eventID = getIdFromUser();
+        if (eventID == -1) {
             System.out.println("Not a vaild event ID\n");
-            logFile.save(logFile.time() + " User input for event ID was not a number\n");
-            getIdFromUser(eventMap,currCustomer);
+            logFile.save(logFile.time() + " User input for event ID was an incorrect Number\n");
+            purchaseTickets();
+            return;
         }
+        Event tempEvent = eventMap.get(eventID);
+        // Checks that the key is in the map
+        if (tempEvent == null) {
+            System.out.println("Not a vaild event ID\n");
+            logFile.save(logFile.time() + " User input was an incorrect event ID of " + eventID + "\n");
+            purchaseTickets();
+            return;
+        }
+        logFile.save(logFile.time() + " User is trying to purchase tickets for event with ID " + tempEvent.getId() + "\n");
+        Purchase completePurchase = new Purchase(tempEvent, currCustomer);
+        completePurchase.purchaseTicketsCustomer();
+        return;
     }
 
     /**
