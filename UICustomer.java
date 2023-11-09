@@ -79,6 +79,10 @@ public class UICustomer {
                     logFile.save(logFile.time() + " User picked menu option 5 to save invoices\n");
                     saveInoice();
                     break;
+                case "6":
+                    logFile.save(logFile.time() + " User picked menu option 6 to cancel purchase\n");
+                    cancelPurchase();
+                    break;
                 case "exit":
                     System.out.println("\nThank you " + currCustomer.getFirstName() + " for using TicketMiner!\n");
                     logFile.save(logFile.time() + " User " + currCustomer.getFirstName() + " terminated the program\n");
@@ -233,6 +237,11 @@ public class UICustomer {
         currCustomer.invoiceSummary(currCustomer.getInvoiceList(), "");
         System.out.println("Invoice list has been saved\n");
         logFile.save(logFile.time() + " Invoice list has been saved\n");
+    }
+
+    public void cancelPurchase() {
+        printInvoices();
+
     }
 
     /**

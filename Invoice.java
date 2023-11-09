@@ -38,6 +38,9 @@ public class Invoice {
     private String ticketType;
     private String eventType;
     private String date;
+    private Double convenience;
+    private Double service;
+    private Double charity;
     private ArrayList<Ticket> ticketList = new ArrayList<Ticket>();
 
     //Constructors
