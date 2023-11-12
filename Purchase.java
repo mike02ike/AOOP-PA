@@ -17,19 +17,20 @@ import java.util.Scanner;
  * <p>
  * Class Purpose: Handles the purchase process for both customer and admin
  * <p>
- * Last Change: 11/04/2023
+ * Last Change: 11/11/2023
  * 
  * @author Erik LaNeave
- * @version 2.1
+ * @version 2.2
  */
 
-public class Purchase {
+public class Purchase{
 
     //Attributes
     private Event currentEvent;
     private Customer currentCustomer;
     private String currentTicketName;
-    private Double currentTaxAmount;
+    private double currentTaxAmount;
+    private int autoTicket;
     private Log logFile = Log.getInstance();
     private Scanner scnr = new Scanner(System.in);
 
@@ -49,13 +50,13 @@ public class Purchase {
         this.currentEvent = currentEvent;
         this.currentCustomer = currentCustomer;
     }
-
+    
     /**
      * Start of auto purchase for admin
      * should be able to make a new instance of the class and give event and customer and go from there
      */
-    public void autoPurchaseAdmin(int ticketAmountToBuy, String ticketName) {
-        setCurrentTicketName(ticketName);
+    public void autoPurchaseAdmin() {
+        //setCurrentTicketName(ticketName);
         double ticketPrice = ticketAmount();
         logFile.save(logFile.time() + " Starting auto purchase with customer " + currentCustomer.getFirstName() + "\n");
 
@@ -63,23 +64,23 @@ public class Purchase {
         // exceptions made by me
         try {
             // Checks that event has tickets for the purchase throws CheckTicketAvaException
-            ticketCheck(ticketAmountToBuy);
+            ticketCheck(autoTicket);
             // Gets total cost of purchase
-            double totalCostWithTax = getTotalCost(ticketPrice, ticketAmountToBuy);
+            double totalCostWithTax = getTotalCost(ticketPrice, autoTicket);
             // Checks the the user has funds for the purchase throws CustomerMoneyException
             moneyCheckAndUpdate(totalCostWithTax);
             // Updates the amount of tickets in the event
-            updateEvent(ticketAmountToBuy);
+            updateEvent(autoTicket);
             // Increases the purchased tickets in customer
-            updateCust(ticketAmountToBuy);
+            updateCust(autoTicket);
             // Creates a new invoice for the customer
-            createInvoice(ticketAmountToBuy, totalCostWithTax);
-            logFile.save(logFile.time() + " Customer with name " + currentCustomer.getFirstName() + " purchased " + ticketAmountToBuy
+            createInvoice(autoTicket, totalCostWithTax);
+            logFile.save(logFile.time() + " Customer with name " + currentCustomer.getFirstName() + " purchased " + autoTicket
                     + " tickets for event with ID " + currentEvent.getId() + " spending $" + doubleForm(totalCostWithTax)
                     + "\n");
             logFile.save(logFile.time() + " Customer with name " + currentCustomer.getFirstName() + " current funds: $"
                     + doubleForm(currentCustomer.getMoneyAvailable()) + "\n");
-            logFile.save(logFile.time() + " Available ticket type " + ticketName + " for event ID " + currentEvent.getId()
+            logFile.save(logFile.time() + " Available ticket type " + currentTicketName + " for event ID " + currentEvent.getId()
                     + " is now tickets\n");
             return;
         } catch (CheckTicketAvaException e) {
@@ -405,7 +406,9 @@ public class Purchase {
      */
     public void createInvoice(int userTicketAmount, Double totalCostWithTax) {
         ArrayList<Ticket> ticketList = makeTicketListInvoice(userTicketAmount);
-        Invoice newInvoice = new Invoice(userTicketAmount, totalCostWithTax, currentTaxAmount, currentEvent.getId(), currentEvent.getName(), currentTicketName, currentEvent.getEventType(), currentEvent.getDate(), ticketList);
+        TicketMiner ourCompany = TicketMiner.getInstance();
+        Invoice newInvoice = new Invoice(userTicketAmount, totalCostWithTax, currentTaxAmount, currentEvent.getId(), currentEvent.getName(), currentTicketName, currentEvent.getEventType(), currentEvent.getDate(), 
+        ourCompany.getConvenienceFee(),ourCompany.getServiceFee(userTicketAmount, userTicketAmount),ourCompany.getCharityFee(userTicketAmount, userTicketAmount),ticketList);
         logFile.save(logFile.time() + " Invoice with confimation number " + newInvoice.getConfirmationNum() + " created for user purchase\n");
         currentCustomer.addInvoice(newInvoice);
     }
@@ -461,6 +464,34 @@ public class Purchase {
      */
     public void setCurrentTicketName(String currentTicketName) {
         this.currentTicketName = currentTicketName;
+    }
+
+    /**
+     * @return
+     */
+    public double getCurrentTaxAmount() {
+        return this.currentTaxAmount;
+    }
+
+    /**
+     * @param currentTaxAmount
+     */
+    public void setCurrentTaxAmount(double currentTaxAmount) {
+        this.currentTaxAmount = currentTaxAmount;
+    }
+
+    /**
+     * @return
+     */
+    public int getAutoTicket() {
+        return this.autoTicket;
+    }
+
+    /**
+     * @param autoTicket
+     */
+    public void setAutoTicket(int autoTicket) {
+        this.autoTicket = autoTicket;
     }
 
 }

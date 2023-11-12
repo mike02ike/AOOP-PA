@@ -4,6 +4,29 @@ import java.nio.file.Paths;
 import java.util.*;
 import java.util.Map.Entry;
 
+/**
+ * Course: Adv. Object-Oriented Programming
+ * <p>
+ * Instructor: Daniel Mejia
+ * <p>
+ * Class Purpose: The UIAdmin class represents the user interface for
+ * administrators in the
+ * TicketMiner application.
+ * Administrators can inquire about events by ID or name, view basic event
+ * information, and access additional calculated information.
+ * <p>
+ * 
+ * @since 11/11/2023
+ * @author Erik LaNeave
+ * @version 2.5
+ *          <p>
+ * @since 10/25/2023
+ * @author Michael Ike
+ * @version 1.8
+ * 
+ * @author Ian Gutierrez
+ */
+
 public class UIAdmin {
 
     public static UIAdmin uiAdmin;
@@ -385,16 +408,26 @@ public class UIAdmin {
     public void autoPurchase() {
         Purchase completPurchase = new Purchase();
         ArrayList<AutoPurchaseInstruction> autoPurchases = getAutoPurchaseInfo();
+        HashMap<String,Customer> cache = new HashMap<String,Customer>();
         if (autoPurchases == null) {
             return;
         }
         logFile.save(logFile.time() + " AutoPurchse CSV read\n");
+        System.out.println(logFile.time());
         for (AutoPurchaseInstruction currAuto : autoPurchases) {
-            Customer currCustomer = findCustomer(currAuto.getCustomerFName(), currAuto.getCustomerLName());
+            Customer currCustomer;
+            if (cache.get(currAuto.getCustomerFName()+currAuto.getCustomerLName()) != null) {
+                currCustomer = cache.get(currAuto.getCustomerFName()+currAuto.getCustomerLName());
+            } else {
+                currCustomer = findCustomer(currAuto.getCustomerFName(), currAuto.getCustomerLName(), cache);
+            }
             completPurchase.setCurrentCustomer(currCustomer);
             completPurchase.setCurrentEvent(this.events.get(currAuto.getEventID()));
-            completPurchase.autoPurchaseAdmin(currAuto.getTicketQuantity(), currAuto.getTicketType());
+            completPurchase.setAutoTicket(currAuto.getTicketQuantity());
+            completPurchase.setCurrentTicketName(currAuto.getTicketType());
+            completPurchase.autoPurchaseAdmin();
         }
+        System.out.println(logFile.time());
         createAutoPurchaseInvoicesDir();
         writeNewAutoPurchaseInvoices();
         logFile.save(logFile.time() + " Auto purchase complete and all invoices saved\n");
@@ -405,12 +438,23 @@ public class UIAdmin {
         try {
             AutoPurchaseReader autoPurchaseReader = new AutoPurchaseReader();
             ArrayList<AutoPurchaseInstruction> autoPurchases = new ArrayList<>();
-            autoPurchases = autoPurchaseReader.readFile("AutoPurchase100.csv");
+            autoPurchases = autoPurchaseReader.readFile("AutoPurchase5M.csv");
             return autoPurchases;
         } catch (FileNotFoundException e) {
             System.out.println("\nAuto Purchase file can't be found");
             return null;
         }
+    }
+
+    public Customer findCustomer(String firstName, String lastName, HashMap<String,Customer> cache) {
+        for (Customer currCust : this.customers.values()) {
+            if (currCust.getFirstName().equalsIgnoreCase(firstName)
+                    && currCust.getLastName().equalsIgnoreCase(lastName)) {
+                cache.put(firstName+lastName, currCust);
+                return currCust;
+            }
+        }
+        return null;
     }
 
     public Customer findCustomer(String firstName, String lastName) {
