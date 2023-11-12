@@ -17,9 +17,9 @@ import java.util.ArrayList;
  * Class Purpose: The Invoice class is used to create invoices which are stored in UI
  * using a ArrayList of Invoices.
  * <p>
- * @since 11/04/2023
+ * @since 11/11/2023
  * @author Erik LaNeave
- * @version 1.9
+ * @version 2.0
  * <p>
  * @since 10/28/2023
  * @author Michael Ike
@@ -62,7 +62,7 @@ public class Invoice {
      * @param date
      * @param newTicketList
      */
-    public Invoice(int numTickets, double totalPrice, double tax, int eventID, String eventName, String ticketType, String eventType, String date, ArrayList<Ticket> newTicketList) {
+    public Invoice(int numTickets, double totalPrice, double tax, int eventID, String eventName, String ticketType, String eventType, String date, double convenience, double service, double charity, ArrayList<Ticket> newTicketList) {
         this.numTickets = numTickets;
         this.totalPrice = totalPrice;
         this.tax = tax;
@@ -71,6 +71,9 @@ public class Invoice {
         this.ticketType = ticketType;
         this.eventType = eventType;
         this.date = date;
+        this.convenience = convenience;
+        this.service = service;
+        this.charity = charity;
         this.ticketList = newTicketList;
         this.confirmationNum = hashCode();
     }
@@ -95,7 +98,8 @@ public class Invoice {
      * Creates a hashCode from the attributes and is used as the confirmation code for the invoices
      */
     public int hashCode() {
-        return (int) numTickets.hashCode() + totalPrice.hashCode() + tax.hashCode() + eventID.hashCode() + eventName.hashCode() + ticketType.hashCode() + eventType.hashCode() + date.hashCode() + ticketList.hashCode();
+        return (int) numTickets.hashCode() + totalPrice.hashCode() + tax.hashCode() + eventID.hashCode() + eventName.hashCode() + ticketType.hashCode() + eventType.hashCode() + date.hashCode() + ticketList.hashCode() + 
+        convenience.hashCode() + service.hashCode() + charity.hashCode();
     }
 
     /**

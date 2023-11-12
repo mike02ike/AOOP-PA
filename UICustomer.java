@@ -20,9 +20,9 @@ import java.util.Scanner;
  * Class Purpose: The UICustomer class handles the menu options for the customer.
  * The log and invoices for the user are kept and updated inside of the UI.
  * <p>
- * @since 11/09/2023
+ * @since 11/11/2023
  * @author Erik LaNeave
- * @version 2.4
+ * @version 2.5
  * <p>
  * @since 10/27/2023
  * @author Michael Ike
@@ -77,7 +77,7 @@ public class UICustomer {
                     break;
                 case "5":
                     logFile.save(logFile.time() + " User picked menu option 5 to save invoices\n");
-                    saveInoice();
+                    saveInvoice();
                     break;
                 case "6":
                     logFile.save(logFile.time() + " User picked menu option 6 to cancel purchase\n");
@@ -228,7 +228,7 @@ public class UICustomer {
     /**
      * Saves the current invoices at a user might have to a text file.
      */
-    public void saveInoice() {
+    public void saveInvoice() {
         if (currCustomer.getInvoiceList().isEmpty()) {
             System.out.println("No invoices have been made\n");
             logFile.save(logFile.time() + " User tried to save empty invoice list\n");
@@ -264,8 +264,6 @@ public class UICustomer {
             logFile.save(logFile.time() + " User input was not an integer\n");
             System.out.println("Not a vaild confimation number\n");
         }
-
-
     }
 
     /**
