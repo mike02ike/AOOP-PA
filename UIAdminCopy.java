@@ -446,7 +446,7 @@ public class UIAdminCopy {
       Customer currCustomer = findCustomer(currAuto.getCustomerFName(), currAuto.getCustomerLName(), customerMap);
       completPurchase.setCurrentCustomer(currCustomer);
       completPurchase.setCurrentEvent(eventMap.get(currAuto.getEventID()));
-      completPurchase.autoPurchaseAdmin(currAuto.getTicketQuantity(), currAuto.getTicketType());
+      //completPurchase.autoPurchaseAdmin(currAuto.getTicketQuantity(), currAuto.getTicketType());
     }
     createAutoPurchaseInvoicesDir();
     writeNewAutoPurchaseInvoices(customerMap);
