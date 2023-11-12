@@ -33,6 +33,7 @@ public abstract class Event {
   private HashMap<String, ArrayList<Ticket>> purchasedTickets = new HashMap<>(); // Tickets sold by type
   private HashMap<String, Integer> numSeatsSold = new HashMap<>(); // Number of seats sold by type
   private HashMap<String, Double> seatRevenue = new HashMap<>(); // Revenue collected by type
+  private HashMap<Integer, ArrayList<Invoice>> invoices = new HashMap<>();
   private double expectedProfit;
   private double actualProfit;
   private double totalMemberDiscount; // Total amount customers have saved due to membership
@@ -106,6 +107,18 @@ public abstract class Event {
     this.collectedFees.put("convenience", 0.0);
     this.collectedFees.put("service", 0.0);
     this.collectedFees.put("charity", 0.0);
+  }
+
+  public HashMap<Integer, ArrayList<Invoice>> getInvoices() {
+    return this.invoices;
+  }
+
+  public void addInvoice(Invoice invoice) {
+    ArrayList<Invoice> temp = this.invoices.get(invoice.getCustomerID());
+    temp.add(invoice);
+
+    this.invoices.put(invoice.getCustomerID(), temp);
+
   }
 
   /**

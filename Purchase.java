@@ -23,9 +23,9 @@ import java.util.Scanner;
  * @version 2.2
  */
 
-public class Purchase{
+public class Purchase {
 
-    //Attributes
+    // Attributes
     private Event currentEvent;
     private Customer currentCustomer;
     private String currentTicketName;
@@ -33,7 +33,6 @@ public class Purchase{
     private int autoTicket;
     private Log logFile = Log.getInstance();
     private Scanner scnr = new Scanner(System.in);
-
 
     /**
      * Empty Constructor
@@ -43,6 +42,7 @@ public class Purchase{
 
     /**
      * Takes a event and customer ourCompanyect
+     * 
      * @param currentEvent
      * @param currentCustomer
      */
@@ -50,13 +50,14 @@ public class Purchase{
         this.currentEvent = currentEvent;
         this.currentCustomer = currentCustomer;
     }
-    
+
     /**
      * Start of auto purchase for admin
-     * should be able to make a new instance of the class and give event and customer and go from there
+     * should be able to make a new instance of the class and give event and
+     * customer and go from there
      */
     public void autoPurchaseAdmin() {
-        //setCurrentTicketName(ticketName);
+        // setCurrentTicketName(ticketName);
         double ticketPrice = ticketAmount();
         logFile.save(logFile.time() + " Starting auto purchase with customer " + currentCustomer.getFirstName() + "\n");
 
@@ -75,12 +76,15 @@ public class Purchase{
             updateCust(autoTicket);
             // Creates a new invoice for the customer
             createInvoice(autoTicket, totalCostWithTax);
-            logFile.save(logFile.time() + " Customer with name " + currentCustomer.getFirstName() + " purchased " + autoTicket
-                    + " tickets for event with ID " + currentEvent.getId() + " spending $" + doubleForm(totalCostWithTax)
+            logFile.save(logFile.time() + " Customer with name " + currentCustomer.getFirstName() + " purchased "
+                    + autoTicket
+                    + " tickets for event with ID " + currentEvent.getId() + " spending $"
+                    + doubleForm(totalCostWithTax)
                     + "\n");
             logFile.save(logFile.time() + " Customer with name " + currentCustomer.getFirstName() + " current funds: $"
                     + doubleForm(currentCustomer.getMoneyAvailable()) + "\n");
-            logFile.save(logFile.time() + " Available ticket type " + currentTicketName + " for event ID " + currentEvent.getId()
+            logFile.save(logFile.time() + " Available ticket type " + currentTicketName + " for event ID "
+                    + currentEvent.getId()
                     + " is now tickets\n");
             return;
         } catch (CheckTicketAvaException e) {
@@ -114,7 +118,8 @@ public class Purchase{
         // Try catch is used to catch possible string to int exception along with
         // exceptions made by me
         try {
-            // Gets ticket amount and checks that input is between 1 and 6 throws TicketInputException
+            // Gets ticket amount and checks that input is between 1 and 6 throws
+            // TicketInputException
             int inputInt = getTicketNumUser();
             // Checks that event has tickets for the purchase throws CheckTicketAvaException
             ticketCheck(inputInt);
@@ -130,11 +135,13 @@ public class Purchase{
             createInvoice(inputInt, totalCostWithTax);
             printNewInvoice();
             logFile.save(logFile.time() + " User with ID " + currentCustomer.getId() + " purchased " + inputInt
-                    + " tickets for event with ID " + currentEvent.getId() + " spending $" + doubleForm(totalCostWithTax)
+                    + " tickets for event with ID " + currentEvent.getId() + " spending $"
+                    + doubleForm(totalCostWithTax)
                     + "\n");
             logFile.save(logFile.time() + " User with ID " + currentCustomer.getId() + " current funds: $"
                     + doubleForm(currentCustomer.getMoneyAvailable()) + "\n");
-            logFile.save(logFile.time() + " Available ticket type " + currentTicketName + " for event ID " + currentEvent.getId()
+            logFile.save(logFile.time() + " Available ticket type " + currentTicketName + " for event ID "
+                    + currentEvent.getId()
                     + " is now tickets\n");
             System.out.println("Purchase was successful\n");
             return;
@@ -143,7 +150,7 @@ public class Purchase{
             logFile.save(logFile.time() + " User input exceeds ticket type amount for event\n");
             logFile.save(logFile.time() + " User with ID " + currentCustomer.getId()
                     + " failed to purchase tickets for event with ID " + currentEvent.getId() + "\n");
-            System.out.println("\n"+e.getMessage());
+            System.out.println("\n" + e.getMessage());
             if (checkIfUserExit()) {
                 System.out.println();
                 return;
@@ -157,13 +164,16 @@ public class Purchase{
             logFile.save(logFile.time() + " User has inufficient funds for this purchase\n");
             logFile.save(logFile.time() + " User with ID " + currentCustomer.getId()
                     + " failed to purchase tickets for event with ID " + currentEvent.getId() + "\n");
-            System.out.println("\n"+e.getMessage() + "Current funds are at $" + doubleForm(currentCustomer.getMoneyAvailable()));
+            System.out.println(
+                    "\n" + e.getMessage() + "Current funds are at $" + doubleForm(currentCustomer.getMoneyAvailable()));
             if (checkIfUserExit()) {
                 System.out.println();
                 return;
             }
-            System.out.println("Please go back through the purchase process and selcet a different ticket type or lower your ticket amount");
-            System.out.println("----------------------------------------------------------------------------------------------------------");
+            System.out.println(
+                    "Please go back through the purchase process and selcet a different ticket type or lower your ticket amount");
+            System.out.println(
+                    "----------------------------------------------------------------------------------------------------------");
             // If event doesn't have tickets then go back through menu
             purchaseTicketsCustomer();
         }
@@ -172,29 +182,34 @@ public class Purchase{
 
     /**
      * Finds the ticket price
+     * 
      * @return returns the ticketPrice
      */
     public double getTicketCostAmount() {
         System.out.print("Enter the name of the tickets you would like to purchase\n--> ");
         currentTicketName = scnr.nextLine();
         double ticketPrice = ticketAmount();
-        //if ticketamount returns -1 then ticket price was not found
+        // if ticketamount returns -1 then ticket price was not found
         if (ticketPrice == -1.0) {
-            logFile.save(logFile.time() + " User input was an incorrect with ticket name of " + currentTicketName + "\n");
+            logFile.save(
+                    logFile.time() + " User input was an incorrect with ticket name of " + currentTicketName + "\n");
             System.out.println("Ticket of that name does not exist\nPlease enter a valid ticket name\n");
-            //ask the user to enter the ticket amount again
+            // ask the user to enter the ticket amount again
             return getTicketCostAmount();
         }
         return ticketPrice;
     }
 
     /**
-     * Ask the user to enter the amounts of ticket they want to purchase and throws errors
+     * Ask the user to enter the amounts of ticket they want to purchase and throws
+     * errors
+     * 
      * @return number of tickets from user
      */
     public int getTicketNumUser() {
         try {
-            System.out.print("\nEnter the amount of tickets you would like to purchase\nLimit of 6 tickets per-transaction\n--> ");
+            System.out.print(
+                    "\nEnter the amount of tickets you would like to purchase\nLimit of 6 tickets per-transaction\n--> ");
             String userInput = scnr.nextLine();
             int inputInt = Integer.valueOf(userInput);
             ticketAmountCheck(inputInt);
@@ -202,24 +217,26 @@ public class Purchase{
         } catch (TicketInputException e) {
             logFile.save(logFile.time() + " Ticket input amount was not in range from 1 to 6\n");
             System.out.println(e.getMessage());
-            //Ask user to enter ticket to be purchased again
+            // Ask user to enter ticket to be purchased again
             return getTicketNumUser();
         } catch (NumberFormatException e) {
             // Catches the String to int exception
             logFile.save(logFile.time() + " User with ID " + currentCustomer.getId()
                     + " failed to enter an integer for ticket amount\n");
             System.out.println("Please enter an integer for ticket amount");
-            //Ask user to enter ticket to be purchased again
+            // Ask user to enter ticket to be purchased again
             return getTicketNumUser();
         }
     }
 
     /**
      * Asks the user if they want to exit the purchase method
+     * 
      * @return retuns true or false depending on user input
      */
     public boolean checkIfUserExit() {
-        System.out.println("Would you like to cancel the purchase or try again?\nEnter exit to cancel the order and anything else to try again.");
+        System.out.println(
+                "Would you like to cancel the purchase or try again?\nEnter exit to cancel the order and anything else to try again.");
         System.out.print("--> ");
         String userInput = scnr.nextLine();
         switch (userInput.toLowerCase()) {
@@ -239,8 +256,13 @@ public class Purchase{
         Venue tempVenue = currentEvent.getVenue();
         double[] ticketsAva = tempVenue.getNumAvailableSeats();
         double[] ogTickets = tempVenue.getOriginalAvailableSeats();
-        String amount = String.format("\n-- Number of Tickets Available --\n|Vip: %.0f|Gold: %.0f|Silver %.0f|Bronze: %.0f|General Admission: %.0f|\n", ticketsAva[0], ticketsAva[1], ticketsAva[2], ticketsAva[3], ticketsAva[4]);
-        String purchase = String.format("-- Number of Tickets Purchased --\n|Vip: %.0f|Gold: %.0f|Silver %.0f|Bronze: %.0f|General Admission: %.0f|\n", ogTickets[0]-ticketsAva[0], ogTickets[1]-ticketsAva[1], ogTickets[2]-ticketsAva[2], ogTickets[3]-ticketsAva[3], ogTickets[4]-ticketsAva[4]);
+        String amount = String.format(
+                "\n-- Number of Tickets Available --\n|Vip: %.0f|Gold: %.0f|Silver %.0f|Bronze: %.0f|General Admission: %.0f|\n",
+                ticketsAva[0], ticketsAva[1], ticketsAva[2], ticketsAva[3], ticketsAva[4]);
+        String purchase = String.format(
+                "-- Number of Tickets Purchased --\n|Vip: %.0f|Gold: %.0f|Silver %.0f|Bronze: %.0f|General Admission: %.0f|\n",
+                ogTickets[0] - ticketsAva[0], ogTickets[1] - ticketsAva[1], ogTickets[2] - ticketsAva[2],
+                ogTickets[3] - ticketsAva[3], ogTickets[4] - ticketsAva[4]);
         String price = String.format(
                 "-- Ticket Prices --\n|Vip: $%.2f|Gold: $%.2f|Silver $%.2f|Bronze: $%.2f|General Admission: $%.2f|\n",
                 currentEvent.getVipPrice(), currentEvent.getGoldPrice(), currentEvent.getSilverPrice(),
@@ -250,6 +272,7 @@ public class Purchase{
 
     /**
      * Takes in the ticket name and finds the price
+     * 
      * @return returns the price of the ticket or -1 if incorrect name
      */
     public double ticketAmount() {
@@ -271,6 +294,7 @@ public class Purchase{
 
     /**
      * Used to check user input for ticket amount
+     * 
      * @param inputInt
      * @throws TicketInputException
      */
@@ -283,6 +307,7 @@ public class Purchase{
 
     /**
      * Takes the currentTicketName and find the index for the array
+     * 
      * @param currentTicketName
      * @return returns the ticket number for the array in venue
      */
@@ -304,13 +329,15 @@ public class Purchase{
     }
 
     /**
-     * Checks that the event has tickets equal to the amount that user wants to purchase
+     * Checks that the event has tickets equal to the amount that user wants to
+     * purchase
+     * 
      * @throws CheckTicketAvaException
      */
     public void ticketCheck(int userTicketAmount) throws CheckTicketAvaException {
         double[] ticketAv = currentEvent.getVenue().getNumAvailableSeats();
         int ticketNumValue = findTicketNum();
-        //Checks the ticket amount and returns if the ticket name is not valid
+        // Checks the ticket amount and returns if the ticket name is not valid
         if (ticketNumValue != -1 && ticketAv[ticketNumValue] >= userTicketAmount && userTicketAmount >= 1) {
             return;
         }
@@ -332,6 +359,7 @@ public class Purchase{
 
     /**
      * Finds the total cost of the purchase and handles discounts and tax
+     * 
      * @param ticketPrice
      * @param ticketAmount
      * @return totalCost
@@ -357,7 +385,9 @@ public class Purchase{
     }
 
     /**
-     * Updates the event information based on the number of tickets purchased and ticket names.
+     * Updates the event information based on the number of tickets purchased and
+     * ticket names.
+     * 
      * @param numOfTickets
      */
     public void updateEvent(int numOfTickets) {
@@ -377,6 +407,7 @@ public class Purchase{
 
     /**
      * Creates an arraylist of tickets that is stored in the invoice
+     * 
      * @param userTicketAmount
      * @return arraylist of ticket ourCompanyects
      */
@@ -384,7 +415,8 @@ public class Purchase{
         ArrayList<Ticket> ticketList = new ArrayList<Ticket>();
 
         for (int i = 0; i < userTicketAmount; i++) {
-            Ticket tempTicket = new Ticket(currentCustomer.getFirstName(), currentCustomer.getLastName(), currentTicketName);
+            Ticket tempTicket = new Ticket(currentCustomer.getFirstName(), currentCustomer.getLastName(),
+                    currentTicketName);
             ticketList.add(tempTicket);
         }
 
@@ -398,18 +430,24 @@ public class Purchase{
     public String doubleForm(double toBeForm) {
         return String.format("%.2f", toBeForm);
     }
-    
+
     /**
      * Creates an invoice for the purchase that the customer made
+     * 
      * @param userTicketAmount
      * @param totalCostWithTax
      */
     public void createInvoice(int userTicketAmount, Double totalCostWithTax) {
         ArrayList<Ticket> ticketList = makeTicketListInvoice(userTicketAmount);
         TicketMiner ourCompany = TicketMiner.getInstance();
-        Invoice newInvoice = new Invoice(userTicketAmount, totalCostWithTax, currentTaxAmount, currentEvent.getId(), currentEvent.getName(), currentTicketName, currentEvent.getEventType(), currentEvent.getDate(), 
-        ourCompany.getConvenienceFee(),ourCompany.getServiceFee(userTicketAmount, userTicketAmount),ourCompany.getCharityFee(userTicketAmount, userTicketAmount),ticketList);
-        logFile.save(logFile.time() + " Invoice with confimation number " + newInvoice.getConfirmationNum() + " created for user purchase\n");
+        Invoice newInvoice = new Invoice(this.currentCustomer.getId(), userTicketAmount, totalCostWithTax,
+                currentTaxAmount,
+                currentEvent.getId(), currentEvent.getName(), currentTicketName, currentEvent.getEventType(),
+                currentEvent.getDate(),
+                ourCompany.getConvenienceFee(), ourCompany.getServiceFee(userTicketAmount, userTicketAmount),
+                ourCompany.getCharityFee(userTicketAmount, userTicketAmount), ticketList);
+        logFile.save(logFile.time() + " Invoice with confimation number " + newInvoice.getConfirmationNum()
+                + " created for user purchase\n");
         currentCustomer.addInvoice(newInvoice);
     }
 
@@ -418,7 +456,7 @@ public class Purchase{
      */
     public void printNewInvoice() {
         ArrayList<Invoice> invoiceList = currentCustomer.getInvoiceList();
-        Invoice newInvoice = invoiceList.get(invoiceList.size()-1);
+        Invoice newInvoice = invoiceList.get(invoiceList.size() - 1);
         // The new invoice is printed to the user
         System.out.println("\n ---------CREATED INVOICE---------");
         newInvoice.printInvoice();
