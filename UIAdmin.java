@@ -65,8 +65,9 @@ public class UIAdmin {
             System.out.println("5 - Save an Invoice for a Customer");
             System.out.println("6 - Cancel event");
             System.out.println("Enter \"Exit\" to exit the Program");
+
             // Only takes in strings to help with exceptions
-            String inputUser = myScanner.nextLine();
+            String inputUser = myScanner.next();
             // switch case used to cut down on possible exceptions and clean look
             switch (inputUser.toLowerCase()) {
                 case "1": // 1 - inquire event by ID
@@ -90,7 +91,7 @@ public class UIAdmin {
                     saveInvoiceForCustomer();
                     break;
                 case "6":
-
+                    cancelEvent();
                     break;
                 case "exit":
                     System.out.println("\nThank you for using TicketMiner!\nTerminating program...");
@@ -103,8 +104,49 @@ public class UIAdmin {
                     System.out.println("Invalid input. Please enter a number 1 - 4");
                     break;
             }// end switch
+
         }
         return false;
+    }
+
+    public void cancelEvent() {
+        Event selectedEvent = selectEvent();
+        selectedEvent.setIsCanceled(true);
+
+        if (!selectedEvent.getInvoices().isEmpty()) {
+            HashMap<Integer, ArrayList<Invoice>> invoices = selectedEvent.getInvoices();
+
+            for (Entry<Integer, ArrayList<Invoice>> invoice : invoices.entrySet()) {
+                ArrayList<Invoice> customerInvoices = invoice.getValue();
+                double refundAmount = 0;
+
+                for (Invoice currInvoice : customerInvoices) {
+                    refundAmount += currInvoice.getTotalPrice();
+                }
+
+                customers.get(invoice.getKey()).addMoney(refundAmount);
+            }
+        }
+
+        System.out.println("\nEvent has been canceled and all collected money has been refunded.");
+    }
+
+    public Event selectEvent() {
+        while (true) {
+            try {
+                System.out.println("Enter the event ID of the event you would like to cancel.");
+                int input = myScanner.nextInt();
+
+                if (events.get(input) != null) {
+                    return events.get(input);
+                } else {
+                    System.out.println("Event does not exist. Try again.");
+                }
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid input! Please enter a number");
+                myScanner.next();
+            }
+        }
     }
 
     /**

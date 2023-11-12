@@ -114,6 +114,11 @@ public abstract class Event {
   }
 
   public void addInvoice(Invoice invoice) {
+    if (this.invoices.get(invoice.getCustomerID()) == null) {
+      ArrayList<Invoice> customerInvoices = new ArrayList<>();
+      this.invoices.put(invoice.getCustomerID(), customerInvoices);
+    }
+
     ArrayList<Invoice> temp = this.invoices.get(invoice.getCustomerID());
     temp.add(invoice);
 

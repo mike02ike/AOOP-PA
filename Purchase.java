@@ -449,6 +449,7 @@ public class Purchase {
         logFile.save(logFile.time() + " Invoice with confimation number " + newInvoice.getConfirmationNum()
                 + " created for user purchase\n");
         currentCustomer.addInvoice(newInvoice);
+        currentEvent.addInvoice(newInvoice);
     }
 
     /**
