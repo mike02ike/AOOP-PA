@@ -177,6 +177,7 @@ public class EventHandler extends CSVHandler<Integer, Event> {
     }
     currVenue.calculateNumSeats(); // Have numbers of seats calculated
     currEvent.setVenue(currVenue); // Set venue
+    currEvent.setIsCanceled(false); // Event is not canceled
 
     return Map.entry(currEvent.getId(), currEvent);
   }

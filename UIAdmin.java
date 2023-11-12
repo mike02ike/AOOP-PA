@@ -57,8 +57,14 @@ public class UIAdmin {
         boolean control = true;
         while (control) {
             // Prints the menu options and ask for user input as option
-            System.out.print(
-                    "\nAdministrator Menu:\n1 - Inquire Event by ID\n2 - Inquire Event by Name\n3 - Create New Event\n4 - Run Auto Purchase\n5 - Save an Invoice for a Customer\nEnter \"Exit\" to exit the Program\n--> ");
+            System.out.println("Administrator Menu");
+            System.out.println("1 - Inquire Event by ID");
+            System.out.println("2 - Inquire Event by Name");
+            System.out.println("3 - Create New Event");
+            System.out.println("4 - Run Auto Purchase");
+            System.out.println("5 - Save an Invoice for a Customer");
+            System.out.println("6 - Cancel event");
+            System.out.println("Enter \"Exit\" to exit the Program");
             // Only takes in strings to help with exceptions
             String inputUser = myScanner.nextLine();
             // switch case used to cut down on possible exceptions and clean look
@@ -82,6 +88,9 @@ public class UIAdmin {
                 case "5": // 5 - Save invoice for customer
                     logFile.save(logFile.time() + " Admin picked menu option 5 to save an invoice for a user\n");
                     saveInvoiceForCustomer();
+                    break;
+                case "6":
+
                     break;
                 case "exit":
                     System.out.println("\nThank you for using TicketMiner!\nTerminating program...");
@@ -408,7 +417,7 @@ public class UIAdmin {
     public void autoPurchase() {
         Purchase completPurchase = new Purchase();
         ArrayList<AutoPurchaseInstruction> autoPurchases = getAutoPurchaseInfo();
-        HashMap<String,Customer> cache = new HashMap<String,Customer>();
+        HashMap<String, Customer> cache = new HashMap<String, Customer>();
         if (autoPurchases == null) {
             return;
         }
@@ -416,8 +425,8 @@ public class UIAdmin {
         System.out.println(logFile.time());
         for (AutoPurchaseInstruction currAuto : autoPurchases) {
             Customer currCustomer;
-            if (cache.get(currAuto.getCustomerFName()+currAuto.getCustomerLName()) != null) {
-                currCustomer = cache.get(currAuto.getCustomerFName()+currAuto.getCustomerLName());
+            if (cache.get(currAuto.getCustomerFName() + currAuto.getCustomerLName()) != null) {
+                currCustomer = cache.get(currAuto.getCustomerFName() + currAuto.getCustomerLName());
             } else {
                 currCustomer = findCustomer(currAuto.getCustomerFName(), currAuto.getCustomerLName(), cache);
             }
@@ -446,11 +455,11 @@ public class UIAdmin {
         }
     }
 
-    public Customer findCustomer(String firstName, String lastName, HashMap<String,Customer> cache) {
+    public Customer findCustomer(String firstName, String lastName, HashMap<String, Customer> cache) {
         for (Customer currCust : this.customers.values()) {
             if (currCust.getFirstName().equalsIgnoreCase(firstName)
                     && currCust.getLastName().equalsIgnoreCase(lastName)) {
-                cache.put(firstName+lastName, currCust);
+                cache.put(firstName + lastName, currCust);
                 return currCust;
             }
         }
