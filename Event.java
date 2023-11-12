@@ -655,4 +655,12 @@ public abstract class Event {
     this.collectedFees.put("charity", this.getCharityFee() + feeIn);
   }
 
+  public void setIsCanceled(boolean isCanceled) {
+    this.isCanceled = isCanceled;
+  }
+
+  public boolean getIsCanceled() {
+    return this.isCanceled;
+  }
+
 }
