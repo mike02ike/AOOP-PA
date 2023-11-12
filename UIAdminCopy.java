@@ -29,6 +29,11 @@ import java.util.Map.Entry;
  * information, and access additional calculated information.
  * <p>
  * 
+ * @since 11/09/2023
+ * @author Anaiah Quinn
+ * @version 2.5
+ *        <p>
+ * 
  * @since 11/06/2023
  * @author Erik LaNeave
  * @version 2.4
@@ -64,7 +69,7 @@ public class UIAdminCopy {
     while (control) {
       // Prints the menu options and ask for user input as option
       System.out.print(
-          "\nAdministrator Menu:\n1 - Inquire Event by ID\n2 - Inquire Event by Name\n3 - Create New Event\n4 - Run Auto Purchase\n5 - Save an Invoice for a Customer\nEnter \"Exit\" to exit the Program\n--> ");
+          "\nAdministrator Menu:\n1 - Inquire Event by ID\n2 - Inquire Event by Name\n3 - Create New Event\n4 - Run Auto Purchase\n5 - Save an Invoice for a Customer\n 6- Print all Event Fees\nEnter \"Exit\" to exit the Program\n--> ");
       // Only takes in strings to help with exceptions
       String inputUser = myScanner.nextLine();
       // switch case used to cut down on possible exceptions and clean look
@@ -88,6 +93,10 @@ public class UIAdminCopy {
         case "5": // 5 - Save invoice for customer
           logFile.save(logFile.time() + " Admin picked menu option 5 to save an invoice for a user\n");
           saveInvoiceForCustomer(customerMap);
+          break;
+        case "6"://6 - Print Fees for all Events
+          logFile.save(logFile.time() + "Admin picked menu option 6 to print all event fees");
+          //call method to implent
           break;
         case "exit":
           System.out.println("\nThank you for using TicketMiner!\nTerminating program...");
@@ -405,7 +414,7 @@ public class UIAdminCopy {
     System.out.println("================================\n");
     while (true) {
       System.out.print("Submenu for Additional Information\n");
-      System.out.print("1 - View Event Calculated Info\n2 - Exit Submenu\n--> ");
+      System.out.print("1 - View Event Calculated Info\n2 - Print Event Fees\n3 - Exit Submenu\n--> ");
       String input = myScanner.nextLine();
       switch (input) {
         case "1": // Views calculated event info
@@ -416,7 +425,11 @@ public class UIAdminCopy {
           System.out.println("Total Revenue");
           currEvent.adminPrintRevenueInfo();
           break;
-        case "2": // Exit subMenu
+        case "2"://Prints total fees for event
+          logFile.save(logFile.time() + "Admin picked submenu option 2 to print event fees\n");
+          //implimentation to be determined
+          break;
+        case "3": // Exit subMenu
           logFile.save(logFile.time() + " Admin picked submenu option 2 to exit submenu\n");
           System.out.println("Exiting sub menu...");
           return;
