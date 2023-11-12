@@ -21,9 +21,9 @@ import java.time.format.DateTimeFormatter;
  * Class Purpose: The Log class is used to maintain the record of what
  * has changed in the Sport classes and to write to the log file when the program terminates
  * <p>
- * Last Change: 11/11/2023
+ * Last Change: 11/12/2023
  * @author Erik LaNeave
- * @version 1.2
+ * @version 1.3
 */
 
 public class Log {
@@ -76,6 +76,25 @@ public class Log {
             //Creates the fileWriter object
             this.recordWrite = new FileWriter(this.fileName);
             //Writes the information
+            this.recordWrite.write(this.record.toString());
+            //Closes the file
+            this.recordWrite.close();
+        } catch (IOException e) {
+            System.out.println("Error when trying to write to the file");
+        } catch (OutOfMemoryError e) {
+            writeBigLogFile();
+        }
+    }
+
+    /**
+     * Writes log event if the log file is too big for a single write
+     */
+    public void writeBigLogFile() {
+        //Try-catch used incase of an error when writing
+        try {
+            //Creates the fileWriter object
+            this.recordWrite = new FileWriter(this.fileName);
+            //Writes the information
             String temp = this.record.toString();
             //a dirty way to handle the log when it is too big for write
             String sub1 = temp.substring(0, record.length()/2);
@@ -84,11 +103,12 @@ public class Log {
             for (int i = 0; i < subArr.length; i++) {
                 this.recordWrite.write(subArr[i]);
             }
-            //this.recordWrite.write(this.record.toString());
             //Closes the file
             this.recordWrite.close();
         } catch (IOException e) {
             System.out.println("Error when trying to write to the file");
+        } catch (OutOfMemoryError e) {
+            System.out.println("Log file is too big for bigLogFile function");
         }
     }
 

@@ -18,10 +18,10 @@ import java.util.LinkedHashMap;
  * Class Purpose: This class contains the main method and creates the HashMaps
  * and UI.
  * <p>
- * Last Change: 11/11/2023
+ * Last Change: 11/12/2023
  *
  * @author Erik LaNeave
- * @version 2.2
+ * @version 2.3
  */
 
 public class RunTicket {
@@ -74,8 +74,6 @@ public class RunTicket {
             logFile.save(logFile.time() + " One or both CSV Files not found\n");
             System.out.println("CSV Files not found");
             logFile.writeLogFile();
-        } catch (OutOfMemoryError e) {
-            System.out.println("Log file is too larger to save");
         }
     }
 }
