@@ -21,9 +21,9 @@ import java.time.format.DateTimeFormatter;
  * Class Purpose: The Log class is used to maintain the record of what
  * has changed in the Sport classes and to write to the log file when the program terminates
  * <p>
- * Last Change: 10/29/2023
+ * Last Change: 11/11/2023
  * @author Erik LaNeave
- * @version 1.3
+ * @version 1.2
 */
 
 public class Log {
@@ -33,7 +33,7 @@ public class Log {
     private String fileName = "Log.txt";
     private FileWriter recordWrite;
     //String that is updated during the run of the program and stores the changes made
-    private String record = "";
+    private StringBuilder record = new StringBuilder();
 
     /**
      * Constructor makes the log.txt file when a instance of the object is made
@@ -76,7 +76,15 @@ public class Log {
             //Creates the fileWriter object
             this.recordWrite = new FileWriter(this.fileName);
             //Writes the information
-            this.recordWrite.write(this.record);
+            String temp = this.record.toString();
+            //a dirty way to handle the log when it is too big for write
+            String sub1 = temp.substring(0, record.length()/2);
+            String sub2 = temp.substring(record.length()/2+1, record.length());
+            String[] subArr = {sub1, sub2};
+            for (int i = 0; i < subArr.length; i++) {
+                this.recordWrite.write(subArr[i]);
+            }
+            //this.recordWrite.write(this.record.toString());
             //Closes the file
             this.recordWrite.close();
         } catch (IOException e) {
@@ -89,7 +97,7 @@ public class Log {
      * @param toBeSaved
      */
     public void save(String toBeSaved) {
-        this.record = this.record + toBeSaved;
+        this.record.append(toBeSaved);
     }
 
     /**
