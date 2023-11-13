@@ -18,7 +18,7 @@ import java.util.Map.Entry;
  * 
  * @since 11/12/2023
  * @author Erik LaNeave
- * @version 2.7
+ * @version 2.8
  *          <p>
  * @since 10/25/2023
  * @author Michael Ike
@@ -53,7 +53,7 @@ public class UIAdmin {
         this.customers = customerMap;
     }
 
-    public boolean menu() {
+    public void menu() {
         boolean control = true;
         while (control) {
             // Prints the menu options and ask for user input as option
@@ -106,7 +106,7 @@ public class UIAdmin {
             }// end switch
 
         }
-        return false;
+        return;
     }
 
     public void cancelEvent() {
