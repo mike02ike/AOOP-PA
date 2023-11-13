@@ -12,7 +12,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
 
 /**
  * Course: Adv. Object-Oriented Programming
@@ -22,10 +21,9 @@ import java.util.ArrayList;
  * Class Purpose: The Log class is used to maintain the record of what
  * has changed in the Sport classes and to write to the log file when the program terminates
  * <p>
- * Last Change: 11/12/2023
- * Last Change: 11/12/2023
+ * Last Change: 11/13/2023
  * @author Erik LaNeave
- * @version 1.5
+ * @version 1.6
 */
 
 public class Log {
@@ -88,47 +86,45 @@ public class Log {
         } catch (IOException e) {
             System.out.println("Error when trying to write to the file");
         } catch (OutOfMemoryError e) {
-            writeBigLogFile();
+            System.out.println("Out of memory");
         }
     }
 
-    /**
-     * Writes log event if the log file is too big for a single write
-     */
-    public void writeBigLogFile() {
-        //Try-catch used incase of an error when writing
-        try {
-            //Creates the fileWriter object
-            this.recordWrite = new FileWriter(this.fileName, true);
-            //Writes the information
-            String temp = this.record.toString();
-            System.out.println("just turned record into string");
-            ArrayList<String> tempArr = new ArrayList<String>();
-            makeStringSmaller(temp, tempArr, 0, record.length(), 0);
-            System.out.println("Running the for loop in big log file");
-            for (int i = 0; i < tempArr.size(); i++) {
-                System.out.println("in for loop");
-                this.recordWrite.write(tempArr.get(i));
-            }
-            //Closes the file
-            this.recordWrite.close();
-        } catch (IOException e) {
-            System.out.println("Error when trying to write to the file");
-        } catch (OutOfMemoryError e) {
-            System.out.println("Log file is too big for bigLogFile function");
-        }
-    }
+    // /**
+    //  * Writes log event if the log file is too big for a single write
+    //  */
+    // public void writeBigLogFile() {
+    //     //Try-catch used incase of an error when writing
+    //     try {
+    //         //Creates the fileWriter object
+    //         this.recordWrite = new FileWriter(this.fileName, true);
+    //         //Writes the information
+    //         String temp = this.record.toString();
+    //         System.out.println("just turned record into string");
+    //         ArrayList<String> tempArr = new ArrayList<String>();
+    //         makeStringSmaller(temp, tempArr, 0, record.length(), 0);
+    //         for (int i = 0; i < tempArr.size(); i++) {
+    //             this.recordWrite.write(tempArr.get(i));
+    //         }
+    //         //Closes the file
+    //         this.recordWrite.close();
+    //     } catch (IOException e) {
+    //         System.out.println("Error when trying to write to the file");
+    //     } catch (OutOfMemoryError e) {
+    //         System.out.println("Log file is too big for bigLogFile function");
+    //     }
+    // }
 
-    public void makeStringSmaller(String temp, ArrayList<String> arrTemp, int start, int end, int runs) {
-        if (runs == 4) {
-            arrTemp.add(temp);
-            return;
-        }
-        String sub1 = temp.substring(0, end/2);
-        String sub2 = temp.substring(end/2+1, end);
-        makeStringSmaller(sub1, arrTemp, 0, end/2, runs + 1);
-        makeStringSmaller(sub2, arrTemp, end/2, end, runs + 1);
-    }
+    // public void makeStringSmaller(String temp, ArrayList<String> arrTemp, int start, int end, int runs) {
+    //     if (runs == 15 || temp.length() <= 1) {
+    //         arrTemp.add(temp);
+    //         return;
+    //     }
+    //     String sub1 = temp.substring(0, end/2);
+    //     String sub2 = temp.substring(end/2, end);
+    //     makeStringSmaller(sub1, arrTemp, 0, sub1.length(), runs + 1);
+    //     makeStringSmaller(sub2, arrTemp, end/2, sub2.length(), runs + 1);
+    // }
 
     /**
      * Takes a change made and adds to the record string
@@ -136,14 +132,13 @@ public class Log {
      */
     public void save(String toBeSaved) {
         try {
-            if (record.length() >= 100000) {
+            if (record.length() >= 500000) {
                 writeLogFile();
                 record.delete(0, record.length());
             }
             this.record.append(toBeSaved);
         } catch (OutOfMemoryError e) {
-            writeLogFile();
-            record.delete(0, record.length());
+            System.out.println("Out of memory");
         }
     }
 

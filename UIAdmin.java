@@ -16,9 +16,9 @@ import java.util.Map.Entry;
  * information, and access additional calculated information.
  * <p>
  * 
- * @since 11/12/2023
+ * @since 11/13/2023
  * @author Erik LaNeave
- * @version 2.8
+ * @version 2.9
  *          <p>
  * @since 10/25/2023
  * @author Michael Ike
@@ -57,7 +57,7 @@ public class UIAdmin {
         boolean control = true;
         while (control) {
             // Prints the menu options and ask for user input as option
-            System.out.println("Administrator Menu");
+            System.out.println("\nAdministrator Menu");
             System.out.println("1 - Inquire Event by ID");
             System.out.println("2 - Inquire Event by Name");
             System.out.println("3 - Create New Event");
@@ -94,14 +94,14 @@ public class UIAdmin {
                     cancelEvent();
                     break;
                 case "exit":
-                    System.out.println("\nThank you for using TicketMiner!\nTerminating program...");
+                    System.out.println("\nThank you for using TicketMiner!\nReturning to login...");
                     logFile.save(logFile.time() + " Admin terminated the program\n");
                     // Stops while loop from running in RunTicket
                     control = false;
                     break;
                 default: // Used for incorrect input
                     logFile.save(logFile.time() + " Admin inputted an invalid menu option\n");
-                    System.out.println("Invalid input. Please enter a number 1 - 4");
+                    System.out.println("Invalid input. Please enter a number 1 - 6");
                     break;
             }// end switch
 
@@ -487,7 +487,7 @@ public class UIAdmin {
         createAutoPurchaseInvoicesDir();
         writeNewAutoPurchaseInvoices();
         logFile.save(logFile.time() + " Auto purchase complete and all invoices saved\n");
-        System.out.println("Auto purchase complete and Invoices have been saved\n");
+        System.out.println("Auto purchase complete and Invoices have been saved");
     }
 
     public ArrayList<AutoPurchaseInstruction> getAutoPurchaseInfo() {

@@ -20,9 +20,9 @@ import java.util.Scanner;
  * A log of login information is made.
  * <p>
  * 
- * @since 11/12/2023
+ * @since 11/13/2023
  * @author Erik LaNeave
- * @version 1.3
+ * @version 1.4
  *          <p>
  * @since 10/28/2023
  * @author Michael Ike
@@ -63,7 +63,7 @@ public class Login {
                 admin.menu();
                 return true;
             case "exit":
-                logFile.save(logFile.time() + " User terminated the program");
+                logFile.save(logFile.time() + " User terminated the program\n");
                 return false;
             default:
                 logFile.save(logFile.time() + " User entered an invalid option\n");
