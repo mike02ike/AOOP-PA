@@ -109,6 +109,31 @@ public abstract class Event {
     this.collectedFees.put("charity", 0.0);
   }
 
+  public void updateConvenienceFees(double convenienceIn) {
+    TicketMiner company = TicketMiner.getInstance();
+    
+    double currentConvenienceFees = collectedFees.get("convenience");
+    double updatedConvenienceFees = currentConvenienceFees + convenienceIn;
+    collectedFees.put("convenience", updatedConvenienceFees);
+  }
+
+  public void updateServiceFees(double serviceIn) {
+    TicketMiner company = TicketMiner.getInstance();
+    
+    double currentServiceFees = collectedFees.get("service");
+    double updatedServiceFees = currentServiceFees + serviceIn;
+    collectedFees.put("service", updatedServiceFees);
+  }
+
+  public void updateCharityFees(double charityIn) {
+    TicketMiner company = TicketMiner.getInstance();
+    
+    double currentCharityFees = collectedFees.get("charity");
+    double updatedServiceFees = currentCharityFees + charityIn;
+    collectedFees.put("charity", updatedServiceFees);
+  }
+
+
   public HashMap<Integer, ArrayList<Invoice>> getInvoices() {
     return this.invoices;
   }

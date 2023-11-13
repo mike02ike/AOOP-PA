@@ -367,6 +367,9 @@ public class Purchase {
     public double getTotalCost(double ticketPrice, int ticketAmount) {
         TicketMiner ourCompany = TicketMiner.getInstance();
         double subTotal = (ticketPrice * ticketAmount) + ourCompany.getAllFees(ticketAmount, ticketPrice);
+        currentEvent.updateConvenienceFees(ourCompany.getConvenienceFee());
+        currentEvent.updateServiceFees(ourCompany.getServiceFee(ticketAmount, ticketPrice));
+        currentEvent.updateCharityFees(ourCompany.getCharityFee(ticketAmount, ticketPrice));
 
         // TicketMiner Member Discount
         if (currentCustomer.getTicketMinerMember()) {

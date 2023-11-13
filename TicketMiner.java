@@ -7,6 +7,7 @@
  * of Texas at El Paso and a grade will be assigned for the work I produced.
 */
 
+import java.util.HashMap;
 /**
  * Course: Adv. Object-Oriented Programming
  * <p>
@@ -20,16 +21,16 @@
  * @version 1.0
  */
 
-
 //TODO: Create a hashmap that has a key -> eventId and value -> hashmap of event fees
 
 
 public class TicketMiner{
     //attributes
-    private static TicketMiner obj;
+    private static TicketMiner obj; //singleton
     private double convenienceFee = 2.50;
     private double serviceFee;
     private double charityFee;
+    private HashMap<Integer, HashMap<String, Double>> collectedFees = new HashMap<>();
 
 
 
