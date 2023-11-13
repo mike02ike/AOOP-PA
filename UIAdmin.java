@@ -423,13 +423,18 @@ public class UIAdmin {
         }
         logFile.save(logFile.time() + " AutoPurchse CSV read\n");
         System.out.println(logFile.time());
+        StringBuilder firstAndLast = new StringBuilder();
         for (AutoPurchaseInstruction currAuto : autoPurchases) {
             Customer currCustomer;
-            if (cache.get(currAuto.getCustomerFName() + currAuto.getCustomerLName()) != null) {
-                currCustomer = cache.get(currAuto.getCustomerFName() + currAuto.getCustomerLName());
+            firstAndLast.append(currAuto.getCustomerFName());
+            firstAndLast.append(currAuto.getCustomerLName());
+            String custName = firstAndLast.toString();
+            if (cache.get(custName) != null) {
+                currCustomer = cache.get(custName);
             } else {
                 currCustomer = findCustomer(currAuto.getCustomerFName(), currAuto.getCustomerLName(), cache);
             }
+            firstAndLast.delete(0, firstAndLast.length());
             completPurchase.setCurrentCustomer(currCustomer);
             completPurchase.setCurrentEvent(this.events.get(currAuto.getEventID()));
             completPurchase.setAutoTicket(currAuto.getTicketQuantity());
@@ -440,7 +445,7 @@ public class UIAdmin {
         createAutoPurchaseInvoicesDir();
         writeNewAutoPurchaseInvoices();
         logFile.save(logFile.time() + " Auto purchase complete and all invoices saved\n");
-        System.out.println("Auto purchase complete and Invoices have been saved");
+        System.out.println("Auto purchase complete and Invoices have been saved\n");
     }
 
     public ArrayList<AutoPurchaseInstruction> getAutoPurchaseInfo() {
