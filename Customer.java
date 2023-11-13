@@ -8,16 +8,16 @@ import java.util.ArrayList;
  * @author Erik LaNeave
  * @since 11/04/2023
  * @version 1.2
- *         Course: CS 3331 - Advanced Object Oriented Programming
- *         Instructor: Dr. Daniel Mejia
- *         Programming Assignment 3
- *         Lab Description: This program is an extension of PA2, with added tax
- *         and discount functionality. It is also merged with a teammate.
- *         Honesty Statement: I completed this work entirely on my own without
- *         any outside sources including peers, experts, online sources, or the
- *         like. The only assistance I received was from the instructor, TA, or
- *         IA.
- * <p>
+ *          Course: CS 3331 - Advanced Object Oriented Programming
+ *          Instructor: Dr. Daniel Mejia
+ *          Programming Assignment 3
+ *          Lab Description: This program is an extension of PA2, with added tax
+ *          and discount functionality. It is also merged with a teammate.
+ *          Honesty Statement: I completed this work entirely on my own without
+ *          any outside sources including peers, experts, online sources, or the
+ *          like. The only assistance I received was from the instructor, TA, or
+ *          IA.
+ *          <p>
  * @since 10/30/2023
  * @author Michael Ike
  * @version 1.1
@@ -106,6 +106,10 @@ public class Customer {
    */
   public void adjustMoneyAvailable(double purchaseAmount) {
     this.moneyAvailable -= purchaseAmount;
+  }
+
+  public void addMoney(double moneyIn) {
+    this.moneyAvailable += moneyIn;
   }
 
   /**

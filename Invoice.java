@@ -14,21 +14,24 @@ import java.util.ArrayList;
  * <p>
  * Instructor: Daniel Mejia
  * <p>
- * Class Purpose: The Invoice class is used to create invoices which are stored in UI
+ * Class Purpose: The Invoice class is used to create invoices which are stored
+ * in UI
  * using a ArrayList of Invoices.
  * <p>
+ * 
  * @since 11/11/2023
  * @author Erik LaNeave
  * @version 2.0
- * <p>
+ *          <p>
  * @since 10/28/2023
  * @author Michael Ike
  * @version 1.8
-*/
+ */
 
 public class Invoice {
 
-    //Attributes
+    // Attributes
+    private Integer customerID;
     private Integer eventID;
     private Integer numTickets;
     private int confirmationNum;
@@ -43,14 +46,13 @@ public class Invoice {
     private Double charity;
     private ArrayList<Ticket> ticketList = new ArrayList<Ticket>();
 
-    //Constructors
+    // Constructors
     /**
      * Empty constructor
      */
     public Invoice() {
     }
 
-    
     /**
      * @param numTickets
      * @param totalPrice
@@ -62,7 +64,11 @@ public class Invoice {
      * @param date
      * @param newTicketList
      */
-    public Invoice(int numTickets, double totalPrice, double tax, int eventID, String eventName, String ticketType, String eventType, String date, double convenience, double service, double charity, ArrayList<Ticket> newTicketList) {
+    public Invoice(int customerID, int numTickets, double totalPrice, double tax, int eventID, String eventName,
+            String ticketType,
+            String eventType, String date, double convenience, double service, double charity,
+            ArrayList<Ticket> newTicketList) {
+        this.customerID = customerID;
         this.numTickets = numTickets;
         this.totalPrice = totalPrice;
         this.tax = tax;
@@ -78,28 +84,31 @@ public class Invoice {
         this.confirmationNum = hashCode();
     }
 
-    //Methods
+    // Methods
 
     /**
      * Prints the invoice object for the user
      */
     public void printInvoice() {
-        System.out.printf("Event Name: %s\n",getEventName());
-        System.out.printf("Event ID: %d\n",getEventID());
-        System.out.printf("Ticket Type: %s\n",getTicketType());
-        System.out.printf("Number of tickets bought: %d\n",getNumTickets());
-        System.out.printf("Total cost of order: $%.2f\n",getTotalPrice());
-        System.out.printf("Total tax of order was: $%.2f\n",getTax());
-        System.out.printf("Confirmation Number: %d\n",getConfirmationNum());
+        System.out.printf("Event Name: %s\n", getEventName());
+        System.out.printf("Event ID: %d\n", getEventID());
+        System.out.printf("Ticket Type: %s\n", getTicketType());
+        System.out.printf("Number of tickets bought: %d\n", getNumTickets());
+        System.out.printf("Total cost of order: $%.2f\n", getTotalPrice());
+        System.out.printf("Total tax of order was: $%.2f\n", getTax());
+        System.out.printf("Confirmation Number: %d\n", getConfirmationNum());
         System.out.printf("----------------------------------\n");
     }
 
     /**
-     * Creates a hashCode from the attributes and is used as the confirmation code for the invoices
+     * Creates a hashCode from the attributes and is used as the confirmation code
+     * for the invoices
      */
     public int hashCode() {
-        return (int) numTickets.hashCode() + totalPrice.hashCode() + tax.hashCode() + eventID.hashCode() + eventName.hashCode() + ticketType.hashCode() + eventType.hashCode() + date.hashCode() + ticketList.hashCode() + 
-        convenience.hashCode() + service.hashCode() + charity.hashCode();
+        return (int) numTickets.hashCode() + totalPrice.hashCode() + tax.hashCode() + eventID.hashCode()
+                + eventName.hashCode() + ticketType.hashCode() + eventType.hashCode() + date.hashCode()
+                + ticketList.hashCode() +
+                convenience.hashCode() + service.hashCode() + charity.hashCode();
     }
 
     /**
@@ -276,5 +285,13 @@ public class Invoice {
      */
     public void setCharity(Double charity) {
         this.charity = charity;
+    }
+
+    public void setCustomerID(int id) {
+        this.customerID = id;
+    }
+
+    public int getCustomerID() {
+        return this.customerID;
     }
 }
