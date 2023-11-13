@@ -12,6 +12,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 
 /**
  * Course: Adv. Object-Oriented Programming
@@ -22,8 +23,9 @@ import java.time.format.DateTimeFormatter;
  * has changed in the Sport classes and to write to the log file when the program terminates
  * <p>
  * Last Change: 11/12/2023
+ * Last Change: 11/12/2023
  * @author Erik LaNeave
- * @version 1.4
+ * @version 1.5
 */
 
 public class Log {
@@ -61,7 +63,11 @@ public class Log {
         this.recordFile = new File(this.fileName);
         //Try-catch used when making the new log.txt file
         try {
-            recordFile.createNewFile();
+            boolean isCreated = recordFile.createNewFile();
+            if (!isCreated) {
+                recordFile.delete();
+                recordFile.createNewFile();
+            }
         } catch (IOException e) {
             System.out.println("File could not be made");
         }
@@ -96,13 +102,17 @@ public class Log {
             this.recordWrite = new FileWriter(this.fileName, true);
             //Writes the information
             String temp = this.record.toString();
+            System.out.println("just turned record into string");
+            ArrayList<String> tempArr = new ArrayList<String>();
+            makeStringSmaller(temp, tempArr, 0, record.length(), 0);
             //a dirty way to handle the log when it is too big for write
-            String sub1 = temp.substring(0, record.length()/2);
-            String sub2 = temp.substring(record.length()/2+1, record.length());
-            String[] subArr = {sub1, sub2};
+            // String sub1 = temp.substring(0, record.length()/2);
+            // String sub2 = temp.substring(record.length()/2+1, record.length());
+            // String[] subArr = {sub1, sub2};
             System.out.println("Running the for loop in big log file");
-            for (int i = 0; i < subArr.length; i++) {
-                this.recordWrite.write(subArr[i]);
+            for (int i = 0; i < tempArr.size(); i++) {
+                System.out.println("in for loop");
+                this.recordWrite.write(tempArr.get(i));
             }
             //Closes the file
             this.recordWrite.close();
@@ -113,12 +123,27 @@ public class Log {
         }
     }
 
+    public void makeStringSmaller(String temp, ArrayList<String> arrTemp, int start, int end, int runs) {
+        if (runs == 4) {
+            arrTemp.add(temp);
+            return;
+        }
+        String sub1 = temp.substring(0, end/2);
+        String sub2 = temp.substring(end/2+1, end);
+        makeStringSmaller(sub1, arrTemp, 0, end/2, runs + 1);
+        makeStringSmaller(sub2, arrTemp, end/2, end, runs + 1);
+    }
+
     /**
      * Takes a change made and adds to the record string
      * @param toBeSaved
      */
     public void save(String toBeSaved) {
         try {
+            if (record.length() >= 50000) {
+                writeLogFile();
+                record.delete(0, record.length());
+            }
             this.record.append(toBeSaved);
         } catch (OutOfMemoryError e) {
             writeLogFile();

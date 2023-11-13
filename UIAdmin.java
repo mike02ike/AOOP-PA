@@ -16,9 +16,9 @@ import java.util.Map.Entry;
  * information, and access additional calculated information.
  * <p>
  * 
- * @since 11/11/2023
+ * @since 11/12/2023
  * @author Erik LaNeave
- * @version 2.5
+ * @version 2.7
  *          <p>
  * @since 10/25/2023
  * @author Michael Ike
@@ -64,10 +64,10 @@ public class UIAdmin {
             System.out.println("4 - Run Auto Purchase");
             System.out.println("5 - Save an Invoice for a Customer");
             System.out.println("6 - Cancel event");
-            System.out.println("Enter \"Exit\" to exit the Program");
+            System.out.print("Enter \"Exit\" to exit the Program\n--> ");
 
             // Only takes in strings to help with exceptions
-            String inputUser = myScanner.next();
+            String inputUser = myScanner.nextLine();
             // switch case used to cut down on possible exceptions and clean look
             switch (inputUser.toLowerCase()) {
                 case "1": // 1 - inquire event by ID
