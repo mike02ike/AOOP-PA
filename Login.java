@@ -20,9 +20,9 @@ import java.util.Scanner;
  * A log of login information is made.
  * <p>
  * 
- * @since 11/02/2023
+ * @since 11/12/2023
  * @author Erik LaNeave
- * @version 1.2
+ * @version 1.3
  *          <p>
  * @since 10/28/2023
  * @author Michael Ike
@@ -49,17 +49,22 @@ public class Login {
      * @return
      */
     public boolean custOrAdmin(LinkedHashMap<Integer, Event> eventMap, LinkedHashMap<Integer, Customer> customerMap) {
-        System.out.print("Enter the number corresponding to your status below:\n1. Customer\n2. Administrator\n--> ");
+        System.out.print("Enter the number corresponding to your status below:\n1. Customer\n2. Administrator\nType \"Exit\" to terminate the program\n--> ");
         String input = scnr.nextLine();
-        switch (input) {
+        switch (input.toLowerCase()) {
             case "1": // The user is a Customer and will be asked to login in
                 logFile.save(logFile.time() + " User is a customer and will attempt to login\n");
-                return customerLogin(eventMap, customerMap);
+                customerLogin(eventMap, customerMap);
+                return true;
             case "2": // The user is a admin is shown the admin menu
                 logFile.save(logFile.time() + " User is an administrator\n");
                 UIAdmin admin = UIAdmin.getInstance();
                 admin.setHashMaps(eventMap, customerMap);
-                return admin.menu();
+                admin.menu();
+                return true;
+            case "exit":
+                logFile.save(logFile.time() + " User terminated the program");
+                return false;
             default:
                 logFile.save(logFile.time() + " User entered an invalid option\n");
                 System.out.println("Please enter either 1 or 2\n");
@@ -75,7 +80,7 @@ public class Login {
      * @param customerMap
      * @return customerId
      */
-    public boolean customerLogin(LinkedHashMap<Integer, Event> eventMap, LinkedHashMap<Integer, Customer> customerMap) {
+    public void customerLogin(LinkedHashMap<Integer, Event> eventMap, LinkedHashMap<Integer, Customer> customerMap) {
         boolean loginControl = true;
         // Will run forever
         while (loginControl) {
@@ -84,7 +89,7 @@ public class Login {
                     "Option 1: Login with either your first and last name or username and password\nOption 2: Type \"Exit\" to exit the program\nFirst name or Username\n--> ");
             login[0] = scnr.nextLine();
             if (login[0].equalsIgnoreCase("exit")) {
-                return false;
+                return;
             }
             System.out.print("Last name or Password\n--> ");
             login[1] = scnr.nextLine();
@@ -98,13 +103,14 @@ public class Login {
                 // Creates and calls to the UICustomer class and class to the menu in customerUI
                 UICustomer custUI = new UICustomer();
                 custUI.menu(eventMap, customerMap.get(customerId));
+                return;
             } else {
                 System.out.println("\nIncorrect login credentials\nPlease try again\n");
                 logFile.save(logFile.time() + " Failed login from user with credentials " + login[0] + " and "
                         + login[1] + "\n");
             }
         }
-        return false;
+        return;
     }
 
     /**
