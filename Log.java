@@ -23,7 +23,7 @@ import java.time.format.DateTimeFormatter;
  * <p>
  * Last Change: 11/12/2023
  * @author Erik LaNeave
- * @version 1.3
+ * @version 1.4
 */
 
 public class Log {
@@ -74,7 +74,7 @@ public class Log {
         //Try-catch used incase of an error when writing
         try {
             //Creates the fileWriter object
-            this.recordWrite = new FileWriter(this.fileName);
+            this.recordWrite = new FileWriter(this.fileName,true);
             //Writes the information
             this.recordWrite.write(this.record.toString());
             //Closes the file
@@ -93,13 +93,14 @@ public class Log {
         //Try-catch used incase of an error when writing
         try {
             //Creates the fileWriter object
-            this.recordWrite = new FileWriter(this.fileName);
+            this.recordWrite = new FileWriter(this.fileName, true);
             //Writes the information
             String temp = this.record.toString();
             //a dirty way to handle the log when it is too big for write
             String sub1 = temp.substring(0, record.length()/2);
             String sub2 = temp.substring(record.length()/2+1, record.length());
             String[] subArr = {sub1, sub2};
+            System.out.println("Running the for loop in big log file");
             for (int i = 0; i < subArr.length; i++) {
                 this.recordWrite.write(subArr[i]);
             }
@@ -117,7 +118,12 @@ public class Log {
      * @param toBeSaved
      */
     public void save(String toBeSaved) {
-        this.record.append(toBeSaved);
+        try {
+            this.record.append(toBeSaved);
+        } catch (OutOfMemoryError e) {
+            writeLogFile();
+            record.delete(0, record.length());
+        }
     }
 
     /**
