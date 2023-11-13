@@ -105,10 +105,6 @@ public class Log {
             System.out.println("just turned record into string");
             ArrayList<String> tempArr = new ArrayList<String>();
             makeStringSmaller(temp, tempArr, 0, record.length(), 0);
-            //a dirty way to handle the log when it is too big for write
-            // String sub1 = temp.substring(0, record.length()/2);
-            // String sub2 = temp.substring(record.length()/2+1, record.length());
-            // String[] subArr = {sub1, sub2};
             System.out.println("Running the for loop in big log file");
             for (int i = 0; i < tempArr.size(); i++) {
                 System.out.println("in for loop");
@@ -140,7 +136,7 @@ public class Log {
      */
     public void save(String toBeSaved) {
         try {
-            if (record.length() >= 50000) {
+            if (record.length() >= 100000) {
                 writeLogFile();
                 record.delete(0, record.length());
             }
