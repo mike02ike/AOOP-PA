@@ -1,9 +1,0 @@
------------Invoice 1-----------
-Event Type: Concert
-Event Name: UTEP Wind Symphony 7
-Event Date: 12/5/23
-Ticket Type: General Admission
-Number of Tickets: 5
-Total Price: 30.44
-Confirmation Number: 437903305
--------------------------------

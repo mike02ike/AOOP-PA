@@ -21,9 +21,6 @@ import java.util.HashMap;
  * @version 1.0
  */
 
-//TODO: Create a hashmap that has a key -> eventId and value -> hashmap of event fees
-
-
 public class TicketMiner{
     //attributes
     private static TicketMiner obj; //singleton
@@ -31,9 +28,6 @@ public class TicketMiner{
     private double serviceFee;
     private double charityFee;
     private HashMap<Integer, HashMap<String, Double>> collectedFees = new HashMap<>();
-
-
-
 
     //constructors
     private TicketMiner(){}
@@ -62,6 +56,20 @@ public class TicketMiner{
     public double getCharityFee(int ticketAmount, double ticketPrice) {
         charityFee = ticketAmount * ticketPrice * .0075;
         return charityFee;
+    }
+
+    public void initializeCollectedFees() {
+        // Initialize the inner HashMaps for each eventId
+        for (Integer eventId : collectedFees.keySet()) {
+            // Create a new inner HashMap for each eventId if it doesn't exist
+            if (!collectedFees.containsKey(eventId)) {
+                collectedFees.put(eventId, new HashMap<>());
+            }
+            // Initialize specific fee types for the eventId
+            collectedFees.get(eventId).put("convenience", 0.0);
+            collectedFees.get(eventId).put("service", 0.0);
+            collectedFees.get(eventId).put("charity", 0.0);
+        }
     }
 
 }

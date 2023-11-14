@@ -1,9 +1,0 @@
------------Invoice 1-----------
-Event Type: Sport
-Event Name: UTEP Basketball 6
-Event Date: 12/6/23
-Ticket Type: VIP
-Number of Tickets: 3
-Total Price: 104.34
-Confirmation Number: 1666892534
--------------------------------

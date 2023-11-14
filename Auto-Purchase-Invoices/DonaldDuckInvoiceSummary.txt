@@ -1,9 +1,0 @@
------------Invoice 1-----------
-Event Type: Sport
-Event Name: UTEP Football 13
-Event Date: 11/27/23
-Ticket Type: Silver
-Number of Tickets: 5
-Total Price: 146.13
-Confirmation Number: 815849084
--------------------------------

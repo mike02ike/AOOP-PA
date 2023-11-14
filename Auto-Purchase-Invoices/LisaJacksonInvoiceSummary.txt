@@ -1,9 +1,0 @@
------------Invoice 1-----------
-Event Type: Concert
-Event Name: UTEP Wind Symphony 9
-Event Date: 9/14/23
-Ticket Type: Bronze
-Number of Tickets: 4
-Total Price: 67.67
-Confirmation Number: 906475783
--------------------------------

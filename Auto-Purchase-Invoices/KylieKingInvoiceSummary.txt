@@ -1,9 +1,0 @@
------------Invoice 1-----------
-Event Type: Sport
-Event Name: UTEP Basketball 15
-Event Date: 1/8/24
-Ticket Type: Silver
-Number of Tickets: 3
-Total Price: 73.06
-Confirmation Number: 687703319
--------------------------------
