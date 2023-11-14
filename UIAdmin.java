@@ -71,7 +71,7 @@ public class UIAdmin {
             System.out.print("Enter \"Exit\" to exit the Program\n--> ");
 
             // Only takes in strings to help with exceptions
-            String inputUser = myScanner.nextLine();
+            String inputUser = myScanner.next();
             // switch case used to cut down on possible exceptions and clean look
             switch (inputUser.toLowerCase()) {
                 case "1": // 1 - inquire event by ID
@@ -448,7 +448,7 @@ public class UIAdmin {
                     System.out.println("Total Revenue");
                     this.selectedEvent.adminPrintRevenueInfo();
                     break;
-                case "2"://Print total fees from event
+                case "2":// Print total fees from event
                     logFile.save(logFile.time() + "Admin picked submenu option 2 to print event fees");
                     printFees(selectedEvent);
                     break;
@@ -464,7 +464,7 @@ public class UIAdmin {
         }
     }
 
-    public void printFees(Event event){
+    public void printFees(Event event) {
         System.out.println("Fees");
     }
 

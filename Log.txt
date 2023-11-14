@@ -1,8 +1,0 @@
-11-13-2023 16:39:41 Program start
-11-13-2023 16:39:41 Event and Customer maps made from csv files
-11-13-2023 16:39:41 Starting the login process
-11-13-2023 16:39:50 User is an administrator
-11-13-2023 16:39:52 Admin terminated the program
-11-13-2023 16:39:52 Starting the login process
-11-13-2023 16:39:54 User terminated the program
-11-13-2023 16:39:54 Updated Event and Customer csv made
