@@ -16,6 +16,10 @@ import java.util.Map.Entry;
  * information, and access additional calculated information.
  * <p>
  * 
+ * @since 11/14/2023
+ * @author Anaiah Quinn
+ * @version 3.0
+ *          <p>
  * @since 11/13/2023
  * @author Erik LaNeave
  * @version 2.9
@@ -433,7 +437,7 @@ public class UIAdmin {
         System.out.println("================================\n");
         while (true) {
             System.out.print("Submenu for Additional Information\n");
-            System.out.print("1 - View Event Calculated Info\n2 - Exit Submenu\n--> ");
+            System.out.print("1 - View Event Calculated Info\n 2- Print Event Fees\n3 - Exit Submenu\n--> ");
             String input = myScanner.nextLine();
             switch (input) {
                 case "1": // Views calculated event info
@@ -444,8 +448,12 @@ public class UIAdmin {
                     System.out.println("Total Revenue");
                     this.selectedEvent.adminPrintRevenueInfo();
                     break;
-                case "2": // Exit subMenu
-                    logFile.save(logFile.time() + " Admin picked submenu option 2 to exit submenu\n");
+                case "2"://Print total fees from event
+                    logFile.save(logFile.time() + "Admin picked submenu option 2 to print event fees");
+                    printFees(selectedEvent);
+                    break;
+                case "3": // Exit subMenu
+                    logFile.save(logFile.time() + " Admin picked submenu option 3 to exit submenu\n");
                     System.out.println("Exiting sub menu...");
                     return;
                 default: // Handles incorrect input
@@ -454,6 +462,10 @@ public class UIAdmin {
                     break;
             }
         }
+    }
+
+    public void printFees(Event event){
+        System.out.println("Fees");
     }
 
     public void autoPurchase() {
