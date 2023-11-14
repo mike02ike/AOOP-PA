@@ -17,10 +17,10 @@ import java.util.Scanner;
  * <p>
  * Class Purpose: Handles the purchase process for both customer and admin
  * <p>
- * Last Change: 11/11/2023
+ * Last Change: 11/14/2023
  * 
  * @author Erik LaNeave
- * @version 2.2
+ * @version 2.3
  */
 
 public class Purchase {
@@ -75,7 +75,7 @@ public class Purchase {
             // Increases the purchased tickets in customer
             updateCust(autoTicket);
             // Creates a new invoice for the customer
-            createInvoice(autoTicket, totalCostWithTax);
+            //createInvoice(autoTicket, totalCostWithTax);
             logFile.save(logFile.time() + " Customer with name " + currentCustomer.getFirstName() + " purchased "
                     + autoTicket
                     + " tickets for event with ID " + currentEvent.getId() + " spending $"
@@ -132,7 +132,7 @@ public class Purchase {
             // Increases the purchased tickets in customer
             updateCust(inputInt);
             // Creates a new invoice for the customer
-            createInvoice(inputInt, totalCostWithTax);
+            //createInvoice(inputInt, totalCostWithTax);
             printNewInvoice();
             logFile.save(logFile.time() + " User with ID " + currentCustomer.getId() + " purchased " + inputInt
                     + " tickets for event with ID " + currentEvent.getId() + " spending $"
@@ -440,17 +440,21 @@ public class Purchase {
      * @param userTicketAmount
      * @param totalCostWithTax
      */
-    public void createInvoice(int userTicketAmount, Double totalCostWithTax) {
+    public Invoice createInvoice(int userTicketAmount, double totalCostWithTax, double convenience, double service, double charity) {
         ArrayList<Ticket> ticketList = makeTicketListInvoice(userTicketAmount);
-        TicketMiner ourCompany = TicketMiner.getInstance();
         Invoice newInvoice = new Invoice(this.currentCustomer.getId(), userTicketAmount, totalCostWithTax,
                 currentTaxAmount,
                 currentEvent.getId(), currentEvent.getName(), currentTicketName, currentEvent.getEventType(),
                 currentEvent.getDate(),
-                ourCompany.getConvenienceFee(), ourCompany.getServiceFee(userTicketAmount, userTicketAmount),
-                ourCompany.getCharityFee(userTicketAmount, userTicketAmount), ticketList);
+                convenience, service, charity, ticketList);
         logFile.save(logFile.time() + " Invoice with confimation number " + newInvoice.getConfirmationNum()
                 + " created for user purchase\n");
+        // currentCustomer.addInvoice(newInvoice);
+        // currentEvent.addInvoice(newInvoice);
+        return newInvoice;
+    }
+
+    public void addInvoices(Invoice newInvoice) {
         currentCustomer.addInvoice(newInvoice);
         currentEvent.addInvoice(newInvoice);
     }
