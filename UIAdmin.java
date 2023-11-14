@@ -465,7 +465,16 @@ public class UIAdmin {
     }
 
     public void printFees(Event event) {
-        System.out.println("Fees");
+        System.out.println("================================");
+        System.out.println("==============FEES==============");
+        System.out.println("Total Fee Revenue for event: "+ event.getName());
+        System.out.println("Service Fees: $" + event.getServiceFee());
+        System.out.println("Convenience Fees: $" + event.getConvenienceFee());
+        System.out.println("Charity Fees $" + event.getCharityFee());
+        double total = event.getCharityFee()+event.getConvenienceFee()+event.getServiceFee();
+        System.out.println("Total Fees: $" + total);
+
+
     }
 
     public void autoPurchase() {
