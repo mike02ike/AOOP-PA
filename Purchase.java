@@ -370,6 +370,9 @@ public class Purchase {
         currentEvent.updateConvenienceFees(ourCompany.getConvenienceFee());
         currentEvent.updateServiceFees(ourCompany.getServiceFee(ticketAmount, ticketPrice));
         currentEvent.updateCharityFees(ourCompany.getCharityFee(ticketAmount, ticketPrice));
+        ourCompany.updateConvenienceFees(currentEvent.getId());
+        ourCompany.updateServiceFees(currentEvent.getId(), ticketAmount, ticketPrice);
+        ourCompany.updateCharityFees(currentEvent.getId(), ticketAmount, ticketPrice);
 
         // TicketMiner Member Discount
         if (currentCustomer.getTicketMinerMember()) {

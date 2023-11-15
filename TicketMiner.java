@@ -15,7 +15,7 @@ import java.util.HashMap;
  * <p>
  * Instructor: Daniel Mejia
  * <p>
- * 
+ *
  * @since 11/08/2023
  * @author Michael Ike
  * @version 1.0
@@ -28,6 +28,7 @@ public class TicketMiner{
     private double serviceFee;
     private double charityFee;
     private HashMap<Integer, HashMap<String, Double>> collectedFees = new HashMap<>();
+    HashMap<String, Double> eventMap;
 
     //constructors
     private TicketMiner(){}
@@ -72,4 +73,27 @@ public class TicketMiner{
         }
     }
 
+    public void updateConvenienceFees(int eventId) {
+        eventMap = collectedFees.get(eventId);
+        double currentConvenienceFees = eventMap.get("convenience");
+        double updatedConvenienceFees = currentConvenienceFees + getConvenienceFee();
+        eventMap.put("convenience", updatedConvenienceFees);
+        collectedFees.put(eventId, eventMap);
+    }
+    
+    public void updateServiceFees(int eventId, int ticketAmount, double ticketPrice) {
+        eventMap = collectedFees.get(eventId);
+        double currentServiceFees = eventMap.get("service");
+        double updatedServiceFees = currentServiceFees + getServiceFee(ticketAmount, ticketPrice);
+        eventMap.put("service", updatedServiceFees);
+        collectedFees.put(eventId, eventMap);
+    }
+    
+    public void updateCharityFees(int eventId, int ticketAmount, double ticketPrice) {
+        eventMap = collectedFees.get(eventId);
+        double currentCharityFees = eventMap.get("service");
+        double updatedCharityFees = currentCharityFees + getCharityFee(ticketAmount, ticketPrice);
+        eventMap.put("charity", updatedCharityFees);
+        collectedFees.put(eventId, eventMap);
+    }
 }
