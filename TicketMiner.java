@@ -27,6 +27,7 @@ public class TicketMiner{
     private double convenienceFee = 2.50;
     private double serviceFee;
     private double charityFee;
+    private double totalRevenue;
     private HashMap<Integer, HashMap<String, Double>> collectedFees = new HashMap<>();
     HashMap<String, Double> eventMap;
 
@@ -95,5 +96,14 @@ public class TicketMiner{
         double updatedCharityFees = currentCharityFees + getCharityFee(ticketAmount, ticketPrice);
         eventMap.put("charity", updatedCharityFees);
         collectedFees.put(eventId, eventMap);
+    }
+
+    public double computeRevenue(){
+        for(HashMap<String, Double> eventMap : collectedFees.values()){
+            for(double fee : eventMap.values()){
+                totalRevenue += fee;
+            }
+        }
+        return totalRevenue;
     }
 }
