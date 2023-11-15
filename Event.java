@@ -1,20 +1,29 @@
 
 /**
- * @author Ian Gutierrez & Erik LaNeave
- *         Date: 10/21/2023
- *         Course: CS 3331 - Advanced Object Oriented Programming
- *         Instructor: Dr. Daniel Mejia
- *         Programming Assignment 3
- *         Lab Description: This program is an extension of PA2, with added tax and discount functionality. It is also merged with a teammate.
- *         Honesty Statement: I completed this work entirely on my own without
- *         any outside sources including peers, experts, online sources, or the
- *         like. The only assistance I received was from the instructor, TA, or
- *         IA.
+ * Honesty Statement: I completed this work entirely on my own without
+ * any outside sources including peers, experts, online sources, or the
+ * like. The only assistance I received was from the instructor, TA, or IA.
+ * <p>
+ * Course: CS 3331 - Advanced Object Oriented Programming
+ * Instructor: Dr. Daniel Mejia
+ * Programming Assignment 5
+ * <p>
+ * @author Ian Gutierrez
+ * @author Erik LaNeave
+ * @version 2.0
+ * @since 10/21/2023
+ * <p>
+ * @since 11/15/2023
+ * @author Michael Ike
+ * @version 2.1
  */
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
+/**
+ * Represents an abstract class Event that serves as a blueprint for different types of events.
+ */
 public abstract class Event {
 
   /**
@@ -41,7 +50,7 @@ public abstract class Event {
   private HashMap<String, Double> collectedFees = new HashMap<>();
 
   /**
-   * Constructor
+   * Constructor to initialize seat prices, purchased tickets, number of seats sold, seat revenue, and collected fees.
    */
   public Event() {
     initializeSeatPrices();
@@ -52,7 +61,7 @@ public abstract class Event {
   }
 
   /**
-   * Initialized hashmap
+   * Initializes seat prices hashmap for different ticket types.
    */
   public void initializeSeatPrices() {
     this.seatPrices.put("vip", 0.0);
@@ -63,7 +72,7 @@ public abstract class Event {
   }
 
   /**
-   * Initialized hashmap
+   * Initializes purchased tickets hashmap for different ticket types.
    */
   public void initializePurchasedTickets() {
     ArrayList<Ticket> vipPurchasedTickets = new ArrayList<>(); // Vip tickets purchased
@@ -80,7 +89,7 @@ public abstract class Event {
   }
 
   /**
-   * Initialized hashmap
+   * Initializes number of seats sold hashmap for different ticket types.
    */
   public void initializeNumSeatsSold() {
     this.numSeatsSold.put("vip", 0);
@@ -92,7 +101,7 @@ public abstract class Event {
   }
 
   /**
-   * Initialized hashmap
+   * Initializes seat revenue hashmap for different ticket types.
    */
   public void initializeSeatRevenue() {
     this.seatRevenue.put("vip", 0.0);
@@ -103,12 +112,19 @@ public abstract class Event {
     this.seatRevenue.put("total", 0.0);
   }
 
+  /**
+   * Initializes collected fees hashmap for convenience, service, and charity fees.
+   */
   public void initializeCollectedFees() {
     this.collectedFees.put("convenience", 0.0);
     this.collectedFees.put("service", 0.0);
     this.collectedFees.put("charity", 0.0);
   }
 
+  /**
+   * Updates the convenience fees collected for the event.
+   * @param convenienceIn The convenience fees to be added.
+   */
   public void updateConvenienceFees(double convenienceIn) {
     TicketMiner company = TicketMiner.getInstance();
     
@@ -117,6 +133,10 @@ public abstract class Event {
     collectedFees.put("convenience", updatedConvenienceFees);
   }
 
+  /**
+   * Updates the service fees collected for the event.
+   * @param serviceIn The service fees to be added.
+   */
   public void updateServiceFees(double serviceIn) {
     TicketMiner company = TicketMiner.getInstance();
     
@@ -125,6 +145,10 @@ public abstract class Event {
     collectedFees.put("service", updatedServiceFees);
   }
 
+  /**
+   * Updates the charity fees collected for the event.
+   * @param charityIn The charity fees to be added.
+   */
   public void updateCharityFees(double charityIn) {
     TicketMiner company = TicketMiner.getInstance();
     
@@ -133,11 +157,18 @@ public abstract class Event {
     collectedFees.put("charity", updatedServiceFees);
   }
 
-
+  /**
+   * Retrieves the invoices generated for this event.
+   * @return HashMap containing invoices grouped by customer ID.
+   */
   public HashMap<Integer, ArrayList<Invoice>> getInvoices() {
     return this.invoices;
   }
 
+  /**
+   * Adds an invoice to the list of invoices for a specific customer.
+   * @param invoice The invoice to be added.
+   */
   public void addInvoice(Invoice invoice) {
     if (this.invoices.get(invoice.getCustomerID()) == null) {
       ArrayList<Invoice> customerInvoices = new ArrayList<>();

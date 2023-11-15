@@ -11,18 +11,23 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
- * Course: Adv. ourCompanyect-Oriented Programming
- * <p>
+ * Course: Adv. Object-Oriented Programming
  * Instructor: Daniel Mejia
  * <p>
  * Class Purpose: Handles the purchase process for both customer and admin
  * <p>
  * Last Change: 11/14/2023
- * 
  * @author Erik LaNeave
  * @version 2.3
+ * <p>
+ * @since 11/15/2023
+ * @author Michael Ike
+ * @version 2.4
  */
 
+/**
+ * Represents a Purchase made for an Event by a Customer.
+ */
 public class Purchase {
 
     // Attributes
@@ -41,10 +46,10 @@ public class Purchase {
     }
 
     /**
-     * Takes a event and customer ourCompanyect
-     * 
-     * @param currentEvent
-     * @param currentCustomer
+     * Constructor that takes an event and customer object.
+     *
+     * @param currentEvent    The Event to be associated with the purchase.
+     * @param currentCustomer The Customer associated with the purchase.
      */
     public Purchase(Event currentEvent, Customer currentCustomer) {
         this.currentEvent = currentEvent;
@@ -52,9 +57,7 @@ public class Purchase {
     }
 
     /**
-     * Start of auto purchase for admin
-     * should be able to make a new instance of the class and give event and
-     * customer and go from there
+     * Initiates an automated purchase process for admin use.
      */
     public void autoPurchaseAdmin() {
         // setCurrentTicketName(ticketName);
@@ -102,10 +105,7 @@ public class Purchase {
     }
 
     /**
-     * Asks the user to enter the name of ticket, number of tickets, and prints the
-     * invoice of the purchase.
-     * Updates the amount of tickts available, purchased tickets, and customer money
-     * All exceptions are handled for possible problems
+     * Allows a customer to purchase tickets by inputting ticket details.
      */
     public void purchaseTicketsCustomer() {
         System.out.println("\n-- Current funds $" + doubleForm(currentCustomer.getMoneyAvailable())
