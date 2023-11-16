@@ -69,6 +69,7 @@ public class UIAdmin {
             System.out.println("4 - Run Auto Purchase");
             System.out.println("5 - Save an Invoice for a Customer");
             System.out.println("6 - Cancel event");
+            System.out.println("7 - Compute Profit");
             System.out.print("Enter \"Exit\" to exit the Program\n--> ");
 
             // Only takes in strings to help with exceptions
@@ -95,8 +96,13 @@ public class UIAdmin {
                     logFile.save(logFile.time() + " Admin picked menu option 5 to save an invoice for a user\n");
                     saveInvoiceForCustomer();
                     break;
-                case "6":
+                case "6":// 6 - Cancel Event
+                    logFile.save(logFile.time()+ " Admin picked menu option 6 to cancel an event\n");
                     cancelEvent();
+                    break;
+                case "7"://7 Compute profit
+                    logFile.save((logFile.time()+ " Admin picked menu option 7 to compute profit\n"));
+                    printRevenue();
                     break;
                 case "exit":
                     System.out.println("\nThank you for using TicketMiner!\nReturning to login...");
