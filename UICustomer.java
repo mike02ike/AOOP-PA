@@ -17,13 +17,15 @@ import java.util.Scanner;
  * <p>
  * Instructor: Daniel Mejia
  * <p>
- * Class Purpose: The UICustomer class handles the menu options for the customer.
+ * Class Purpose: The UICustomer class handles the menu options for the
+ * customer.
  * The log and invoices for the user are kept and updated inside of the UI.
  * <p>
+ * 
  * @since 11/11/2023
  * @author Erik LaNeave
  * @version 2.5
- * <p>
+ *          <p>
  * @since 10/27/2023
  * @author Michael Ike
  * @version 1.9
@@ -46,7 +48,7 @@ public class UICustomer {
      * @return Boolean back to RunTicket to stop main while loop
      */
     public void menu(LinkedHashMap<Integer, Event> eventMapIn, Customer currCustomerIn) {
-        //Set the class attributes to the given eventMapIn and the currCustomerIn
+        // Set the class attributes to the given eventMapIn and the currCustomerIn
         currCustomer = currCustomerIn;
         eventMap = eventMapIn;
 
@@ -102,15 +104,15 @@ public class UICustomer {
      */
     public int getIdFromUser() {
         try {
-                System.out.print("Enter the event ID\n--> ");
-                String userInput = scnr.nextLine();
-                int eventID = Integer.parseInt(userInput);
-                return eventID;
-            } catch (NumberFormatException e) {
-                System.out.println("Not a vaild event ID\n");
-                logFile.save(logFile.time() + " User input for event ID was not a number\n");
-                return -1;
-            }
+            System.out.print("Enter the event ID\n--> ");
+            String userInput = scnr.nextLine();
+            int eventID = Integer.parseInt(userInput);
+            return eventID;
+        } catch (NumberFormatException e) {
+            System.out.println("Not a vaild event ID\n");
+            logFile.save(logFile.time() + " User input for event ID was not a number\n");
+            return -1;
+        }
     }
 
     /**
@@ -182,7 +184,8 @@ public class UICustomer {
             purchaseTickets();
             return;
         }
-        logFile.save(logFile.time() + " User is trying to purchase tickets for event with ID " + tempEvent.getId() + "\n");
+        logFile.save(
+                logFile.time() + " User is trying to purchase tickets for event with ID " + tempEvent.getId() + "\n");
         Purchase completePurchase = new Purchase(tempEvent, currCustomer);
         completePurchase.purchaseTicketsCustomer();
         return;
@@ -195,8 +198,13 @@ public class UICustomer {
         Venue tempVenue = currentEvent.getVenue();
         double[] ticketsAva = tempVenue.getNumAvailableSeats();
         double[] ogTickets = tempVenue.getOriginalAvailableSeats();
-        String amount = String.format("\n-- Number of Tickets Available --\n|Vip: %.0f|Gold: %.0f|Silver %.0f|Bronze: %.0f|General Admission: %.0f|\n", ticketsAva[0], ticketsAva[1], ticketsAva[2], ticketsAva[3], ticketsAva[4]);
-        String purchase = String.format("-- Number of Tickets Purchased --\n|Vip: %.0f|Gold: %.0f|Silver %.0f|Bronze: %.0f|General Admission: %.0f|\n", ogTickets[0]-ticketsAva[0], ogTickets[1]-ticketsAva[1], ogTickets[2]-ticketsAva[2], ogTickets[3]-ticketsAva[3], ogTickets[4]-ticketsAva[4]);
+        String amount = String.format(
+                "\n-- Number of Tickets Available --\n|Vip: %.0f|Gold: %.0f|Silver %.0f|Bronze: %.0f|General Admission: %.0f|\n",
+                ticketsAva[0], ticketsAva[1], ticketsAva[2], ticketsAva[3], ticketsAva[4]);
+        String purchase = String.format(
+                "-- Number of Tickets Purchased --\n|Vip: %.0f|Gold: %.0f|Silver %.0f|Bronze: %.0f|General Admission: %.0f|\n",
+                ogTickets[0] - ticketsAva[0], ogTickets[1] - ticketsAva[1], ogTickets[2] - ticketsAva[2],
+                ogTickets[3] - ticketsAva[3], ogTickets[4] - ticketsAva[4]);
         String price = String.format(
                 "-- Ticket Prices --\n|Vip: $%.2f|Gold: $%.2f|Silver $%.2f|Bronze: $%.2f|General Admission: $%.2f|\n",
                 currentEvent.getVipPrice(), currentEvent.getGoldPrice(), currentEvent.getSilverPrice(),
@@ -209,7 +217,7 @@ public class UICustomer {
      * run through the list and print the invoice information.
      */
     public void printInvoices() {
-        ArrayList<Invoice>  invoiceList = currCustomer.getInvoiceList();
+        ArrayList<Invoice> invoiceList = currCustomer.getInvoiceList();
         // checks if empty
         if (invoiceList.isEmpty()) {
             logFile.save(logFile.time() + " User tried to print invoice list but list is empty\n");
@@ -247,16 +255,22 @@ public class UICustomer {
         }
         printInvoices();
         System.out.print("Enter the confirmation number of the purchase you would like to cancel\n--> ");
-        String confirString = scnr.nextLine();
+        String confirString = scnr.next();
         try {
             int confirInt = Integer.parseInt(confirString);
             for (Invoice currInv : currCustomer.getInvoiceList()) {
                 if (currInv.getConfirmationNum() == confirInt) {
-                    //Not done but will zero out total cost and change name
+                    // Not done but will zero out total cost and change name
                     currInv.setTotalPrice(0.0);
                     currInv.setTax(0.0);
                     currInv.setEventName("Purchase Canceled " + currInv.getEventName());
-                    System.out.println("Purchase with confirmation number " + currInv.getConfirmationNum() + " Canceled\n");
+                    System.out.println(
+                            "Purchase with confirmation number " + currInv.getConfirmationNum() + " Canceled\n");
+
+                    int numTickets = currInv.getNumTickets();
+                    int ticketType = getTicketType(currInv.getTicketType());
+                    eventMap.get(currInv.getEventID()).getVenue().addSeats(ticketType, numTickets);
+                    eventMap.get(currInv.getEventID()).updateSeatsAndRevenue();
                     return;
                 }
             }
@@ -272,5 +286,22 @@ public class UICustomer {
      */
     public String doubleForm(double toBeForm) {
         return String.format("%.2f", toBeForm);
+    }
+
+    public int getTicketType(String ticketType) {
+        switch (ticketType.toLowerCase()) {
+            case "vip":
+                return 0;
+            case "gold":
+                return 1;
+            case "silver":
+                return 2;
+            case "bronze":
+                return 3;
+            case "general admission":
+                return 4;
+            default:
+                return -1;
+        }
     }
 }
