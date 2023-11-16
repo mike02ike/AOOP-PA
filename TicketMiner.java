@@ -120,13 +120,12 @@ public class TicketMiner {
     /**
      * Updates the service fees for a specific event based on the number of tickets and ticket price.
      * @param eventId The ID of the event.
-     * @param ticketAmount The number of tickets.
-     * @param ticketPrice The price per ticket.
+     * @param serviceIn
      */
-    public void updateServiceFees(int eventId, int ticketAmount, double ticketPrice) {
+    public void updateServiceFees(int eventId, double serviceIn) {
         eventMap = collectedFees.get(eventId);
         double currentServiceFees = eventMap.get("service");
-        double updatedServiceFees = currentServiceFees + getServiceFee(ticketAmount, ticketPrice);
+        double updatedServiceFees = currentServiceFees + serviceIn;
         eventMap.put("service", updatedServiceFees);
         collectedFees.put(eventId, eventMap);
     }
@@ -134,13 +133,12 @@ public class TicketMiner {
     /**
      * Updates the charity fees for a specific event based on the number of tickets and ticket price.
      * @param eventId The ID of the event.
-     * @param ticketAmount The number of tickets.
-     * @param ticketPrice The price per ticket.
+     * @param charityIn
      */
-    public void updateCharityFees(int eventId, int ticketAmount, double ticketPrice) {
+    public void updateCharityFees(int eventId, double charityIn) {
         eventMap = collectedFees.get(eventId);
-        double currentCharityFees = eventMap.get("service");
-        double updatedCharityFees = currentCharityFees + getCharityFee(ticketAmount, ticketPrice);
+        double currentCharityFees = eventMap.get("charity");
+        double updatedCharityFees = currentCharityFees + charityIn;
         eventMap.put("charity", updatedCharityFees);
         collectedFees.put(eventId, eventMap);
     }
