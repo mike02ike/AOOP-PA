@@ -7,69 +7,196 @@
  * of Texas at El Paso and a grade will be assigned for the work I produced.
 */
 
-import java.util.HashMap;
 /**
  * Course: Adv. Object-Oriented Programming
- * <p>
- * Class Purpose: Runs all test classes
- * <p>
  * Instructor: Daniel Mejia
  * <p>
- * 
  * @since 11/08/2023
  * @author Michael Ike
  * @version 1.0
  */
 
-public class TicketMiner{
-    //attributes
-    private static TicketMiner obj; //singleton
-    private double convenienceFee = 2.50;
-    private double serviceFee;
-    private double charityFee;
-    private HashMap<Integer, HashMap<String, Double>> collectedFees = new HashMap<>();
+import java.util.HashMap;
 
-    //constructors
-    private TicketMiner(){}
+/**
+ * The TicketMiner class manages ticket fees and revenue calculation for events.
+ */
+public class TicketMiner {
+    // Attributes
+    private static TicketMiner obj; // Singleton instance
+    private double convenienceFee = 2.50; // Default convenience fee
+    private double serviceFee; // Service fee
+    private double charityFee; // Charity fee
+    private double totalRevenue = 0.00; // Total revenue generated
+    private double convenienceRevenue = 0.00; // Total revenue generated from convenienceFees
+    private double serviceRevenue = 0.00; // Total revenue generated from serviceFees
+    private double charityRevenue = 0.00; // Total revenue generated from charityFees
+    private HashMap<Integer, HashMap<String, Double>> collectedFees = new HashMap<>(); // Collected fees for events
+    HashMap<String, Double> eventMap; // Inner map to store fee types for each event
 
-    //methods
-    public static synchronized TicketMiner getInstance(){
-        if(obj == null){
+    // Constructors
+    private TicketMiner() {} // Private constructor for singleton pattern
+
+    // Methods
+
+    /**
+     * Returns the singleton instance of TicketMiner.
+     * @return The TicketMiner singleton instance.
+     */
+    public static synchronized TicketMiner getInstance() {
+        if (obj == null) {
             obj = new TicketMiner();
         }
         return obj;
     }
 
-    public double getAllFees(int ticketAmount, double ticketPrice){
+    /**
+     * Calculates and returns the total fees for an event based on ticket amount and price.
+     * @param ticketAmount The number of tickets sold.
+     * @param ticketPrice The price per ticket.
+     * @return The total fees (convenience, service, and charity) for the given ticket amount and price.
+     */
+    public double getAllFees(int ticketAmount, double ticketPrice) {
         return getConvenienceFee() + getServiceFee(ticketAmount, ticketPrice) + getCharityFee(ticketAmount, ticketPrice);
     }
 
+    /**
+     * Returns the convenience fee.
+     * @return The convenience fee.
+     */
     public double getConvenienceFee() {
         return convenienceFee;
     }
 
+    /**
+     * Calculates and returns the service fee based on the number of tickets and ticket price.
+     * @param ticketAmount The number of tickets.
+     * @param ticketPrice The price per ticket.
+     * @return The service fee.
+     */
     public double getServiceFee(int ticketAmount, double ticketPrice) {
         serviceFee = ticketAmount * ticketPrice * .005;
         return serviceFee;
     }
 
+    /**
+     * Calculates and returns the charity fee based on the number of tickets and ticket price.
+     * @param ticketAmount The number of tickets.
+     * @param ticketPrice The price per ticket.
+     * @return The charity fee.
+     */
     public double getCharityFee(int ticketAmount, double ticketPrice) {
         charityFee = ticketAmount * ticketPrice * .0075;
         return charityFee;
     }
 
+    /**
+     * Initializes the collected fees for each event.
+     * If the eventId's inner HashMap doesn't exist, it creates a new one and initializes specific fee types for the eventId.
+     */
     public void initializeCollectedFees() {
-        // Initialize the inner HashMaps for each eventId
         for (Integer eventId : collectedFees.keySet()) {
-            // Create a new inner HashMap for each eventId if it doesn't exist
             if (!collectedFees.containsKey(eventId)) {
                 collectedFees.put(eventId, new HashMap<>());
             }
-            // Initialize specific fee types for the eventId
             collectedFees.get(eventId).put("convenience", 0.0);
             collectedFees.get(eventId).put("service", 0.0);
             collectedFees.get(eventId).put("charity", 0.0);
         }
     }
 
+    /**
+     * Updates the convenience fees for a specific event based on the convenience fee value.
+     * @param eventId The ID of the event.
+     */
+    public void updateConvenienceFees(int eventId) {
+        eventMap = collectedFees.get(eventId);
+        double currentConvenienceFees = eventMap.get("convenience");
+        double updatedConvenienceFees = currentConvenienceFees + getConvenienceFee();
+        eventMap.put("convenience", updatedConvenienceFees);
+        collectedFees.put(eventId, eventMap);
+    }
+    
+    /**
+     * Updates the service fees for a specific event based on the number of tickets and ticket price.
+     * @param eventId The ID of the event.
+     * @param ticketAmount The number of tickets.
+     * @param ticketPrice The price per ticket.
+     */
+    public void updateServiceFees(int eventId, int ticketAmount, double ticketPrice) {
+        eventMap = collectedFees.get(eventId);
+        double currentServiceFees = eventMap.get("service");
+        double updatedServiceFees = currentServiceFees + getServiceFee(ticketAmount, ticketPrice);
+        eventMap.put("service", updatedServiceFees);
+        collectedFees.put(eventId, eventMap);
+    }
+    
+    /**
+     * Updates the charity fees for a specific event based on the number of tickets and ticket price.
+     * @param eventId The ID of the event.
+     * @param ticketAmount The number of tickets.
+     * @param ticketPrice The price per ticket.
+     */
+    public void updateCharityFees(int eventId, int ticketAmount, double ticketPrice) {
+        eventMap = collectedFees.get(eventId);
+        double currentCharityFees = eventMap.get("service");
+        double updatedCharityFees = currentCharityFees + getCharityFee(ticketAmount, ticketPrice);
+        eventMap.put("charity", updatedCharityFees);
+        collectedFees.put(eventId, eventMap);
+    }
+
+    /**
+     * Computes the total revenue earned from convenience fees across all events.
+     * @return The total revenue generated from convenience fees from all events.
+     */
+    public double computeConvenienceRevenue() {
+        double temp;
+
+        for (HashMap<String, Double> eventMap : collectedFees.values()) {
+            temp = eventMap.get("convenience");
+            convenienceRevenue += temp;
+        }
+        return convenienceRevenue;
+    }
+
+    /**
+     * Computes the total revenue earned from service fees across all events.
+     * @return The total revenue generated from service fees from all events.
+     */
+    public double computeServiceRevenue() {
+        double temp;
+
+        for (HashMap<String, Double> eventMap : collectedFees.values()) {
+            temp = eventMap.get("service");
+            serviceRevenue += temp;
+        }
+        return serviceRevenue;
+    }
+
+    /**
+     * Computes the total revenue earned from chairty fees across all events.
+     * @return The total revenue generated from chairty fees from all events.
+     */
+    public double computeCharityRevenue() {
+        double temp;
+
+        for (HashMap<String, Double> eventMap : collectedFees.values()) {
+            temp = eventMap.get("charity");
+            charityRevenue += temp;
+        }
+        return charityRevenue;
+    }
+
+    /**
+     * Computes the total revenue earned from collected fees across all events.
+     * @return The total revenue generated from all events.
+     */
+    public double computeRevenue() {
+        for (HashMap<String, Double> eventMap : collectedFees.values()) {
+            for (double fee : eventMap.values()) {
+                totalRevenue += fee;
+            }
+        }
+        return totalRevenue;
+    }
 }
