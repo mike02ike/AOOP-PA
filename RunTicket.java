@@ -42,6 +42,8 @@ public class RunTicket {
         EventHandler eventHandler = new EventHandler();
         CustomerHandler customerHandler = new CustomerHandler();
         Log logFile = Log.getInstance();
+        TicketMiner ourCompany = TicketMiner.getInstance();
+        ourCompany.initializeCollectedFees(eventMap);
 
         // Handles the file not found exception
         try {

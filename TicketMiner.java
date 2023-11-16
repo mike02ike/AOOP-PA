@@ -16,7 +16,7 @@
  * @version 1.0
  */
 
-import java.util.HashMap;
+import java.util.*;
 
 /**
  * The TicketMiner class manages ticket fees and revenue calculation for events.
@@ -32,7 +32,7 @@ public class TicketMiner {
     private double serviceRevenue = 0.00; // Total revenue generated from serviceFees
     private double charityRevenue = 0.00; // Total revenue generated from charityFees
     private HashMap<Integer, HashMap<String, Double>> collectedFees = new HashMap<>(); // Collected fees for events
-    HashMap<String, Double> eventMap; // Inner map to store fee types for each event
+    HashMap<String, Double> eventMap = new HashMap<>(); // Inner map to store fee types for each event
 
     // Constructors
     private TicketMiner() {} // Private constructor for singleton pattern
@@ -94,7 +94,8 @@ public class TicketMiner {
      * Initializes the collected fees for each event.
      * If the eventId's inner HashMap doesn't exist, it creates a new one and initializes specific fee types for the eventId.
      */
-    public void initializeCollectedFees() {
+    // needed to fix
+    public void initializeCollectedFees(LinkedHashMap<Integer,Event> eventMap)  {
         for (Integer eventId : collectedFees.keySet()) {
             if (!collectedFees.containsKey(eventId)) {
                 collectedFees.put(eventId, new HashMap<>());
