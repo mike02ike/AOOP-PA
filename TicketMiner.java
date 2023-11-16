@@ -27,7 +27,10 @@ public class TicketMiner {
     private double convenienceFee = 2.50; // Default convenience fee
     private double serviceFee; // Service fee
     private double charityFee; // Charity fee
-    private double totalRevenue; // Total revenue generated
+    private double totalRevenue = 0.00; // Total revenue generated
+    private double convenienceRevenue = 0.00; // Total revenue generated from convenienceFees
+    private double serviceRevenue = 0.00; // Total revenue generated from serviceFees
+    private double charityRevenue = 0.00; // Total revenue generated from charityFees
     private HashMap<Integer, HashMap<String, Double>> collectedFees = new HashMap<>(); // Collected fees for events
     HashMap<String, Double> eventMap; // Inner map to store fee types for each event
 
@@ -140,6 +143,48 @@ public class TicketMiner {
         double updatedCharityFees = currentCharityFees + getCharityFee(ticketAmount, ticketPrice);
         eventMap.put("charity", updatedCharityFees);
         collectedFees.put(eventId, eventMap);
+    }
+
+    /**
+     * Computes the total revenue earned from convenience fees across all events.
+     * @return The total revenue generated from convenience fees from all events.
+     */
+    public double computeConvenienceRevenue() {
+        double temp;
+
+        for (HashMap<String, Double> eventMap : collectedFees.values()) {
+            temp = eventMap.get("convenience");
+            convenienceRevenue += temp;
+        }
+        return convenienceRevenue;
+    }
+
+    /**
+     * Computes the total revenue earned from service fees across all events.
+     * @return The total revenue generated from service fees from all events.
+     */
+    public double computeServiceRevenue() {
+        double temp;
+
+        for (HashMap<String, Double> eventMap : collectedFees.values()) {
+            temp = eventMap.get("service");
+            serviceRevenue += temp;
+        }
+        return serviceRevenue;
+    }
+
+    /**
+     * Computes the total revenue earned from chairty fees across all events.
+     * @return The total revenue generated from chairty fees from all events.
+     */
+    public double computeCharityRevenue() {
+        double temp;
+
+        for (HashMap<String, Double> eventMap : collectedFees.values()) {
+            temp = eventMap.get("charity");
+            charityRevenue += temp;
+        }
+        return charityRevenue;
     }
 
     /**
