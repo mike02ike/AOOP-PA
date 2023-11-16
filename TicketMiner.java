@@ -13,7 +13,8 @@
  * <p>
  * @since 11/08/2023
  * @author Michael Ike
- * @version 1.0
+ * @author Erik LaNeave
+ * @version 1.1
  */
 
 import java.util.*;
@@ -32,7 +33,7 @@ public class TicketMiner {
     private double serviceRevenue = 0.00; // Total revenue generated from serviceFees
     private double charityRevenue = 0.00; // Total revenue generated from charityFees
     private HashMap<Integer, HashMap<String, Double>> collectedFees = new HashMap<>(); // Collected fees for events
-    HashMap<String, Double> eventMap = new HashMap<>(); // Inner map to store fee types for each event
+    HashMap<String, Double> eventMap; // Inner map to store fee types for each event
 
     // Constructors
     private TicketMiner() {} // Private constructor for singleton pattern
@@ -94,15 +95,13 @@ public class TicketMiner {
      * Initializes the collected fees for each event.
      * If the eventId's inner HashMap doesn't exist, it creates a new one and initializes specific fee types for the eventId.
      */
-    // needed to fix
     public void initializeCollectedFees(LinkedHashMap<Integer,Event> eventMap)  {
-        for (Integer eventId : collectedFees.keySet()) {
-            if (!collectedFees.containsKey(eventId)) {
-                collectedFees.put(eventId, new HashMap<>());
-            }
-            collectedFees.get(eventId).put("convenience", 0.0);
-            collectedFees.get(eventId).put("service", 0.0);
-            collectedFees.get(eventId).put("charity", 0.0);
+        for (Integer eventId : eventMap.keySet()) {
+            HashMap<String,Double> feesMap = new HashMap<>();
+            feesMap.put("convenience", 0.0);
+            feesMap.put("service", 0.0);
+            feesMap.put("charity", 0.0);
+            collectedFees.put(eventId, feesMap);
         }
     }
 

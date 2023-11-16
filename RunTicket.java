@@ -18,10 +18,10 @@ import java.util.LinkedHashMap;
  * Class Purpose: This class contains the main method and creates the HashMaps
  * and UI.
  * <p>
- * Last Change: 11/12/2023
+ * Last Change: 11/16/2023
  *
  * @author Erik LaNeave
- * @version 2.3
+ * @version 2.4
  */
 
 public class RunTicket {
@@ -43,7 +43,6 @@ public class RunTicket {
         CustomerHandler customerHandler = new CustomerHandler();
         Log logFile = Log.getInstance();
         TicketMiner ourCompany = TicketMiner.getInstance();
-        ourCompany.initializeCollectedFees(eventMap);
 
         // Handles the file not found exception
         try {
@@ -53,6 +52,7 @@ public class RunTicket {
             eventMap = eventHandler.readFile("EventListPA5.csv");
             customerMap = customerHandler.readFile("CustomerListPA5.csv");
             logFile.save(logFile.time() + " Event and Customer maps made from csv files\n");
+            ourCompany.initializeCollectedFees(eventMap);
             // boolean used to control the driving while loop
             boolean mainMenuControl = true;
             System.out.println("Welcome to TicketMiner!");
