@@ -16,9 +16,9 @@ import java.util.Scanner;
  * <p>
  * Class Purpose: Handles the purchase process for both customer and admin
  * <p>
- * Last Change: 11/14/2023
+ * Last Change: 11/16/2023
  * @author Erik LaNeave
- * @version 2.3
+ * @version 2.4
  * <p>
  * @since 11/15/2023
  * @author Michael Ike
@@ -70,19 +70,20 @@ public class Purchase {
             // Checks that event has tickets for the purchase throws CheckTicketAvaException
             ticketCheck(autoTicket);
             // Gets total cost of purchase
-            double totalCostWithTax = getTotalCost(ticketPrice, autoTicket);
+            Invoice newInvoice = getTotalCost(ticketPrice, autoTicket);
             // Checks the the user has funds for the purchase throws CustomerMoneyException
-            moneyCheckAndUpdate(totalCostWithTax);
+            moneyCheckAndUpdate(newInvoice.getTotalPrice());
             // Updates the amount of tickets in the event
             updateEvent(autoTicket);
             // Increases the purchased tickets in customer
             updateCust(autoTicket);
             // Creates a new invoice for the customer
-            //createInvoice(autoTicket, totalCostWithTax);
+            addInvoices(newInvoice);
+            updateEventAndTicketMiner(newInvoice);
             logFile.save(logFile.time() + " Customer with name " + currentCustomer.getFirstName() + " purchased "
                     + autoTicket
                     + " tickets for event with ID " + currentEvent.getId() + " spending $"
-                    + doubleForm(totalCostWithTax)
+                    + doubleForm(newInvoice.getTotalPrice())
                     + "\n");
             logFile.save(logFile.time() + " Customer with name " + currentCustomer.getFirstName() + " current funds: $"
                     + doubleForm(currentCustomer.getMoneyAvailable()) + "\n");
@@ -124,19 +125,20 @@ public class Purchase {
             // Checks that event has tickets for the purchase throws CheckTicketAvaException
             ticketCheck(inputInt);
             // Gets total cost of purchase
-            double totalCostWithTax = getTotalCost(ticketPrice, inputInt);
+            Invoice newInvoice = getTotalCost(ticketPrice, inputInt);
             // Checks the the user has funds for the purchase throws CustomerMoneyException
-            moneyCheckAndUpdate(totalCostWithTax);
+            moneyCheckAndUpdate(newInvoice.getTotalPrice());
             // Updates the amount of tickets in the event
             updateEvent(inputInt);
             // Increases the purchased tickets in customer
             updateCust(inputInt);
             // Creates a new invoice for the customer
-            //createInvoice(inputInt, totalCostWithTax);
+            addInvoices(newInvoice);
+            updateEventAndTicketMiner(newInvoice);
             printNewInvoice();
             logFile.save(logFile.time() + " User with ID " + currentCustomer.getId() + " purchased " + inputInt
                     + " tickets for event with ID " + currentEvent.getId() + " spending $"
-                    + doubleForm(totalCostWithTax)
+                    + doubleForm(newInvoice.getTotalPrice())
                     + "\n");
             logFile.save(logFile.time() + " User with ID " + currentCustomer.getId() + " current funds: $"
                     + doubleForm(currentCustomer.getMoneyAvailable()) + "\n");
@@ -362,32 +364,32 @@ public class Purchase {
      * 
      * @param ticketPrice
      * @param ticketAmount
-     * @return totalCost
+     * @return newInvoice with all needed values
      */
-    public double getTotalCost(double ticketPrice, int ticketAmount) {
+    public Invoice getTotalCost(double ticketPrice, int ticketAmount) {
         TicketMiner ourCompany = TicketMiner.getInstance();
-        double subTotal = (ticketPrice * ticketAmount) + ourCompany.getAllFees(ticketAmount, ticketPrice);
-        currentEvent.updateConvenienceFees(ourCompany.getConvenienceFee());
-        currentEvent.updateServiceFees(ourCompany.getServiceFee(ticketAmount, ticketPrice));
-        currentEvent.updateCharityFees(ourCompany.getCharityFee(ticketAmount, ticketPrice));
-        ourCompany.updateConvenienceFees(currentEvent.getId());
-        ourCompany.updateServiceFees(currentEvent.getId(), ticketAmount, ticketPrice);
-        ourCompany.updateCharityFees(currentEvent.getId(), ticketAmount, ticketPrice);
+        double totalWithOutFees = (ticketPrice * ticketAmount);
+        double convenienceFees = ourCompany.getConvenienceFee();
+        double serviceFees = ourCompany.getServiceFee(ticketAmount, ticketPrice);
+        double charityFees = ourCompany.getCharityFee(ticketAmount, ticketPrice);
+        double subTotalFees = totalWithOutFees + convenienceFees + serviceFees + charityFees;
 
         // TicketMiner Member Discount
         if (currentCustomer.getTicketMinerMember()) {
-            double discountTotal = subTotal * .10;
+            double discountTotal = subTotalFees * .10;
             currentCustomer.addMembershipSavings(discountTotal);
             currentEvent.addTotalMemberDiscount(discountTotal);
 
-            subTotal -= discountTotal;
+            subTotalFees -= discountTotal;
         }
 
-        currentTaxAmount = subTotal * 0.0825;
+        currentTaxAmount = subTotalFees * 0.0825;
         currentEvent.addTotalTax(currentTaxAmount);
-        subTotal = Math.floor(100 * (subTotal + currentTaxAmount)) / 100;
+        double subTotalWithTaxAndFees = Math.floor(100 * (subTotalFees + currentTaxAmount)) / 100;
 
-        return subTotal;
+        Invoice newInvoice = createInvoice(ticketAmount, subTotalWithTaxAndFees, convenienceFees, serviceFees, charityFees);
+
+        return newInvoice;
     }
 
     /**
@@ -452,14 +454,32 @@ public class Purchase {
                 convenience, service, charity, ticketList);
         logFile.save(logFile.time() + " Invoice with confimation number " + newInvoice.getConfirmationNum()
                 + " created for user purchase\n");
-        // currentCustomer.addInvoice(newInvoice);
-        // currentEvent.addInvoice(newInvoice);
         return newInvoice;
     }
 
+    /**
+     * Adds new invoice to the current customer
+     * 
+     * @param newInvoice
+     */
     public void addInvoices(Invoice newInvoice) {
         currentCustomer.addInvoice(newInvoice);
         currentEvent.addInvoice(newInvoice);
+    }
+
+    /**
+     * Updates the ticketminer and event with all fees from purchase
+     * 
+     * @param currentInvoice
+     */
+    public void updateEventAndTicketMiner(Invoice currentInvoice) {
+        TicketMiner ourCompany = TicketMiner.getInstance();
+        currentEvent.updateConvenienceFees(currentInvoice.getConvenience());
+        currentEvent.updateServiceFees(currentInvoice.getService());
+        currentEvent.updateCharityFees(currentInvoice.getCharity());
+        ourCompany.updateConvenienceFees(currentEvent.getId());
+        ourCompany.updateServiceFees(currentEvent.getId(), currentInvoice.getService());
+        ourCompany.updateCharityFees(currentEvent.getId(), currentInvoice.getCharity());
     }
 
     /**
