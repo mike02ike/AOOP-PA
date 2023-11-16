@@ -36,12 +36,14 @@ public class TicketMiner {
     HashMap<String, Double> eventMap; // Inner map to store fee types for each event
 
     // Constructors
-    private TicketMiner() {} // Private constructor for singleton pattern
+    private TicketMiner() {
+    } // Private constructor for singleton pattern
 
     // Methods
 
     /**
      * Returns the singleton instance of TicketMiner.
+     * 
      * @return The TicketMiner singleton instance.
      */
     public static synchronized TicketMiner getInstance() {
@@ -51,18 +53,27 @@ public class TicketMiner {
         return obj;
     }
 
+    public HashMap<Integer, HashMap<String, Double>> getCollectedFees() {
+        return this.collectedFees;
+    }
+
     /**
-     * Calculates and returns the total fees for an event based on ticket amount and price.
+     * Calculates and returns the total fees for an event based on ticket amount and
+     * price.
+     * 
      * @param ticketAmount The number of tickets sold.
-     * @param ticketPrice The price per ticket.
-     * @return The total fees (convenience, service, and charity) for the given ticket amount and price.
+     * @param ticketPrice  The price per ticket.
+     * @return The total fees (convenience, service, and charity) for the given
+     *         ticket amount and price.
      */
     public double getAllFees(int ticketAmount, double ticketPrice) {
-        return getConvenienceFee() + getServiceFee(ticketAmount, ticketPrice) + getCharityFee(ticketAmount, ticketPrice);
+        return getConvenienceFee() + getServiceFee(ticketAmount, ticketPrice)
+                + getCharityFee(ticketAmount, ticketPrice);
     }
 
     /**
      * Returns the convenience fee.
+     * 
      * @return The convenience fee.
      */
     public double getConvenienceFee() {
@@ -70,9 +81,11 @@ public class TicketMiner {
     }
 
     /**
-     * Calculates and returns the service fee based on the number of tickets and ticket price.
+     * Calculates and returns the service fee based on the number of tickets and
+     * ticket price.
+     * 
      * @param ticketAmount The number of tickets.
-     * @param ticketPrice The price per ticket.
+     * @param ticketPrice  The price per ticket.
      * @return The service fee.
      */
     public double getServiceFee(int ticketAmount, double ticketPrice) {
@@ -81,9 +94,11 @@ public class TicketMiner {
     }
 
     /**
-     * Calculates and returns the charity fee based on the number of tickets and ticket price.
+     * Calculates and returns the charity fee based on the number of tickets and
+     * ticket price.
+     * 
      * @param ticketAmount The number of tickets.
-     * @param ticketPrice The price per ticket.
+     * @param ticketPrice  The price per ticket.
      * @return The charity fee.
      */
     public double getCharityFee(int ticketAmount, double ticketPrice) {
@@ -93,11 +108,12 @@ public class TicketMiner {
 
     /**
      * Initializes the collected fees for each event.
-     * If the eventId's inner HashMap doesn't exist, it creates a new one and initializes specific fee types for the eventId.
+     * If the eventId's inner HashMap doesn't exist, it creates a new one and
+     * initializes specific fee types for the eventId.
      */
-    public void initializeCollectedFees(LinkedHashMap<Integer,Event> eventMap)  {
+    public void initializeCollectedFees(LinkedHashMap<Integer, Event> eventMap) {
         for (Integer eventId : eventMap.keySet()) {
-            HashMap<String,Double> feesMap = new HashMap<>();
+            HashMap<String, Double> feesMap = new HashMap<>();
             feesMap.put("convenience", 0.0);
             feesMap.put("service", 0.0);
             feesMap.put("charity", 0.0);
@@ -106,7 +122,9 @@ public class TicketMiner {
     }
 
     /**
-     * Updates the convenience fees for a specific event based on the convenience fee value.
+     * Updates the convenience fees for a specific event based on the convenience
+     * fee value.
+     * 
      * @param eventId The ID of the event.
      */
     public void updateConvenienceFees(int eventId) {
@@ -116,10 +134,12 @@ public class TicketMiner {
         eventMap.put("convenience", updatedConvenienceFees);
         collectedFees.put(eventId, eventMap);
     }
-    
+
     /**
-     * Updates the service fees for a specific event based on the number of tickets and ticket price.
-     * @param eventId The ID of the event.
+     * Updates the service fees for a specific event based on the number of tickets
+     * and ticket price.
+     * 
+     * @param eventId   The ID of the event.
      * @param serviceIn
      */
     public void updateServiceFees(int eventId, double serviceIn) {
@@ -129,10 +149,12 @@ public class TicketMiner {
         eventMap.put("service", updatedServiceFees);
         collectedFees.put(eventId, eventMap);
     }
-    
+
     /**
-     * Updates the charity fees for a specific event based on the number of tickets and ticket price.
-     * @param eventId The ID of the event.
+     * Updates the charity fees for a specific event based on the number of tickets
+     * and ticket price.
+     * 
+     * @param eventId   The ID of the event.
      * @param charityIn
      */
     public void updateCharityFees(int eventId, double charityIn) {
@@ -145,6 +167,7 @@ public class TicketMiner {
 
     /**
      * Computes the total revenue earned from convenience fees across all events.
+     * 
      * @return The total revenue generated from convenience fees from all events.
      */
     public double computeConvenienceRevenue() {
@@ -159,6 +182,7 @@ public class TicketMiner {
 
     /**
      * Computes the total revenue earned from service fees across all events.
+     * 
      * @return The total revenue generated from service fees from all events.
      */
     public double computeServiceRevenue() {
@@ -173,6 +197,7 @@ public class TicketMiner {
 
     /**
      * Computes the total revenue earned from chairty fees across all events.
+     * 
      * @return The total revenue generated from chairty fees from all events.
      */
     public double computeCharityRevenue() {
@@ -187,6 +212,7 @@ public class TicketMiner {
 
     /**
      * Computes the total revenue earned from collected fees across all events.
+     * 
      * @return The total revenue generated from all events.
      */
     public double computeRevenue() {
