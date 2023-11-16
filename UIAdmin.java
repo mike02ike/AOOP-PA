@@ -16,9 +16,9 @@ import java.util.Map.Entry;
  * information, and access additional calculated information.
  * <p>
  * 
- * @since 11/14/2023
+ * @since 11/16/2023
  * @author Anaiah Quinn
- * @version 3.0
+ * @version 3.1
  *          <p>
  * @since 11/13/2023
  * @author Erik LaNeave
@@ -39,6 +39,7 @@ public class UIAdmin {
     private LinkedHashMap<Integer, Customer> customers;
     private Event selectedEvent;
     private Log logFile = Log.getInstance();
+    private TicketMiner ticketMiner = TicketMiner.getInstance();
     private Scanner myScanner = new Scanner(System.in);
 
     public static synchronized UIAdmin getInstance() {
@@ -464,17 +465,37 @@ public class UIAdmin {
         }
     }
 
+    /**
+     * prints fees for event 
+     * 
+     * @param event
+     */
+
     public void printFees(Event event) {
+        //Displays fee revenue from a specific event 
         System.out.println("================================");
         System.out.println("==============FEES==============");
         System.out.println("Total Fee Revenue for event: "+ event.getName());
         System.out.println("Service Fees: $" + event.getServiceFee());
         System.out.println("Convenience Fees: $" + event.getConvenienceFee());
-        System.out.println("Charity Fees $" + event.getCharityFee());
+        System.out.println("Charity Fees: $" + event.getCharityFee());
         double total = event.getCharityFee()+event.getConvenienceFee()+event.getServiceFee();
         System.out.println("Total Fees: $" + total);
 
 
+    }
+    public void printRevenue(){
+        //Displays total Ticket Miner fee revenue from all events, ticket miner profit
+        System.out.println("================================");
+        System.out.println("             PROFIT             ");
+        System.out.println("================================");
+        System.out.println("Revenue from Convenience Fees: $" + ticketMiner.computeServiceRevenue());
+        System.out.println("Revenue from Service Fees: $" + ticketMiner.computeServiceRevenue());
+        System.out.println("Total Revenue:$ "+ ticketMiner.computeServiceRevenue()+ticketMiner.computeConvenienceRevenue());
+        System.out.println("=================================");
+        System.out.println("            CHARITY              ");
+        System.out.println("=================================");
+        System.out.println("Money for Charity: $"+ ticketMiner.computeCharityRevenue());
     }
 
     public void autoPurchase() {
