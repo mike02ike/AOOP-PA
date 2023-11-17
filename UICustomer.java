@@ -264,9 +264,7 @@ public class UICustomer {
                     currInv.setTotalPrice(0.0);
                     currInv.setTax(0.0);
                     currInv.setEventName("Purchase Canceled " + currInv.getEventName());
-                    System.out.println(
-                            "Purchase with confirmation number " + currInv.getConfirmationNum() + " Canceled\n");
-
+                    System.out.println("Purchase with confirmation number " + currInv.getConfirmationNum() + " Canceled\n");
                     int numTickets = currInv.getNumTickets();
                     int ticketType = getTicketType(currInv.getTicketType());
                     eventMap.get(currInv.getEventID()).getVenue().addSeats(ticketType, numTickets);

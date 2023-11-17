@@ -259,14 +259,14 @@ public class Purchase {
         double[] ticketsAva = tempVenue.getNumAvailableSeats();
         double[] ogTickets = tempVenue.getOriginalAvailableSeats();
         String amount = String.format(
-                "\n-- Number of Tickets Available --\n|Vip: %.0f|Gold: %.0f|Silver %.0f|Bronze: %.0f|General Admission: %.0f|\n",
+                "\n-- Number of Tickets Available --\n|Vip: %.0f|Gold: %.0f|Silver: %.0f|Bronze: %.0f|General Admission: %.0f|\n",
                 ticketsAva[0], ticketsAva[1], ticketsAva[2], ticketsAva[3], ticketsAva[4]);
         String purchase = String.format(
-                "-- Number of Tickets Purchased --\n|Vip: %.0f|Gold: %.0f|Silver %.0f|Bronze: %.0f|General Admission: %.0f|\n",
+                "-- Number of Tickets Purchased --\n|Vip: %.0f|Gold: %.0f|Silver: %.0f|Bronze: %.0f|General Admission: %.0f|\n",
                 ogTickets[0] - ticketsAva[0], ogTickets[1] - ticketsAva[1], ogTickets[2] - ticketsAva[2],
                 ogTickets[3] - ticketsAva[3], ogTickets[4] - ticketsAva[4]);
         String price = String.format(
-                "-- Ticket Prices --\n|Vip: $%.2f|Gold: $%.2f|Silver $%.2f|Bronze: $%.2f|General Admission: $%.2f|\n",
+                "-- Ticket Prices --\n|Vip: $%.2f|Gold: $%.2f|Silver: $%.2f|Bronze: $%.2f|General Admission: $%.2f|\n",
                 currentEvent.getVipPrice(), currentEvent.getGoldPrice(), currentEvent.getSilverPrice(),
                 currentEvent.getBronzePrice(), currentEvent.getGenAdmissionPrice());
         System.out.print(amount + purchase + price + "\n");
