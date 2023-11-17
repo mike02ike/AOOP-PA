@@ -19,9 +19,9 @@ import java.util.ArrayList;
  * using a ArrayList of Invoices.
  * <p>
  * 
- * @since 11/11/2023
+ * @since 11/16/2023
  * @author Erik LaNeave
- * @version 2.0
+ * @version 2.1
  *          <p>
  * @since 10/28/2023
  * @author Michael Ike
@@ -95,6 +95,7 @@ public class Invoice {
         System.out.printf("Ticket Type: %s\n", getTicketType());
         System.out.printf("Number of tickets bought: %d\n", getNumTickets());
         System.out.printf("Total cost of order: $%.2f\n", getTotalPrice());
+        System.out.printf("Total fees of order: $%.2f\n", (getCharity() + getConvenience() + getService()));
         System.out.printf("Total tax of order was: $%.2f\n", getTax());
         System.out.printf("Confirmation Number: %d\n", getConfirmationNum());
         System.out.printf("----------------------------------\n");
