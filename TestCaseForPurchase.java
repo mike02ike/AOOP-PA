@@ -17,10 +17,10 @@ import org.junit.Test;
  * <p>
  * Class Purpose: Test the method that check and control in the purchase class and main purhcase methods
  * <p>
- * Last Change: 11/04/2023
+ * Last Change: 11/16/2023
  *
  * @author Erik LaNeave
- * @version 1.3
+ * @version 1.4
  */
 
 public class TestCaseForPurchase {
@@ -162,22 +162,35 @@ public class TestCaseForPurchase {
     public void testTotalCost() {
         Purchase testPurchase = new Purchase();
         Sport testEvent = new Sport();
+        testEvent.setId(1);
+        testEvent.setName("Test");
+        testEvent.setEventType("Sport");
+        testEvent.setDate("12/1/2021");
         testPurchase.setCurrentEvent(testEvent);
+        testPurchase.setCurrentTicketName("gold");
         Customer testCust = new Customer();
         testPurchase.setCurrentCustomer(testCust);
 
         //When customer is a miner member
         testCust.setTicketMinerMember(true);
-        assertEquals(0.0,testPurchase.getTotalCost(0.0, 0),0);
-        assertEquals(0.0,testPurchase.getTotalCost(0.0, Integer.MAX_VALUE),0);
-        assertEquals(28.95,testPurchase.getTotalCost(14.86, 2),0);
-        assertEquals(4075.05,testPurchase.getTotalCost(1045.69, 4),0);
+        Invoice temp1 = testPurchase.getTotalCost(0.0, 0);
+        assertEquals(2.43,temp1.getTotalPrice(),0);
+        Invoice temp2 = testPurchase.getTotalCost(0.0, 1);
+        assertEquals(2.43,temp2.getTotalPrice(),0);
+        Invoice temp3 = testPurchase.getTotalCost(14.86, 2);
+        assertEquals(31.75,temp3.getTotalPrice(),0);
+        Invoice temp4 = testPurchase.getTotalCost(1045.69, 4);
+        assertEquals(4128.42,temp4.getTotalPrice(),0);
 
-        //When customer is a miner member
+        //When customer is not a miner member
         testCust.setTicketMinerMember(false);
-        assertEquals(0.0,testPurchase.getTotalCost(0.0, 0),0);
-        assertEquals(0.0,testPurchase.getTotalCost(0.0, Integer.MAX_VALUE),0);
-        assertEquals(32.17,testPurchase.getTotalCost(14.86, 2),0);
-        assertEquals(4527.83,testPurchase.getTotalCost(1045.69, 4),0);
+        temp1 = testPurchase.getTotalCost(0.0, 0);
+        assertEquals(2.70,temp1.getTotalPrice(),0);
+        temp2 = testPurchase.getTotalCost(0.0, 1);
+        assertEquals(2.70,temp2.getTotalPrice(),1);
+        temp3 = testPurchase.getTotalCost(14.86, 2);
+        assertEquals(35.28,temp3.getTotalPrice(),0);
+        temp4 = testPurchase.getTotalCost(1045.69, 4);
+        assertEquals(4587.14,temp4.getTotalPrice(),0);
     }
 }
