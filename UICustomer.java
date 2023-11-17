@@ -22,9 +22,9 @@ import java.util.Scanner;
  * The log and invoices for the user are kept and updated inside of the UI.
  * <p>
  * 
- * @since 11/11/2023
+ * @since 11/16/2023
  * @author Erik LaNeave
- * @version 2.5
+ * @version 2.6
  *          <p>
  * @since 10/27/2023
  * @author Michael Ike
@@ -247,6 +247,9 @@ public class UICustomer {
         logFile.save(logFile.time() + " Invoice list has been saved\n");
     }
 
+    /**
+     * Ask user for use confirmation and will then cancel the ticket and give them the money back
+     */
     public void cancelPurchase() {
         if (currCustomer.getInvoiceList().isEmpty()) {
             logFile.save(logFile.time() + " User tried to cancel a purchase but has not invoices\n");
@@ -266,7 +269,7 @@ public class UICustomer {
                     currInv.setEventName("Purchase Canceled " + currInv.getEventName());
                     System.out.println(
                             "Purchase with confirmation number " + currInv.getConfirmationNum() + " Canceled\n");
-
+                    currCustomer.setMoneyAvailable(currCustomer.getMoneyAvailable() + (currInv.getTotalPrice() - currInv.getConvenience() - currInv.getService() - currInv.getCharity()));
                     int numTickets = currInv.getNumTickets();
                     int ticketType = getTicketType(currInv.getTicketType());
                     eventMap.get(currInv.getEventID()).getVenue().addSeats(ticketType, numTickets);
@@ -288,6 +291,12 @@ public class UICustomer {
         return String.format("%.2f", toBeForm);
     }
 
+    /**
+     * Returns the index of the ticket for use in ticket array
+     * 
+     * @param ticketType
+     * @return
+     */
     public int getTicketType(String ticketType) {
         switch (ticketType.toLowerCase()) {
             case "vip":
