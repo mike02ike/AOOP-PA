@@ -22,9 +22,9 @@ import java.util.Scanner;
  * The log and invoices for the user are kept and updated inside of the UI.
  * <p>
  * 
- * @since 11/16/2023
+ * @since 11/17/2023
  * @author Erik LaNeave
- * @version 2.6
+ * @version 2.7
  *          <p>
  * @since 10/27/2023
  * @author Michael Ike
@@ -56,7 +56,7 @@ public class UICustomer {
         while (true) {
             // Prints the menu options and ask for user input as number
             System.out.print(
-                    "Miner Menu\n1 - View Single Event Information\n2 - View All Events\n3 - Purchase Event Tickets\n4 - View Invoices\n5 - Save Invoices\n6 - Cancel Purchase\nor Type \"Exit\" to exit the program\n--> ");
+                    "Miner Menu\n1 - View Single Event Information\n2 - View All Events\n3 - Purchase Event Tickets\n4 - View Invoices\n5 - Save Invoices\n6 - Cancel Purchase\nor Type \"Exit\" to return to login\n--> ");
             // Only takes in strings to help with exceptions
             String input = scnr.nextLine().toLowerCase();
             // switch case used to cut down on possible exceptions and clean look
@@ -86,7 +86,7 @@ public class UICustomer {
                     cancelPurchase();
                     break;
                 case "exit":
-                    System.out.println("\nThank you " + currCustomer.getFirstName() + " for using TicketMiner!\n");
+                    System.out.println("\nThank you " + currCustomer.getFirstName() + " for using TicketMiner!\nReturning to login...\n");
                     logFile.save(logFile.time() + " User " + currCustomer.getFirstName() + " terminated the program\n");
                     // Stops while loop from running in RunTicket
                     return;
@@ -148,7 +148,7 @@ public class UICustomer {
         System.out.println("\n-------EVENT INFORMATION-------\nEvent Name is: " + tempEvent.getName());
         tempEvent.eventBasicInfo();
         System.out.println("-------------------------\n");
-        System.out.print("\n-------EVENT TICKET INFORMATION-------");
+        System.out.print("-------EVENT TICKET INFORMATION-------");
         displayEventTicketAmount(tempEvent);
         System.out.println("--------------------------------------\n");
     }
@@ -248,6 +248,21 @@ public class UICustomer {
     }
 
     /**
+     * Runs through the invoice list and finds the invoice with same confirmation number
+     * 
+     * @param confirmationNumInput
+     * @return found invoice or null
+     */
+    public Invoice findInvoice(int confirmationNumInput) {
+        for (Invoice currInv : currCustomer.getInvoiceList()) {
+            if (currInv.getConfirmationNum() == confirmationNumInput) {
+                return currInv;
+            }
+        }
+        return null;
+    }
+
+    /**
      * Ask user for use confirmation and will then cancel the ticket and give them the money back
      */
     public void cancelPurchase() {
@@ -258,25 +273,28 @@ public class UICustomer {
         }
         printInvoices();
         System.out.print("Enter the confirmation number of the purchase you would like to cancel\n--> ");
-        String confirString = scnr.next();
+        String confirString = scnr.nextLine();
         try {
             int confirInt = Integer.parseInt(confirString);
-            for (Invoice currInv : currCustomer.getInvoiceList()) {
-                if (currInv.getConfirmationNum() == confirInt) {
-                    // Not done but will zero out total cost and change name
-                    currInv.setTotalPrice(0.0);
-                    currInv.setTax(0.0);
-                    currInv.setEventName("Purchase Canceled " + currInv.getEventName());
-                    System.out.println(
-                            "Purchase with confirmation number " + currInv.getConfirmationNum() + " Canceled\n");
-                    currCustomer.setMoneyAvailable(currCustomer.getMoneyAvailable() + (currInv.getTotalPrice() - currInv.getConvenience() - currInv.getService() - currInv.getCharity()));
-                    int numTickets = currInv.getNumTickets();
-                    int ticketType = getTicketType(currInv.getTicketType());
-                    eventMap.get(currInv.getEventID()).getVenue().addSeats(ticketType, numTickets);
-                    eventMap.get(currInv.getEventID()).updateSeatsAndRevenue();
-                    return;
-                }
+            // Not done but will zero out total cost and change name
+            Invoice currInv = findInvoice(confirInt);
+            if (currInv == null) {
+                System.out.println("Not a valid confirmation number");
+                logFile.save(logFile.time() + " Given confirmation number was not correct\n");
+                return;
             }
+            currInv.setTotalPrice(0.0);
+            currInv.setTax(0.0);
+            currInv.setEventName("Purchase Canceled " + currInv.getEventName());
+            System.out.println(
+                    "Purchase with confirmation number " + currInv.getConfirmationNum() + " Canceled\n");
+            logFile.save(logFile.time() + " User canceled invoice with confirmation number " + confirInt + "\n");
+            currCustomer.setMoneyAvailable(currCustomer.getMoneyAvailable() + (currInv.getTotalPrice() - currInv.getConvenience() - currInv.getService() - currInv.getCharity()));
+            int numTickets = currInv.getNumTickets();
+            int ticketType = getTicketType(currInv.getTicketType());
+            eventMap.get(currInv.getEventID()).getVenue().addSeats(ticketType, numTickets);
+            eventMap.get(currInv.getEventID()).updateSeatsAndRevenue();
+            return;
         } catch (NumberFormatException e) {
             logFile.save(logFile.time() + " User input was not an integer\n");
             System.out.println("Not a vaild confimation number\n");
