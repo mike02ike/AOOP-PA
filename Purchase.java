@@ -16,9 +16,9 @@ import java.util.Scanner;
  * <p>
  * Class Purpose: Handles the purchase process for both customer and admin
  * <p>
- * Last Change: 11/16/2023
+ * Last Change: 11/17/2023
  * @author Erik LaNeave
- * @version 2.4
+ * @version 2.5
  * <p>
  * @since 11/15/2023
  * @author Michael Ike
@@ -60,6 +60,10 @@ public class Purchase {
      * Initiates an automated purchase process for admin use.
      */
     public void autoPurchaseAdmin() {
+        if (currentEvent.getIsCanceled()) {
+            logFile.save(logFile.time() + " Attempted to purchase tickets for a canceled event");
+            return;
+        }
         // setCurrentTicketName(ticketName);
         double ticketPrice = ticketAmount();
         logFile.save(logFile.time() + " Starting auto purchase with customer " + currentCustomer.getFirstName() + "\n");
@@ -109,6 +113,11 @@ public class Purchase {
      * Allows a customer to purchase tickets by inputting ticket details.
      */
     public void purchaseTicketsCustomer() {
+        if (currentEvent.getIsCanceled()) {
+            logFile.save(logFile.time() + " Attempted to purchase tickets for a canceled event");
+            System.out.println("Event has been canceled\nTickets can't be purchased for this event\n");
+            return;
+        }
         System.out.println("\n-- Current funds $" + doubleForm(currentCustomer.getMoneyAvailable())
                 + " --\n-- Event Name: " + currentEvent.getName() + " --");
 
