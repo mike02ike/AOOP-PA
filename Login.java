@@ -20,9 +20,9 @@ import java.util.Scanner;
  * A log of login information is made.
  * <p>
  * 
- * @since 11/13/2023
+ * @since 11/17/2023
  * @author Erik LaNeave
- * @version 1.4
+ * @version 1.5
  *          <p>
  * @since 10/28/2023
  * @author Michael Ike
@@ -86,7 +86,7 @@ public class Login {
         while (loginControl) {
             String[] login = new String[2];
             System.out.print(
-                    "Option 1: Login with either your first and last name or username and password\nOption 2: Type \"Exit\" to exit the program\nFirst name or Username\n--> ");
+                    "Option 1: Login with either your first and last name or username and password\nOption 2: Type \"Exit\" to return to main menu\nFirst name or Username\n--> ");
             login[0] = scnr.nextLine();
             if (login[0].equalsIgnoreCase("exit")) {
                 return;

@@ -18,10 +18,10 @@ import java.util.LinkedHashMap;
  * Class Purpose: This class contains the main method and creates the HashMaps
  * and UI.
  * <p>
- * Last Change: 11/16/2023
+ * Last Change: 11/17/2023
  *
  * @author Erik LaNeave
- * @version 2.4
+ * @version 2.5
  */
 
 public class RunTicket {
@@ -67,7 +67,7 @@ public class RunTicket {
             eventHandler.createCSVFile(eventMap);
             customerHandler.createCSVFile(customerMap);
             logFile.save(logFile.time() + " Updated Event and Customer csv made\n");
-            System.out.println("saved new csv");
+            System.out.println("Saved new csv");
             // writes the record string in the logFile object the log.txt file
             logFile.writeLogFile();
             System.out.println("Log file has been saved\n");
