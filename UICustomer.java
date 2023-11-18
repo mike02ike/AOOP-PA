@@ -77,11 +77,11 @@ public class UICustomer {
                     logFile.save(logFile.time() + " User picked menu option 4 to view customer invoice\n");
                     printInvoices();
                     break;
-                case "5":
+                case "5": // 5 - Save Invoices
                     logFile.save(logFile.time() + " User picked menu option 5 to save invoices\n");
                     saveInvoice();
                     break;
-                case "6":
+                case "6": // 6 - Cancel purchase
                     logFile.save(logFile.time() + " User picked menu option 6 to cancel purchase\n");
                     cancelPurchase();
                     break;
