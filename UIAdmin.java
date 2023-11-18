@@ -20,9 +20,9 @@ import java.util.Map.Entry;
  * @author Anaiah Quinn
  * @version 3.1
  *          <p>
- * @since 11/13/2023
+ * @since 11/17/2023
  * @author Erik LaNeave
- * @version 2.9
+ * @version 3.0
  *          <p>
  * @since 10/25/2023
  * @author Michael Ike
@@ -53,11 +53,20 @@ public class UIAdmin {
 
     }
 
+    /**
+     * Sets the two hashmaps for the class 
+     * 
+     * @param eventMap
+     * @param customerMap
+     */
     public void setHashMaps(LinkedHashMap<Integer, Event> eventMap, LinkedHashMap<Integer, Customer> customerMap) {
         this.events = eventMap;
         this.customers = customerMap;
     }
 
+    /**
+     * Displays the main menu for the admin UI and handles user input.
+     */
     public void menu() {
         boolean control = true;
         while (control) {
@@ -70,10 +79,10 @@ public class UIAdmin {
             System.out.println("5 - Save an Invoice for a Customer");
             System.out.println("6 - Cancel event");
             System.out.println("7 - Compute Profit");
-            System.out.print("Enter \"Exit\" to exit the Program\n--> ");
+            System.out.print("Enter \"Exit\" to return to login\n--> ");
 
             // Only takes in strings to help with exceptions
-            String inputUser = myScanner.next();
+            String inputUser = myScanner.nextLine();
             // switch case used to cut down on possible exceptions and clean look
             switch (inputUser.toLowerCase()) {
                 case "1": // 1 - inquire event by ID
@@ -105,7 +114,7 @@ public class UIAdmin {
                     printRevenue();
                     break;
                 case "exit":
-                    System.out.println("\nThank you for using TicketMiner!\nReturning to login...");
+                    System.out.println("\nThank you for using TicketMiner!\nReturning to login...\n");
                     logFile.save(logFile.time() + " Admin terminated the program\n");
                     // Stops while loop from running in RunTicket
                     control = false;
@@ -120,8 +129,15 @@ public class UIAdmin {
         return;
     }
 
+    /**
+     * Handles the canceling of a single event
+     */
     public void cancelEvent() {
         Event selectedEvent = selectEvent();
+        if (selectedEvent.getIsCanceled()) {
+            System.out.println("Event is already canceled and customers have been refunded");
+            return;
+        }
         selectedEvent.setIsCanceled(true);
 
         if (!selectedEvent.getInvoices().isEmpty()) {
@@ -142,20 +158,26 @@ public class UIAdmin {
         System.out.println("\nEvent has been canceled and all collected money has been refunded.");
     }
 
+    /**
+     * Finds the event based on user input
+     * 
+     * @return the found event
+     */
     public Event selectEvent() {
         while (true) {
             try {
-                System.out.println("Enter the event ID of the event you would like to cancel.");
-                int input = myScanner.nextInt();
+                System.out.print("Enter the event ID of the event you would like to cancel.\n--> ");
+                String intput = myScanner.nextLine();
+                int eventID = Integer.parseInt(intput);
 
-                if (events.get(input) != null) {
-                    return events.get(input);
+                if (events.get(eventID) != null) {
+                    return events.get(eventID);
                 } else {
                     System.out.println("Event does not exist. Try again.");
                 }
-            } catch (InputMismatchException e) {
+            } catch (NumberFormatException e) {
                 System.out.println("Invalid input! Please enter a number");
-                myScanner.next();
+                //myScanner.next();
             }
         }
     }
@@ -394,6 +416,9 @@ public class UIAdmin {
 
     }
 
+    /**
+     * Allows the admin to inquire about an event by its ID.
+     */
     public void inquireEventByID() {
         while (true) {
             try {
@@ -420,6 +445,9 @@ public class UIAdmin {
         }
     }
 
+    /**
+     * Allows the admin to inquire about an event by its name.
+     */
     public void inquireEventByName() {
         while (true) {
             System.out.print("Enter the Event Name\n--> ");
@@ -444,6 +472,9 @@ public class UIAdmin {
         }
     }
 
+    /**
+     * Gives the admin options to see more information about the current event
+     */
     public void subMenu() {
         // Displays standard event and then ask if they want to see the calculated
         // information
@@ -453,7 +484,7 @@ public class UIAdmin {
         System.out.println("================================\n");
         while (true) {
             System.out.print("Submenu for Additional Information\n");
-            System.out.print("1 - View Event Calculated Info\n 2- Print Event Fees\n3 - Exit Submenu\n--> ");
+            System.out.print("1 - View Event Calculated Info\n2 - Print Event Fees\n3 - Exit Submenu\n--> ");
             String input = myScanner.nextLine();
             switch (input) {
                 case "1": // Views calculated event info
@@ -463,6 +494,7 @@ public class UIAdmin {
                     this.selectedEvent.adminPrintAvailableSeats();
                     System.out.println("Total Revenue");
                     this.selectedEvent.adminPrintRevenueInfo();
+                    System.out.println("================================\n");
                     break;
                 case "2":// Print total fees from event
                     logFile.save(logFile.time() + "Admin picked submenu option 2 to print event fees");
@@ -491,29 +523,38 @@ public class UIAdmin {
         System.out.println("================================");
         System.out.println("==============FEES==============");
         System.out.println("Total Fee Revenue for event: " + event.getName());
-        System.out.println("Service Fees: $" + event.getServiceFee());
-        System.out.println("Convenience Fees: $" + event.getConvenienceFee());
-        System.out.println("Charity Fees: $" + event.getCharityFee());
+        System.out.println("Service Fees: $" + doubleForm(event.getServiceFee()));
+        System.out.println("Convenience Fees: $" + doubleForm(event.getConvenienceFee()));
+        System.out.println("Charity Fees: $" + doubleForm(event.getCharityFee()));
         double total = event.getCharityFee() + event.getConvenienceFee() + event.getServiceFee();
-        System.out.println("Total Fees: $" + total);
+        System.out.println("Total Fees: $" + doubleForm(total));
+        System.out.println("================================\n");
 
     }
 
+    /**
+     * Prints company profit
+     */
     public void printRevenue() {
         // Displays total Ticket Miner fee revenue from all events, ticket miner profit
-        System.out.println("================================");
+        System.out.println("\n================================");
         System.out.println("             PROFIT             ");
         System.out.println("================================");
-        System.out.println("Revenue from Convenience Fees: $" + ticketMiner.computeServiceRevenue());
-        System.out.println("Revenue from Service Fees: $" + ticketMiner.computeServiceRevenue());
+        System.out.println("Revenue from Convenience Fees: $" + doubleForm(ticketMiner.computeServiceRevenue()));
+        System.out.println("Revenue from Service Fees: $" + doubleForm(ticketMiner.computeServiceRevenue()));
         System.out.println(
-                "Total Revenue:$ " + ticketMiner.computeServiceRevenue() + ticketMiner.computeConvenienceRevenue());
+                "Total Revenue:$ " + doubleForm((ticketMiner.computeServiceRevenue() + ticketMiner.computeConvenienceRevenue())));
         System.out.println("=================================");
         System.out.println("            CHARITY              ");
         System.out.println("=================================");
-        System.out.println("Money for Charity: $" + ticketMiner.computeCharityRevenue());
+        System.out.println("Money for Charity: $" + doubleForm(ticketMiner.computeCharityRevenue()));
+        System.out.println("================================");
     }
 
+    /**
+     * Does the auto purchase based of the given csv file and completes the purchase
+     * from the user.
+     */
     public void autoPurchase() {
         Purchase completPurchase = new Purchase();
         ArrayList<AutoPurchaseInstruction> autoPurchases = getAutoPurchaseInfo();
@@ -548,6 +589,11 @@ public class UIAdmin {
         System.out.println("Auto purchase complete and Invoices have been saved");
     }
 
+    /**
+     * Reads the given csv file and returns information
+     * 
+     * @return Returns an arraylist filled with all the auto purchase objects.
+     */
     public ArrayList<AutoPurchaseInstruction> getAutoPurchaseInfo() {
         try {
             AutoPurchaseReader autoPurchaseReader = new AutoPurchaseReader();
@@ -560,6 +606,14 @@ public class UIAdmin {
         }
     }
 
+    /**
+     * This findCustomer will add a found customer to the cache used in the auto purchase
+     * 
+     * @param firstName
+     * @param lastName
+     * @param cache
+     * @return returns a customer if found
+     */
     public Customer findCustomer(String firstName, String lastName, HashMap<String, Customer> cache) {
         for (Customer currCust : this.customers.values()) {
             if (currCust.getFirstName().equalsIgnoreCase(firstName)
@@ -571,6 +625,13 @@ public class UIAdmin {
         return null;
     }
 
+    /**
+     * Takes given customer first and last name and returns that customer object.
+     * 
+     * @param firstName
+     * @param lastName
+     * @return currentCustomer that was found from the auto-purchase
+     */
     public Customer findCustomer(String firstName, String lastName) {
         for (Customer currCust : this.customers.values()) {
             if (currCust.getFirstName().equalsIgnoreCase(firstName)
@@ -581,6 +642,10 @@ public class UIAdmin {
         return null;
     }
 
+    /**
+     * Creates the Auto-Purchase-Invoices directory. If the dir exists then it is
+     * deleted and remade.
+     */
     public void createAutoPurchaseInvoicesDir() {
         if (Files.exists(Paths.get("Auto-Purchase-Invoices"))) {
             logFile.save(logFile.time() + " Old Auto-Purchase-Invoices directory found and deleted\n");
@@ -596,6 +661,9 @@ public class UIAdmin {
         logFile.save(logFile.time() + " Auto-Purchase-Invoices directory created\n");
     }
 
+    /**
+     * Runs through the customer list and creates the invoices
+     */
     public void writeNewAutoPurchaseInvoices() {
         for (Customer currCust : this.customers.values()) {
             if (!currCust.getInvoiceList().isEmpty()) {
@@ -605,6 +673,9 @@ public class UIAdmin {
         logFile.save(logFile.time() + " All auto purchase invoices have been saved\n");
     }
 
+    /**
+     * Searchs for customer and then saves that customers invoices
+     */
     public void saveInvoiceForCustomer() {
         System.out.println("Enter the First and Last name of the user you want to save an invoice for");
         System.out.print("First Name\n--> ");
@@ -630,4 +701,11 @@ public class UIAdmin {
         System.out.println("No invoice for customer " + firstName + " " + lastName);
     }
 
+    /**
+     * @param toBeForm
+     * @return a format double that has two decimal points.
+     */
+    public String doubleForm(double toBeForm) {
+        return String.format("%.2f", toBeForm);
+    }    
 }
