@@ -283,13 +283,16 @@ public class UICustomer {
                 logFile.save(logFile.time() + " Given confirmation number was not correct\n");
                 return;
             }
+            //updates customer money
+            currCustomer.setMoneyAvailable(currCustomer.getMoneyAvailable() + (currInv.getTotalPrice() - currInv.getConvenience() - currInv.getService() - currInv.getCharity()));
+            //Zero outs parts of the invoice 
             currInv.setTotalPrice(0.0);
             currInv.setTax(0.0);
             currInv.setEventName("Purchase Canceled " + currInv.getEventName());
             System.out.println(
                     "Purchase with confirmation number " + currInv.getConfirmationNum() + " Canceled\n");
             logFile.save(logFile.time() + " User canceled invoice with confirmation number " + confirInt + "\n");
-            currCustomer.setMoneyAvailable(currCustomer.getMoneyAvailable() + (currInv.getTotalPrice() - currInv.getConvenience() - currInv.getService() - currInv.getCharity()));
+            //Updates the event
             int numTickets = currInv.getNumTickets();
             int ticketType = getTicketType(currInv.getTicketType());
             eventMap.get(currInv.getEventID()).getVenue().addSeats(ticketType, numTickets);
