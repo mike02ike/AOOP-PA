@@ -94,7 +94,7 @@ public class UICustomer {
                 default: // Used for incorrect input
                     // If user inputs an incorrect case
                     logFile.save(logFile.time() + " User input is an incorrect menu option\n");
-                    System.out.println("Please enter a number between 1 and 4 or type \"Exit\".\n");
+                    System.out.println("Please enter a number between 1 and 6 or type \"Exit\".\n");
                     break;
             }
         }
@@ -287,25 +287,19 @@ public class UICustomer {
                 return;
             }
             // updates customer money
-            currCustomer.setMoneyAvailable(currCustomer.getMoneyAvailable() + (currInv.getTotalPrice()
-                    - currInv.getConvenience() - currInv.getService() - currInv.getCharity()));
-            // Zero outs parts of the invoice
-            currInv.setTotalPrice(0.0);
-            currInv.setTax(0.0);
-
+            currCustomer.addMoney((currInv.getTotalPrice() - currInv.getConvenience() - currInv.getService() - currInv.getCharity()));
             // Updates the event
             int numTickets = currInv.getNumTickets();
-            System.out.println(currInv.getTicketType());
             int ticketType = getTicketType(currInv.getTicketType());
-            System.out.println(ticketType);
-            // eventMap.get(currInv.getEventID()).getVenue().addSeats(ticketType,
-            // numTickets);
             Event currentEvent = eventMap.get(currInv.getEventID());
             Venue currentVenue = currentEvent.getVenue();
             currentVenue.addSeats(ticketType, numTickets);
             currentEvent.updateSeatsAndRevenue();
-            // eventMap.get(currInv.getEventID()).updateSeatsAndRevenue();
-            currInv.setEventName("Purchase Canceled " + currInv.getEventName());
+            currentEvent.subTotalTax(currInv.getTax());
+            // Zero outs parts of the invoice
+            currInv.setTotalPrice(0.0);
+            currInv.setTax(0.0);
+            currInv.setEventName("(Purchase Canceled) " + currInv.getEventName());
             System.out.println(
                     "Purchase with confirmation number " + currInv.getConfirmationNum() + " Canceled\n");
             logFile.save(logFile.time() + " User canceled invoice with confirmation number " + confirInt + "\n");
