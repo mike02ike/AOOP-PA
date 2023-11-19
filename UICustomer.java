@@ -86,7 +86,8 @@ public class UICustomer {
                     cancelPurchase();
                     break;
                 case "exit":
-                    System.out.println("\nThank you " + currCustomer.getFirstName() + " for using TicketMiner!\nReturning to login...\n");
+                    System.out.println("\nThank you " + currCustomer.getFirstName()
+                            + " for using TicketMiner!\nReturning to login...\n");
                     logFile.save(logFile.time() + " User " + currCustomer.getFirstName() + " terminated the program\n");
                     // Stops while loop from running in RunTicket
                     return;
@@ -248,7 +249,8 @@ public class UICustomer {
     }
 
     /**
-     * Runs through the invoice list and finds the invoice with same confirmation number
+     * Runs through the invoice list and finds the invoice with same confirmation
+     * number
      * 
      * @param confirmationNumInput
      * @return found invoice or null
@@ -263,7 +265,8 @@ public class UICustomer {
     }
 
     /**
-     * Ask user for use confirmation and will then cancel the ticket and give them the money back
+     * Ask user for use confirmation and will then cancel the ticket and give them
+     * the money back
      */
     public void cancelPurchase() {
         if (currCustomer.getInvoiceList().isEmpty()) {
@@ -283,20 +286,29 @@ public class UICustomer {
                 logFile.save(logFile.time() + " Given confirmation number was not correct\n");
                 return;
             }
-            //updates customer money
-            currCustomer.setMoneyAvailable(currCustomer.getMoneyAvailable() + (currInv.getTotalPrice() - currInv.getConvenience() - currInv.getService() - currInv.getCharity()));
-            //Zero outs parts of the invoice 
+            // updates customer money
+            currCustomer.setMoneyAvailable(currCustomer.getMoneyAvailable() + (currInv.getTotalPrice()
+                    - currInv.getConvenience() - currInv.getService() - currInv.getCharity()));
+            // Zero outs parts of the invoice
             currInv.setTotalPrice(0.0);
             currInv.setTax(0.0);
+
+            // Updates the event
+            int numTickets = currInv.getNumTickets();
+            System.out.println(currInv.getTicketType());
+            int ticketType = getTicketType(currInv.getTicketType());
+            System.out.println(ticketType);
+            // eventMap.get(currInv.getEventID()).getVenue().addSeats(ticketType,
+            // numTickets);
+            Event currentEvent = eventMap.get(currInv.getEventID());
+            Venue currentVenue = currentEvent.getVenue();
+            currentVenue.addSeats(ticketType, numTickets);
+            currentEvent.updateSeatsAndRevenue();
+            // eventMap.get(currInv.getEventID()).updateSeatsAndRevenue();
             currInv.setEventName("Purchase Canceled " + currInv.getEventName());
             System.out.println(
                     "Purchase with confirmation number " + currInv.getConfirmationNum() + " Canceled\n");
             logFile.save(logFile.time() + " User canceled invoice with confirmation number " + confirInt + "\n");
-            //Updates the event
-            int numTickets = currInv.getNumTickets();
-            int ticketType = getTicketType(currInv.getTicketType());
-            eventMap.get(currInv.getEventID()).getVenue().addSeats(ticketType, numTickets);
-            eventMap.get(currInv.getEventID()).updateSeatsAndRevenue();
             return;
         } catch (NumberFormatException e) {
             logFile.save(logFile.time() + " User input was not an integer\n");

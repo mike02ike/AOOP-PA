@@ -63,7 +63,7 @@ public abstract class Venue {
   }
 
   public void addSeats(int ticketType, int numOfTickets) {
-    this.numAvailableSeats[ticketType - 1] += numOfTickets;
+    this.numAvailableSeats[ticketType] += numOfTickets;
   }
 
   /**
