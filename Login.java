@@ -86,9 +86,10 @@ public class Login {
         while (loginControl) {
             String[] login = new String[2];
             System.out.print(
-                    "Option 1: Login with either your first and last name or username and password\nOption 2: Type \"Exit\" to return to main menu\nFirst name or Username\n--> ");
+                    "\nOption 1: Login with either your first and last name or username and password\nOption 2: Type \"Exit\" to return to main menu\nFirst name or Username\n--> ");
             login[0] = scnr.nextLine();
             if (login[0].equalsIgnoreCase("exit")) {
+                System.out.println();
                 return;
             }
             System.out.print("Last name or Password\n--> ");
