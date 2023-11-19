@@ -108,6 +108,11 @@ public class Customer {
     this.moneyAvailable -= purchaseAmount;
   }
 
+  /**
+   * Adds some amount of money to the current amount
+   * 
+   * @param moneyIn
+   */
   public void addMoney(double moneyIn) {
     this.moneyAvailable += moneyIn;
   }
