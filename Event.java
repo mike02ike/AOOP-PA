@@ -126,8 +126,6 @@ public abstract class Event {
    * @param convenienceIn The convenience fees to be added.
    */
   public void updateConvenienceFees(double convenienceIn) {
-    TicketMiner company = TicketMiner.getInstance();
-    
     double currentConvenienceFees = collectedFees.get("convenience");
     double updatedConvenienceFees = currentConvenienceFees + convenienceIn;
     collectedFees.put("convenience", updatedConvenienceFees);
@@ -138,8 +136,6 @@ public abstract class Event {
    * @param serviceIn The service fees to be added.
    */
   public void updateServiceFees(double serviceIn) {
-    TicketMiner company = TicketMiner.getInstance();
-    
     double currentServiceFees = collectedFees.get("service");
     double updatedServiceFees = currentServiceFees + serviceIn;
     collectedFees.put("service", updatedServiceFees);
@@ -150,8 +146,6 @@ public abstract class Event {
    * @param charityIn The charity fees to be added.
    */
   public void updateCharityFees(double charityIn) {
-    TicketMiner company = TicketMiner.getInstance();
-    
     double currentCharityFees = collectedFees.get("charity");
     double updatedServiceFees = currentCharityFees + charityIn;
     collectedFees.put("charity", updatedServiceFees);
@@ -293,16 +287,16 @@ public abstract class Event {
   public void adminPrintRevenueInfo() {
     System.out.println("-------------------------");
 
-    System.out.println("Total Revenue for VIP Tickets: $" + getVipRevenue());
-    System.out.println("Total Revenue for Gold Tickets: $" + getGoldRevenue());
-    System.out.println("Total Revenue for Silver Tickets: $" + getSilverRevenue());
-    System.out.println("Total Revenue for Bronze Tickets: $" + getBronzeRevenue());
-    System.out.println("Total Revenue for General Admission Tickets: $" + getGeneralAdmissionRevenue());
-    System.out.println("Total Revenue for All Tickets: $" + getTotalRevenue());
-    System.out.println("Total Amount of Discount for Event: $" + getTotalMemberDiscount());
-    System.out.println("Total Tax for Event: $" + getTotalTax());
-    System.out.println("Expected Profit (Sell Out): $" + this.expectedProfit);
-    System.out.println("Actual Profit: $" + this.actualProfit);
+    System.out.printf("Total Revenue for VIP Tickets: $%.2f\n", getVipRevenue());
+    System.out.printf("Total Revenue for Gold Tickets: $%.2f\n", getGoldRevenue());
+    System.out.printf("Total Revenue for Silver Tickets: $%.2f\n", getSilverRevenue());
+    System.out.printf("Total Revenue for Bronze Tickets: $%.2f\n", getBronzeRevenue());
+    System.out.printf("Total Revenue for General Admission Tickets: $%.2f\n", getGeneralAdmissionRevenue());
+    System.out.printf("Total Revenue for All Tickets: $%.2f\n", getTotalRevenue());
+    System.out.printf("Total Amount of Discount for Event: $%.2f\n", getTotalMemberDiscount());
+    System.out.printf("Total Tax for Event: $%.2f\n", getTotalTax());
+    System.out.printf("Expected Profit (Sell Out): $%.2f\n", this.expectedProfit);
+    System.out.printf("Actual Profit: $%.2f\n", this.actualProfit);
 
     System.out.println("-------------------------");
   }
@@ -323,6 +317,15 @@ public abstract class Event {
    */
   public void addTotalTax(double tax) {
     this.totalTax += tax;
+  }
+
+  /**
+   * Subtracts from to the total tax collected
+   * 
+   * @param taxIn
+   */
+  public void subTotalTax(double taxIn) {
+    this.totalTax -= taxIn;
   }
 
   /**
