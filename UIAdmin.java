@@ -20,9 +20,9 @@ import java.util.Map.Entry;
  * @author Anaiah Quinn
  * @version 3.1
  *          <p>
- * @since 11/17/2023
+ * @since 11/19/2023
  * @author Erik LaNeave
- * @version 3.0
+ * @version 3.1
  *          <p>
  * @since 10/25/2023
  * @author Michael Ike
@@ -78,7 +78,7 @@ public class UIAdmin {
             System.out.println("4 - Run Auto Purchase");
             System.out.println("5 - Save an Invoice for a Customer");
             System.out.println("6 - Cancel event");
-            System.out.println("7 - Compute Profit");
+            System.out.println("7 - Compute TicketMiner Profit");
             System.out.print("Enter \"Exit\" to return to login\n--> ");
 
             // Only takes in strings to help with exceptions
@@ -121,7 +121,7 @@ public class UIAdmin {
                     break;
                 default: // Used for incorrect input
                     logFile.save(logFile.time() + " Admin inputted an invalid menu option\n");
-                    System.out.println("Invalid input. Please enter a number 1 - 6");
+                    System.out.println("Invalid input. Please enter a number 1 - 7");
                     break;
             }// end switch
 
@@ -149,6 +149,7 @@ public class UIAdmin {
 
                 for (Invoice currInvoice : customerInvoices) {
                     refundAmount += currInvoice.getTotalPrice();
+                    cancelInvoice(currInvoice);
                 }
 
                 customers.get(invoice.getKey()).addMoney(refundAmount);
@@ -156,6 +157,21 @@ public class UIAdmin {
         }
 
         System.out.println("\nEvent has been canceled and all collected money has been refunded.");
+    }
+
+    /**
+     * Zeros out the customer invoice
+     * 
+     * @param invoiceIn
+     */
+    void cancelInvoice(Invoice invoiceIn) {
+        invoiceIn.setEventName("(Event Canceled) " + invoiceIn.getEventName());
+        invoiceIn.setTotalPrice(0.0);
+        invoiceIn.setTax(0.0);
+        invoiceIn.setConvenience(0.0);
+        invoiceIn.setService(0.0);
+        invoiceIn.setCharity(0.0);
+        invoiceIn.setTicketList(null);
     }
 
     /**
@@ -484,7 +500,7 @@ public class UIAdmin {
         System.out.println("================================\n");
         while (true) {
             System.out.print("Submenu for Additional Information\n");
-            System.out.print("1 - View Event Calculated Info\n2 - Print Event Fees\n3 - Exit Submenu\n--> ");
+            System.out.print("1 - View Event Calculated Info\n2 - Print Money Gained by TicketMiner\n3 - Exit Submenu\n--> ");
             String input = myScanner.nextLine();
             switch (input) {
                 case "1": // Views calculated event info
@@ -540,10 +556,10 @@ public class UIAdmin {
         System.out.println("\n================================");
         System.out.println("             PROFIT             ");
         System.out.println("================================");
-        System.out.println("Revenue from Convenience Fees: $" + doubleForm(ticketMiner.computeServiceRevenue()));
+        System.out.println("Revenue from Convenience Fees: $" + doubleForm(ticketMiner.computeConvenienceRevenue()));
         System.out.println("Revenue from Service Fees: $" + doubleForm(ticketMiner.computeServiceRevenue()));
         System.out.println(
-                "Total Revenue:$ " + doubleForm((ticketMiner.computeServiceRevenue() + ticketMiner.computeConvenienceRevenue())));
+                "Total Revenue:$ " + doubleForm((ticketMiner.computeConvenienceRevenue() + ticketMiner.computeServiceRevenue())));
         System.out.println("=================================");
         System.out.println("            CHARITY              ");
         System.out.println("=================================");
@@ -557,13 +573,15 @@ public class UIAdmin {
      */
     public void autoPurchase() {
         Purchase completPurchase = new Purchase();
+        System.out.println("Reading Auto Purchase Instructions ...");
         ArrayList<AutoPurchaseInstruction> autoPurchases = getAutoPurchaseInfo();
         HashMap<String, Customer> cache = new HashMap<String, Customer>();
         if (autoPurchases == null) {
             return;
         }
-        logFile.save(logFile.time() + " AutoPurchse CSV read\n");
-        System.out.println(logFile.time());
+        System.out.println("Done");
+        logFile.save(logFile.time() + " Auto Purchse CSV read\n");
+        System.out.println("Running Auto Purchase ...");
         StringBuilder firstAndLast = new StringBuilder();
         for (AutoPurchaseInstruction currAuto : autoPurchases) {
             Customer currCustomer;
@@ -582,7 +600,6 @@ public class UIAdmin {
             completPurchase.setCurrentTicketName(currAuto.getTicketType());
             completPurchase.autoPurchaseAdmin();
         }
-        System.out.println(logFile.time());
         createAutoPurchaseInvoicesDir();
         writeNewAutoPurchaseInvoices();
         logFile.save(logFile.time() + " Auto purchase complete and all invoices saved\n");
