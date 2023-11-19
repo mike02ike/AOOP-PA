@@ -14,7 +14,7 @@
  * @since 11/08/2023
  * @author Michael Ike
  * @author Erik LaNeave
- * @version 1.1
+ * @version 1.2
  */
 
 import java.util.*;
@@ -28,10 +28,10 @@ public class TicketMiner {
     private double convenienceFee = 2.50; // Default convenience fee
     private double serviceFee; // Service fee
     private double charityFee; // Charity fee
-    private double totalRevenue = 0.00; // Total revenue generated
-    private double convenienceRevenue = 0.00; // Total revenue generated from convenienceFees
-    private double serviceRevenue = 0.00; // Total revenue generated from serviceFees
-    private double charityRevenue = 0.00; // Total revenue generated from charityFees
+    private double totalRevenue = 0.0; // Total revenue generated
+    // private double convenienceRevenue = 0.0; // Total revenue generated from convenienceFees
+    // private double serviceRevenue = 0.0; // Total revenue generated from serviceFees
+    // private double charityRevenue = 0.0; // Total revenue generated from charityFees
     private HashMap<Integer, HashMap<String, Double>> collectedFees = new HashMap<>(); // Collected fees for events
     HashMap<String, Double> eventMap; // Inner map to store fee types for each event
 
@@ -130,7 +130,7 @@ public class TicketMiner {
     public void updateConvenienceFees(int eventId) {
         eventMap = collectedFees.get(eventId);
         double currentConvenienceFees = eventMap.get("convenience");
-        double updatedConvenienceFees = currentConvenienceFees + getConvenienceFee();
+        double updatedConvenienceFees = currentConvenienceFees + convenienceFee;
         eventMap.put("convenience", updatedConvenienceFees);
         collectedFees.put(eventId, eventMap);
     }
@@ -161,6 +161,7 @@ public class TicketMiner {
         eventMap = collectedFees.get(eventId);
         double currentCharityFees = eventMap.get("charity");
         double updatedCharityFees = currentCharityFees + charityIn;
+
         eventMap.put("charity", updatedCharityFees);
         collectedFees.put(eventId, eventMap);
     }
@@ -172,12 +173,12 @@ public class TicketMiner {
      */
     public double computeConvenienceRevenue() {
         double temp;
-
+        double computedConvenience = 0.0;
         for (HashMap<String, Double> eventMap : collectedFees.values()) {
             temp = eventMap.get("convenience");
-            convenienceRevenue += temp;
+            computedConvenience += temp;
         }
-        return convenienceRevenue;
+        return computedConvenience;
     }
 
     /**
@@ -187,12 +188,12 @@ public class TicketMiner {
      */
     public double computeServiceRevenue() {
         double temp;
-
+        double computedService = 0.0;
         for (HashMap<String, Double> eventMap : collectedFees.values()) {
             temp = eventMap.get("service");
-            serviceRevenue += temp;
+            computedService += temp;
         }
-        return serviceRevenue;
+        return computedService;
     }
 
     /**
@@ -202,12 +203,12 @@ public class TicketMiner {
      */
     public double computeCharityRevenue() {
         double temp;
-
+        double computedCharity = 0.0;
         for (HashMap<String, Double> eventMap : collectedFees.values()) {
             temp = eventMap.get("charity");
-            charityRevenue += temp;
+            computedCharity += temp;
         }
-        return charityRevenue;
+        return computedCharity;
     }
 
     /**
