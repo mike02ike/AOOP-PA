@@ -227,7 +227,7 @@ public class UIAdmin {
         System.out.print("\nEnter the time of the event. FORMAT: XX:XX AM or PM\n--> ");
         newEvent.setTime(scn.nextLine());
 
-        newEvent.getVenue().setName(chooseVenue());
+        newEvent.getVenue().setName(chooseVenue(newEvent));
 
         newEvent.getVenue().setVipPercentage(5);
         newEvent.getVenue().setGoldPercentage(10);
@@ -235,6 +235,7 @@ public class UIAdmin {
         newEvent.getVenue().setBronzePercentage(20);
         newEvent.getVenue().setGenAdmissionPercentage(45);
         newEvent.getVenue().setReservedExtraPercentage(5);
+        newEvent.getVenue().calculateNumSeats();
 
         double generalAdmissionPrice = getGeneralAdmissionPrice();
         newEvent.setGenAdmissionPrice(generalAdmissionPrice);
@@ -289,7 +290,7 @@ public class UIAdmin {
      * 
      * @return venue
      */
-    public String chooseVenue() {
+    public String chooseVenue(Event newEvent) {
         Scanner scn = new Scanner(System.in);
 
         while (true) {
@@ -304,18 +305,28 @@ public class UIAdmin {
             if (input.equals("1") || input.equals("2") || input.equals("3") || input.equals("4") || input.equals("5")) {
                 switch (input) {
                     case "1":
+                        newEvent.getVenue().setCapacity(58000);
+                        newEvent.getVenue().setCost(681500);
                         return "Sun Bowl Stadium";
 
                     case "2":
+                        newEvent.getVenue().setCapacity(12800);
+                        newEvent.getVenue().setCost(150400);
                         return "Don Haskins Center";
 
                     case "3":
+                        newEvent.getVenue().setCapacity(1152);
+                        newEvent.getVenue().setCost(13536);
                         return "Magoffin Auditorium";
 
                     case "4":
+                        newEvent.getVenue().setCapacity(15000);
+                        newEvent.getVenue().setCost(176250);
                         return "San Jacinto Plaza";
 
                     case "5":
+                        newEvent.getVenue().setCapacity(5000);
+                        newEvent.getVenue().setCost(58750);
                         return "Centennial Plaza";
                 }
             }
