@@ -1,0 +1,324 @@
+-----------Invoice 1-----------
+Event Type: Concert
+Event Name: UTEP Wind Symphony 7
+Event Date: 3/22/24
+Ticket Type: Bronze
+Number of Tickets: 6
+Total Price: 191.11
+Confirmation Number: -1090011859
+-------------------------------
+-----------Invoice 2-----------
+Event Type: Sport
+Event Name: UTEP Basketball 10
+Event Date: 12/20/23
+Ticket Type: VIP
+Number of Tickets: 6
+Total Price: 375.3
+Confirmation Number: 704500197
+-------------------------------
+-----------Invoice 3-----------
+Event Type: Sport
+Event Name: UTEP Basketball 21
+Event Date: 1/29/24
+Ticket Type: Gold
+Number of Tickets: 2
+Total Price: 108.96
+Confirmation Number: -156438656
+-------------------------------
+-----------Invoice 4-----------
+Event Type: Sport
+Event Name: UTEP Basketball 20
+Event Date: 1/24/24
+Ticket Type: Silver
+Number of Tickets: 3
+Total Price: 135.6
+Confirmation Number: 1060413057
+-------------------------------
+-----------Invoice 5-----------
+Event Type: Sport
+Event Name: UTEP Basketball 30
+Event Date: 2/28/24
+Ticket Type: Silver
+Number of Tickets: 5
+Total Price: 224.38
+Confirmation Number: -1075563109
+-------------------------------
+-----------Invoice 6-----------
+Event Type: Concert
+Event Name: UTEP Wind Symphony 2
+Event Date: 1/21/24
+Ticket Type: Silver
+Number of Tickets: 2
+Total Price: 98.02
+Confirmation Number: -1288244864
+-------------------------------
+-----------Invoice 7-----------
+Event Type: Festival
+Event Name: UTEP Commencement 2
+Event Date: 1/25/24
+Ticket Type: Bronze
+Number of Tickets: 3
+Total Price: 2.43
+Confirmation Number: 1339874088
+-------------------------------
+-----------Invoice 8-----------
+Event Type: Sport
+Event Name: UTEP Basketball 28
+Event Date: 2/21/24
+Ticket Type: VIP
+Number of Tickets: 5
+Total Price: 313.16
+Confirmation Number: 1467176457
+-------------------------------
+-----------Invoice 9-----------
+Event Type: Sport
+Event Name: UTEP Basketball 6
+Event Date: 12/6/23
+Ticket Type: Gold
+Number of Tickets: 6
+Total Price: 322.03
+Confirmation Number: 1274316319
+-------------------------------
+-----------Invoice 10-----------
+Event Type: Sport
+Event Name: UTEP Basketball 10
+Event Date: 12/20/23
+Ticket Type: General Admission
+Number of Tickets: 6
+Total Price: 179.99
+Confirmation Number: 219321161
+-------------------------------
+-----------Invoice 11-----------
+Event Type: Sport
+Event Name: UTEP Basketball 18
+Event Date: 1/17/24
+Ticket Type: Silver
+Number of Tickets: 2
+Total Price: 91.21
+Confirmation Number: 415086655
+-------------------------------
+-----------Invoice 12-----------
+Event Type: Sport
+Event Name: UTEP Basketball 29
+Event Date: 2/26/24
+Ticket Type: VIP
+Number of Tickets: 2
+Total Price: 126.72
+Confirmation Number: 537868397
+-------------------------------
+-----------Invoice 13-----------
+Event Type: Sport
+Event Name: UTEP Football 8
+Event Date: 10/23/23
+Ticket Type: Gold
+Number of Tickets: 3
+Total Price: 162.23
+Confirmation Number: 1045354471
+-------------------------------
+-----------Invoice 14-----------
+Event Type: Concert
+Event Name: UTEP Wind Symphony 10
+Event Date: 5/18/24
+Ticket Type: Gold
+Number of Tickets: 6
+Total Price: 326.95
+Confirmation Number: 241546827
+-------------------------------
+-----------Invoice 15-----------
+Event Type: Sport
+Event Name: UTEP Basketball 18
+Event Date: 1/17/24
+Ticket Type: Gold
+Number of Tickets: 5
+Total Price: 268.77
+Confirmation Number: -1493632503
+-------------------------------
+-----------Invoice 16-----------
+Event Type: Sport
+Event Name: UTEP Basketball 4
+Event Date: 11/29/23
+Ticket Type: General Admission
+Number of Tickets: 3
+Total Price: 91.21
+Confirmation Number: 160952390
+-------------------------------
+-----------Invoice 17-----------
+Event Type: Sport
+Event Name: UTEP Football 9
+Event Date: 10/30/23
+Ticket Type: Gold
+Number of Tickets: 5
+Total Price: 268.77
+Confirmation Number: 70501488
+-------------------------------
+-----------Invoice 18-----------
+Event Type: Sport
+Event Name: UTEP Basketball 8
+Event Date: 12/13/23
+Ticket Type: General Admission
+Number of Tickets: 3
+Total Price: 91.21
+Confirmation Number: 383776036
+-------------------------------
+-----------Invoice 19-----------
+Event Type: Sport
+Event Name: UTEP Basketball 10
+Event Date: 12/20/23
+Ticket Type: Gold
+Number of Tickets: 3
+Total Price: 162.23
+Confirmation Number: 343074826
+-------------------------------
+-----------Invoice 20-----------
+Event Type: Sport
+Event Name: UTEP Basketball 29
+Event Date: 2/26/24
+Ticket Type: Gold
+Number of Tickets: 2
+Total Price: 108.96
+Confirmation Number: 463049301
+-------------------------------
+-----------Invoice 21-----------
+Event Type: Sport
+Event Name: UTEP Football 8
+Event Date: 10/23/23
+Ticket Type: General Admission
+Number of Tickets: 6
+Total Price: 179.99
+Confirmation Number: 717281766
+-------------------------------
+-----------Invoice 22-----------
+Event Type: Festival
+Event Name: UTEP Commencement 2
+Event Date: 1/25/24
+Ticket Type: Bronze
+Number of Tickets: 4
+Total Price: 2.43
+Confirmation Number: 1788669757
+-------------------------------
+-----------Invoice 23-----------
+Event Type: Sport
+Event Name: UTEP Football 12
+Event Date: 11/20/23
+Ticket Type: General Admission
+Number of Tickets: 4
+Total Price: 120.8
+Confirmation Number: 1555364026
+-------------------------------
+-----------Invoice 24-----------
+Event Type: Sport
+Event Name: UTEP Basketball 20
+Event Date: 1/24/24
+Ticket Type: Bronze
+Number of Tickets: 6
+Total Price: 233.25
+Confirmation Number: 1508401132
+-------------------------------
+-----------Invoice 25-----------
+Event Type: Sport
+Event Name: UTEP Football 3
+Event Date: 9/18/23
+Ticket Type: VIP
+Number of Tickets: 6
+Total Price: 375.3
+Confirmation Number: -1675668660
+-------------------------------
+-----------Invoice 26-----------
+Event Type: Sport
+Event Name: UTEP Basketball 28
+Event Date: 2/21/24
+Ticket Type: Silver
+Number of Tickets: 2
+Total Price: 91.21
+Confirmation Number: 136374762
+-------------------------------
+-----------Invoice 27-----------
+Event Type: Sport
+Event Name: UTEP Basketball 29
+Event Date: 2/26/24
+Ticket Type: Bronze
+Number of Tickets: 2
+Total Price: 79.37
+Confirmation Number: 1060586951
+-------------------------------
+-----------Invoice 28-----------
+Event Type: Sport
+Event Name: UTEP Basketball 16
+Event Date: 1/10/24
+Ticket Type: General Admission
+Number of Tickets: 5
+Total Price: 150.39
+Confirmation Number: 128021231
+-------------------------------
+-----------Invoice 29-----------
+Event Type: Festival
+Event Name: UTEP Commencement 1
+Event Date: 3/26/24
+Ticket Type: VIP
+Number of Tickets: 2
+Total Price: 2.43
+Confirmation Number: 797148986
+-------------------------------
+-----------Invoice 30-----------
+Event Type: Sport
+Event Name: UTEP Basketball 10
+Event Date: 12/20/23
+Ticket Type: Silver
+Number of Tickets: 3
+Total Price: 135.6
+Confirmation Number: 1773155012
+-------------------------------
+-----------Invoice 31-----------
+Event Type: Festival
+Event Name: UTEP Commencement 1
+Event Date: 3/26/24
+Ticket Type: Silver
+Number of Tickets: 5
+Total Price: 2.43
+Confirmation Number: 2017268159
+-------------------------------
+-----------Invoice 32-----------
+Event Type: Sport
+Event Name: UTEP Basketball 8
+Event Date: 12/13/23
+Ticket Type: General Admission
+Number of Tickets: 2
+Total Price: 61.62
+Confirmation Number: -929844232
+-------------------------------
+-----------Invoice 33-----------
+Event Type: Festival
+Event Name: UTEP Commencement 2
+Event Date: 1/25/24
+Ticket Type: Silver
+Number of Tickets: 5
+Total Price: 2.43
+Confirmation Number: -1950359151
+-------------------------------
+-----------Invoice 34-----------
+Event Type: Festival
+Event Name: Minerpalooza
+Event Date: 5/21/24
+Ticket Type: Silver
+Number of Tickets: 6
+Total Price: 2.43
+Confirmation Number: 1819461877
+-------------------------------
+-----------Invoice 35-----------
+Event Type: Festival
+Event Name: UTEP Commencement 1
+Event Date: 3/26/24
+Ticket Type: Gold
+Number of Tickets: 3
+Total Price: 2.43
+Confirmation Number: -221785207
+-------------------------------
+-----------Invoice 36-----------
+Event Type: Festival
+Event Name: UTEP Commencement 1
+Event Date: 3/26/24
+Ticket Type: Silver
+Number of Tickets: 3
+Total Price: 2.43
+Confirmation Number: 494950397
+-------------------------------
