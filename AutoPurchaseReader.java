@@ -3,12 +3,12 @@ import java.io.*;
 
 /**
  * @author Ian Gutierrez
- *         Date: 11/5/2023
+ *         Date: 11/19/2023
  *         Course: CS 3331 - Advanced Object Oriented Programming
  *         Instructor: Dr. Daniel Mejia
- *         Programming Assignment 4
- *         Lab Description: This program is an extension of PA3, with an added
- *         autopurchaser and admin functionality.
+ *         Programming Assignment 5
+ *         Lab Description: This program is an extension of PA4, with added
+ *         admin and customer functionality.
  *         Honesty Statement: I completed this work entirely on my own without
  *         any outside sources including peers, experts, online sources, or the
  *         like. The only assistance I received was from the instructor, TA, or

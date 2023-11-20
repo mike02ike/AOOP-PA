@@ -24,7 +24,9 @@ import java.util.Scanner;
  * 
  * @since 11/17/2023
  * @author Erik LaNeave
+ * @author Ian Gutierrez
  * @version 2.7
+ * 
  *          <p>
  * @since 10/27/2023
  * @author Michael Ike
@@ -287,7 +289,8 @@ public class UICustomer {
                 return;
             }
             // updates customer money
-            currCustomer.addMoney((currInv.getTotalPrice() - currInv.getConvenience() - currInv.getService() - currInv.getCharity()));
+            currCustomer.addMoney(
+                    (currInv.getTotalPrice() - currInv.getConvenience() - currInv.getService() - currInv.getCharity()));
             // Updates the event
             int numTickets = currInv.getNumTickets();
             int ticketType = getTicketType(currInv.getTicketType());

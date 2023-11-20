@@ -16,7 +16,8 @@ import java.util.Scanner;
  * <p>
  * Class Purpose: Handles the purchase process for both customer and admin
  * <p>
- * Last Change: 11/17/2023
+ * Last Change: 11/19/2023
+ * @author Ian Gutierrez
  * @author Erik LaNeave
  * @version 2.5
  * <p>
@@ -396,7 +397,8 @@ public class Purchase {
         currentEvent.addTotalTax(currentTaxAmount);
         double subTotalWithTaxAndFees = Math.floor(100 * (subTotalFees + currentTaxAmount)) / 100;
 
-        Invoice newInvoice = createInvoice(ticketAmount, subTotalWithTaxAndFees, convenienceFees, serviceFees, charityFees);
+        Invoice newInvoice = createInvoice(ticketAmount, subTotalWithTaxAndFees, convenienceFees, serviceFees,
+                charityFees);
 
         return newInvoice;
     }
@@ -454,7 +456,8 @@ public class Purchase {
      * @param userTicketAmount
      * @param totalCostWithTax
      */
-    public Invoice createInvoice(int userTicketAmount, double totalCostWithTax, double convenience, double service, double charity) {
+    public Invoice createInvoice(int userTicketAmount, double totalCostWithTax, double convenience, double service,
+            double charity) {
         ArrayList<Ticket> ticketList = makeTicketListInvoice(userTicketAmount);
         Invoice newInvoice = new Invoice(this.currentCustomer.getId(), userTicketAmount, totalCostWithTax,
                 currentTaxAmount,
