@@ -229,6 +229,8 @@ public class UIAdmin {
 
         newEvent.getVenue().setName(chooseVenue(newEvent));
 
+        fireWorks(newEvent);
+
         newEvent.getVenue().setVipPercentage(5);
         newEvent.getVenue().setGoldPercentage(10);
         newEvent.getVenue().setSilverPercentage(15);
@@ -255,6 +257,32 @@ public class UIAdmin {
 
         System.out.println("\nEvent added!");
 
+    }
+
+    /**
+     * @param newEvent
+     */
+    public void fireWorks(Event newEvent) {
+        Scanner scn = new Scanner(System.in);
+        String yesOrNo = "";
+        if (newEvent.getVenue().getVenueType().equals("Stadium") || newEvent.getVenue().getVenueType().equals("Open Air")) {
+            while (true) {
+                System.out.print("\nDo you want fireworks for this event\nEnter 1 for yes or 2 for no\n--> ");
+                yesOrNo = scn.nextLine();
+                switch (yesOrNo) {
+                    case "1":
+                        newEvent.setFireworks("Yes");
+                        newEvent.setFireworksCost(34800);
+                        return;
+                    case "2":
+                        newEvent.setFireworks("no");
+                        return;
+                    default:
+                        System.out.println("Input is not 1 or 2");
+                        break;
+                }
+            }
+        }
     }
 
     /**
@@ -288,6 +316,7 @@ public class UIAdmin {
     /**
      * Retrieves venue from admin
      * 
+     * @param newEvent
      * @return venue
      */
     public String chooseVenue(Event newEvent) {
@@ -403,18 +432,22 @@ public class UIAdmin {
                 switch (input) {
                     case "1":
                         venue = venueFactory.createVenue("Stadium");
+                        venue.setVenueType("Stadium");
                         break;
 
                     case "2":
                         venue = venueFactory.createVenue("Arena");
+                        venue.setVenueType("Arena");
                         break;
 
                     case "3":
                         venue = venueFactory.createVenue("Auditorium");
+                        venue.setVenueType("Auditorium");
                         break;
 
                     case "4":
                         venue = venueFactory.createVenue("Open Air");
+                        venue.setVenueType("Open Air");
                         break;
 
                     default:
