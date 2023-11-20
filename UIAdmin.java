@@ -345,14 +345,17 @@ public class UIAdmin {
                 switch (input) {
                     case "1":
                         event = eventFactory.createEvent("Sport");
+                        event.setEventType("Sport");
                         break;
 
                     case "2":
                         event = eventFactory.createEvent("Concert");
+                        event.setEventType("Concert");
                         break;
 
                     case "3":
                         event = eventFactory.createEvent("Festival");
+                        event.setEventType("Festival");
                         break;
 
                     default:
