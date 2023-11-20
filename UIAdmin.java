@@ -54,7 +54,7 @@ public class UIAdmin {
     }
 
     /**
-     * Sets the two hashmaps for the class 
+     * Sets the two hashmaps for the class
      * 
      * @param eventMap
      * @param customerMap
@@ -106,11 +106,11 @@ public class UIAdmin {
                     saveInvoiceForCustomer();
                     break;
                 case "6":// 6 - Cancel Event
-                    logFile.save(logFile.time()+ " Admin picked menu option 6 to cancel an event\n");
+                    logFile.save(logFile.time() + " Admin picked menu option 6 to cancel an event\n");
                     cancelEvent();
                     break;
-                case "7"://7 Compute profit
-                    logFile.save((logFile.time()+ " Admin picked menu option 7 to compute profit\n"));
+                case "7":// 7 Compute profit
+                    logFile.save((logFile.time() + " Admin picked menu option 7 to compute profit\n"));
                     printRevenue();
                     break;
                 case "exit":
@@ -193,7 +193,7 @@ public class UIAdmin {
                 }
             } catch (NumberFormatException e) {
                 System.out.println("Invalid input! Please enter a number");
-                //myScanner.next();
+                // myScanner.next();
             }
         }
     }
@@ -451,6 +451,7 @@ public class UIAdmin {
                 }
                 logFile.save(logFile.time() + " Admin entered a correct event ID of " + eventID + "\n");
                 this.selectedEvent = currEvent;
+                this.selectedEvent.updateSeatsAndRevenue();
                 subMenu();
                 break;
             } catch (NumberFormatException e) {
@@ -483,6 +484,8 @@ public class UIAdmin {
             }
 
             logFile.save(logFile.time() + " Admin entered a corret event name of " + input + "\n");
+            this.selectedEvent = currEvent;
+            this.selectedEvent.updateSeatsAndRevenue();
             subMenu();
             break;
         }
@@ -500,7 +503,8 @@ public class UIAdmin {
         System.out.println("================================\n");
         while (true) {
             System.out.print("Submenu for Additional Information\n");
-            System.out.print("1 - View Event Calculated Info\n2 - Print Money Gained by TicketMiner\n3 - Exit Submenu\n--> ");
+            System.out.print(
+                    "1 - View Event Calculated Info\n2 - Print Money Gained by TicketMiner\n3 - Exit Submenu\n--> ");
             String input = myScanner.nextLine();
             switch (input) {
                 case "1": // Views calculated event info
@@ -559,7 +563,8 @@ public class UIAdmin {
         System.out.println("Revenue from Convenience Fees: $" + doubleForm(ticketMiner.computeConvenienceRevenue()));
         System.out.println("Revenue from Service Fees: $" + doubleForm(ticketMiner.computeServiceRevenue()));
         System.out.println(
-                "Total Revenue:$ " + doubleForm((ticketMiner.computeConvenienceRevenue() + ticketMiner.computeServiceRevenue())));
+                "Total Revenue:$ "
+                        + doubleForm((ticketMiner.computeConvenienceRevenue() + ticketMiner.computeServiceRevenue())));
         System.out.println("=================================");
         System.out.println("            CHARITY              ");
         System.out.println("=================================");
@@ -624,7 +629,8 @@ public class UIAdmin {
     }
 
     /**
-     * This findCustomer will add a found customer to the cache used in the auto purchase
+     * This findCustomer will add a found customer to the cache used in the auto
+     * purchase
      * 
      * @param firstName
      * @param lastName
@@ -724,5 +730,5 @@ public class UIAdmin {
      */
     public String doubleForm(double toBeForm) {
         return String.format("%.2f", toBeForm);
-    }    
+    }
 }

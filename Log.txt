@@ -1,0 +1,12 @@
+11-19-2023 17:01:24 Program start
+11-19-2023 17:01:24 Event and Customer maps made from csv files
+11-19-2023 17:01:24 Starting the login process
+11-19-2023 17:01:26 User is an administrator
+11-19-2023 17:01:28 Admin picked menu option 2 to Inquire Event by Name
+11-19-2023 17:01:32 Admin entered a corret event name of UTEP Football 1
+11-19-2023 17:01:42 Admin picked submenu option 1 to view event calculated information
+11-19-2023 17:01:45 Admin picked submenu option 3 to exit submenu
+11-19-2023 17:01:47 Admin terminated the program
+11-19-2023 17:01:47 Starting the login process
+11-19-2023 17:01:49 User terminated the program
+11-19-2023 17:01:49 Updated Event and Customer csv made
