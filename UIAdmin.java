@@ -531,7 +531,7 @@ public class UIAdmin {
                     return;
                 default: // Handles incorrect input
                     logFile.save(logFile.time() + " Admin input is invalid option for submenu\n");
-                    System.out.println("Please enter a number between 1 and 2");
+                    System.out.println("Please enter a number between 1 and 3");
                     break;
             }
         }
