@@ -309,10 +309,16 @@ public class Invoice {
         return this.customerID;
     }
 
+    /**
+     * @return if the event is canceled
+     */
     public boolean getIsCanceled() {
         return this.isCanceled;
     }
 
+    /**
+     * @param isCanceled
+     */
     public void setIsCanceled(boolean isCanceled) {
         this.isCanceled = isCanceled;
     }
