@@ -22,7 +22,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
- * Represents an abstract class Event that serves as a blueprint for different types of events.
+ * Represents an abstract class Event that serves as a blueprint for different
+ * types of events.
  */
 public abstract class Event {
 
@@ -50,7 +51,8 @@ public abstract class Event {
   private HashMap<String, Double> collectedFees = new HashMap<>();
 
   /**
-   * Constructor to initialize seat prices, purchased tickets, number of seats sold, seat revenue, and collected fees.
+   * Constructor to initialize seat prices, purchased tickets, number of seats
+   * sold, seat revenue, and collected fees.
    */
   public Event() {
     initializeSeatPrices();
@@ -113,7 +115,8 @@ public abstract class Event {
   }
 
   /**
-   * Initializes collected fees hashmap for convenience, service, and charity fees.
+   * Initializes collected fees hashmap for convenience, service, and charity
+   * fees.
    */
   public void initializeCollectedFees() {
     this.collectedFees.put("convenience", 0.0);
@@ -123,6 +126,7 @@ public abstract class Event {
 
   /**
    * Updates the convenience fees collected for the event.
+   * 
    * @param convenienceIn The convenience fees to be added.
    */
   public void updateConvenienceFees(double convenienceIn) {
@@ -133,6 +137,7 @@ public abstract class Event {
 
   /**
    * Updates the service fees collected for the event.
+   * 
    * @param serviceIn The service fees to be added.
    */
   public void updateServiceFees(double serviceIn) {
@@ -143,6 +148,7 @@ public abstract class Event {
 
   /**
    * Updates the charity fees collected for the event.
+   * 
    * @param charityIn The charity fees to be added.
    */
   public void updateCharityFees(double charityIn) {
@@ -153,6 +159,7 @@ public abstract class Event {
 
   /**
    * Retrieves the invoices generated for this event.
+   * 
    * @return HashMap containing invoices grouped by customer ID.
    */
   public HashMap<Integer, ArrayList<Invoice>> getInvoices() {
@@ -161,6 +168,7 @@ public abstract class Event {
 
   /**
    * Adds an invoice to the list of invoices for a specific customer.
+   * 
    * @param invoice The invoice to be added.
    */
   public void addInvoice(Invoice invoice) {
@@ -696,46 +704,99 @@ public abstract class Event {
     return this.seatRevenue.get("total");
   }
 
+  /**
+   * convenience fee getter
+   * 
+   * @return convenience fee
+   */
   public double getConvenienceFee() {
     return this.collectedFees.get("convenience");
   }
 
+  /**
+   * convenience fee setter
+   * 
+   * @param feeIn
+   */
   public void setConvenienceFee(double feeIn) {
     this.collectedFees.put("convenience", feeIn);
   }
 
+  /**
+   * Adds to convenience fee
+   * 
+   * @param feeIn
+   */
   public void addToConvenienceFee(double feeIn) {
     this.collectedFees.put("convenience", this.getConvenienceFee() + feeIn);
   }
 
+  /**
+   * Service Fee getter
+   * 
+   * @return Service Fee
+   */
   public double getServiceFee() {
     return this.collectedFees.get("service");
   }
 
+  /**
+   * Service Fee setter
+   * 
+   * @param feeIn
+   */
   public void setServiceFee(double feeIn) {
     this.collectedFees.put("service", feeIn);
   }
 
+  /**
+   * Adds to service fee
+   * 
+   * @param feeIn
+   */
   public void addToServiceFee(double feeIn) {
     this.collectedFees.put("service", this.getServiceFee() + feeIn);
   }
 
+  /**
+   * charity fee getter
+   * 
+   * @return charity fee
+   */
   public double getCharityFee() {
     return this.collectedFees.get("charity");
   }
 
+  /**
+   * charity fee setter
+   * 
+   * @param feeIn
+   */
   public void setCharityFee(double feeIn) {
     this.collectedFees.put("charity", feeIn);
   }
 
+  /**
+   * adds to charity fee
+   * 
+   * @param feeIn
+   */
   public void addToCharityFee(double feeIn) {
     this.collectedFees.put("charity", this.getCharityFee() + feeIn);
   }
 
+  /**
+   * isCanceled setter
+   * 
+   * @param isCanceled
+   */
   public void setIsCanceled(boolean isCanceled) {
     this.isCanceled = isCanceled;
   }
 
+  /**
+   * @return isCanceled
+   */
   public boolean getIsCanceled() {
     return this.isCanceled;
   }

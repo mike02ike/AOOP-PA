@@ -140,10 +140,16 @@ public class Invoice {
         this.totalPrice = totalPrice;
     }
 
+    /**
+     * @return tax
+     */
     public Double getTax() {
         return this.tax;
     }
 
+    /**
+     * @param tax
+     */
     public void setTax(Double tax) {
         this.tax = tax;
     }
@@ -288,10 +294,16 @@ public class Invoice {
         this.charity = charity;
     }
 
+    /**
+     * @param id
+     */
     public void setCustomerID(int id) {
         this.customerID = id;
     }
 
+    /**
+     * @return customer id
+     */
     public int getCustomerID() {
         return this.customerID;
     }

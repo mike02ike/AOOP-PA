@@ -33,8 +33,10 @@ import java.util.Map.Entry;
 
 public class UIAdmin {
 
+    /**
+     * Class attributes
+     */
     public static UIAdmin uiAdmin;
-
     private LinkedHashMap<Integer, Event> events;
     private LinkedHashMap<Integer, Customer> customers;
     private Event selectedEvent;
@@ -49,6 +51,9 @@ public class UIAdmin {
         return uiAdmin;
     }
 
+    /**
+     * Constructor
+     */
     public UIAdmin() {
 
     }
