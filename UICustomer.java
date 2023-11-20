@@ -277,15 +277,20 @@ public class UICustomer {
             return;
         }
         printInvoices();
-        System.out.print("Enter the confirmation number of the purchase you would like to cancel\n--> ");
+        System.out.print("Enter the confirmation number of the purchase you would like to cancel or enter anything to go back to the menu\n--> ");
         String confirString = scnr.nextLine();
         try {
             int confirInt = Integer.parseInt(confirString);
             // Not done but will zero out total cost and change name
             Invoice currInv = findInvoice(confirInt);
             if (currInv == null) {
-                System.out.println("Not a valid confirmation number");
+                System.out.println("Not a valid confirmation number\n");
                 logFile.save(logFile.time() + " Given confirmation number was not correct\n");
+                return;
+            }
+            if (currInv.getIsCanceled()) {
+                System.out.println("Purchase has already been canceled\n");
+                logFile.save(logFile.time() + " Purchase has already been canceled\n");
                 return;
             }
             // updates customer money
@@ -303,6 +308,7 @@ public class UICustomer {
             currInv.setTotalPrice(0.0);
             currInv.setTax(0.0);
             currInv.setEventName("(Purchase Canceled) " + currInv.getEventName());
+            currInv.setIsCanceled(true);
             System.out.println(
                     "Purchase with confirmation number " + currInv.getConfirmationNum() + " Canceled\n");
             logFile.save(logFile.time() + " User canceled invoice with confirmation number " + confirInt + "\n");

@@ -45,6 +45,7 @@ public class Invoice {
     private Double service;
     private Double charity;
     private ArrayList<Ticket> ticketList = new ArrayList<Ticket>();
+    private boolean isCanceled = false;
 
     // Constructors
     /**
@@ -307,4 +308,13 @@ public class Invoice {
     public int getCustomerID() {
         return this.customerID;
     }
+
+    public boolean getIsCanceled() {
+        return this.isCanceled;
+    }
+
+    public void setIsCanceled(boolean isCanceled) {
+        this.isCanceled = isCanceled;
+    }
+    
 }
