@@ -1,0 +1,9 @@
+-----------Invoice 1-----------
+Event Type: Concert
+Event Name: UTEP Wind Symphony 7
+Event Date: 3/22/24
+Ticket Type: Silver
+Number of Tickets: 6
+Total Price: 321.32
+Confirmation Number: 543941274
+-------------------------------

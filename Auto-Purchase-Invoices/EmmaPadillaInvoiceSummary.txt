@@ -1,0 +1,9 @@
+-----------Invoice 1-----------
+Event Type: Concert
+Event Name: UTEP Wind Symphony 9
+Event Date: 10/17/23
+Ticket Type: Gold
+Number of Tickets: 4
+Total Price: 218.77
+Confirmation Number: -1746660610
+-------------------------------

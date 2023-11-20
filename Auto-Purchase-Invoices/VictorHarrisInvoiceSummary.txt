@@ -1,0 +1,9 @@
+-----------Invoice 1-----------
+Event Type: Sport
+Event Name: UTEP Basketball 18
+Event Date: 1/17/24
+Ticket Type: Gold
+Number of Tickets: 5
+Total Price: 268.77
+Confirmation Number: 630543479
+-------------------------------

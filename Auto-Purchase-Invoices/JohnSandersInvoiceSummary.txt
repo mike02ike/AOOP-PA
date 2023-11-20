@@ -1,0 +1,9 @@
+-----------Invoice 1-----------
+Event Type: Sport
+Event Name: UTEP Football 6
+Event Date: 10/9/23
+Ticket Type: VIP
+Number of Tickets: 6
+Total Price: 417.0
+Confirmation Number: -1322315104
+-------------------------------

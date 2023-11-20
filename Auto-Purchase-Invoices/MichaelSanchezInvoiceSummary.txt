@@ -1,0 +1,9 @@
+-----------Invoice 1-----------
+Event Type: Sport
+Event Name: UTEP Football 5
+Event Date: 10/2/23
+Ticket Type: Gold
+Number of Tickets: 3
+Total Price: 180.26
+Confirmation Number: 977004150
+-------------------------------

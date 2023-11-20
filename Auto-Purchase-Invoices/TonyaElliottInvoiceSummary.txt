@@ -1,0 +1,9 @@
+-----------Invoice 1-----------
+Event Type: Sport
+Event Name: UTEP Football 1
+Event Date: 9/4/23
+Ticket Type: General Admission
+Number of Tickets: 6
+Total Price: 179.99
+Confirmation Number: 1030830216
+-------------------------------

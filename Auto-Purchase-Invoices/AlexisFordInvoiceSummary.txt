@@ -1,0 +1,9 @@
+-----------Invoice 1-----------
+Event Type: Festival
+Event Name: Coachella 2
+Event Date: 12/9/23
+Ticket Type: General Admission
+Number of Tickets: 2
+Total Price: 1186.14
+Confirmation Number: -206306372
+-------------------------------

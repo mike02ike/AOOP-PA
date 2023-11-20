@@ -1,0 +1,9 @@
+-----------Invoice 1-----------
+Event Type: Sport
+Event Name: UTEP Football 2
+Event Date: 9/11/23
+Ticket Type: Silver
+Number of Tickets: 4
+Total Price: 199.99
+Confirmation Number: 395688594
+-------------------------------

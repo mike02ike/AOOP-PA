@@ -1,0 +1,9 @@
+-----------Invoice 1-----------
+Event Type: Sport
+Event Name: UTEP Football 2
+Event Date: 9/11/23
+Ticket Type: General Admission
+Number of Tickets: 5
+Total Price: 167.11
+Confirmation Number: 856120912
+-------------------------------

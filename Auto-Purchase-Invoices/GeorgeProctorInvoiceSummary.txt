@@ -1,0 +1,9 @@
+-----------Invoice 1-----------
+Event Type: Sport
+Event Name: UTEP Basketball 10
+Event Date: 12/20/23
+Ticket Type: Silver
+Number of Tickets: 4
+Total Price: 199.99
+Confirmation Number: 223947821
+-------------------------------
