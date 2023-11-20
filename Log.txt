@@ -1,12 +1,488 @@
-11-19-2023 17:01:24 Program start
-11-19-2023 17:01:24 Event and Customer maps made from csv files
-11-19-2023 17:01:24 Starting the login process
-11-19-2023 17:01:26 User is an administrator
-11-19-2023 17:01:28 Admin picked menu option 2 to Inquire Event by Name
-11-19-2023 17:01:32 Admin entered a corret event name of UTEP Football 1
-11-19-2023 17:01:42 Admin picked submenu option 1 to view event calculated information
-11-19-2023 17:01:45 Admin picked submenu option 3 to exit submenu
-11-19-2023 17:01:47 Admin terminated the program
-11-19-2023 17:01:47 Starting the login process
-11-19-2023 17:01:49 User terminated the program
-11-19-2023 17:01:49 Updated Event and Customer csv made
+11-19-2023 20:58:43 Program start
+11-19-2023 20:58:43 Event and Customer maps made from csv files
+11-19-2023 20:58:43 Starting the login process
+11-19-2023 20:58:46 User is an administrator
+11-19-2023 20:58:49 Admin picked menu option 4 to run the auto purchase
+11-19-2023 20:58:49 Auto Purchse CSV read
+11-19-2023 20:58:49 Starting auto purchase with customer Laurie
+11-19-2023 20:58:49 Invoice with confimation number -1042401943 created for user purchase
+11-19-2023 20:58:49 Customer with name Laurie purchased 3 tickets for event with ID 42 spending $180.26
+11-19-2023 20:58:49 Customer with name Laurie current funds: $3697.11
+11-19-2023 20:58:49 Available ticket type Gold for event ID 42 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Joseph
+11-19-2023 20:58:49 Invoice with confimation number -1614266190 created for user purchase
+11-19-2023 20:58:49 Customer with name Joseph purchased 2 tickets for event with ID 45 spending $165.94
+11-19-2023 20:58:49 Customer with name Joseph current funds: $4880.97
+11-19-2023 20:58:49 Available ticket type VIP for event ID 45 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Mark
+11-19-2023 20:58:49 Invoice with confimation number 508723820 created for user purchase
+11-19-2023 20:58:49 Customer with name Mark purchased 6 tickets for event with ID 37 spending $268.77
+11-19-2023 20:58:49 Customer with name Mark current funds: $6144.32
+11-19-2023 20:58:49 Available ticket type Silver for event ID 37 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Victoria
+11-19-2023 20:58:49 Invoice with confimation number -1618471094 created for user purchase
+11-19-2023 20:58:49 Customer with name Victoria purchased 5 tickets for event with ID 20 spending $224.38
+11-19-2023 20:58:49 Customer with name Victoria current funds: $4462.50
+11-19-2023 20:58:49 Available ticket type Silver for event ID 20 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Patrick
+11-19-2023 20:58:49 Invoice with confimation number -182014553 created for user purchase
+11-19-2023 20:58:49 Customer with name Patrick purchased 4 tickets for event with ID 40 spending $173.68
+11-19-2023 20:58:49 Customer with name Patrick current funds: $3017.28
+11-19-2023 20:58:49 Available ticket type Bronze for event ID 40 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Jennifer
+11-19-2023 20:58:49 Invoice with confimation number -78286773 created for user purchase
+11-19-2023 20:58:49 Customer with name Jennifer purchased 4 tickets for event with ID 4 spending $134.22
+11-19-2023 20:58:49 Customer with name Jennifer current funds: $3572.90
+11-19-2023 20:58:49 Available ticket type General Admission for event ID 4 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Victor
+11-19-2023 20:58:49 Invoice with confimation number 630543479 created for user purchase
+11-19-2023 20:58:49 Customer with name Victor purchased 5 tickets for event with ID 31 spending $268.77
+11-19-2023 20:58:49 Customer with name Victor current funds: $5542.58
+11-19-2023 20:58:49 Available ticket type Gold for event ID 31 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Bungein
+11-19-2023 20:58:49 Invoice with confimation number 1669482633 created for user purchase
+11-19-2023 20:58:49 Customer with name Bungein purchased 3 tickets for event with ID 13 spending $91.21
+11-19-2023 20:58:49 Customer with name Bungein current funds: $2965.95
+11-19-2023 20:58:49 Available ticket type General Admission for event ID 13 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Joshua
+11-19-2023 20:58:49 Invoice with confimation number -1942553041 created for user purchase
+11-19-2023 20:58:49 Customer with name Joshua purchased 4 tickets for event with ID 27 spending $278.90
+11-19-2023 20:58:49 Customer with name Joshua current funds: $2536.12
+11-19-2023 20:58:49 Available ticket type VIP for event ID 27 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Jared
+11-19-2023 20:58:49 Invoice with confimation number 426093505 created for user purchase
+11-19-2023 20:58:49 Customer with name Jared purchased 2 tickets for event with ID 43 spending $61.62
+11-19-2023 20:58:49 Customer with name Jared current funds: $2973.86
+11-19-2023 20:58:49 Available ticket type General Admission for event ID 43 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Carmen
+11-19-2023 20:58:49 Invoice with confimation number -1206225729 created for user purchase
+11-19-2023 20:58:49 Customer with name Carmen purchased 2 tickets for event with ID 1 spending $88.19
+11-19-2023 20:58:49 Customer with name Carmen current funds: $1605.69
+11-19-2023 20:58:49 Available ticket type Bronze for event ID 1 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Jorge
+11-19-2023 20:58:49 Invoice with confimation number -1891384163 created for user purchase
+11-19-2023 20:58:49 Customer with name Jorge purchased 2 tickets for event with ID 5 spending $108.96
+11-19-2023 20:58:49 Customer with name Jorge current funds: $4474.79
+11-19-2023 20:58:49 Available ticket type Gold for event ID 5 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer April
+11-19-2023 20:58:49 Invoice with confimation number 1307892240 created for user purchase
+11-19-2023 20:58:49 Customer with name April purchased 3 tickets for event with ID 7 spending $162.23
+11-19-2023 20:58:49 Customer with name April current funds: $3182.73
+11-19-2023 20:58:49 Available ticket type Gold for event ID 7 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Amy
+11-19-2023 20:58:49 Invoice with confimation number 1979951309 created for user purchase
+11-19-2023 20:58:49 Customer with name Amy purchased 2 tickets for event with ID 10 spending $108.96
+11-19-2023 20:58:49 Customer with name Amy current funds: $1145.11
+11-19-2023 20:58:49 Available ticket type Gold for event ID 10 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Amber
+11-19-2023 20:58:49 Invoice with confimation number -142140385 created for user purchase
+11-19-2023 20:58:49 Given customer has inufficient funds for this purchase
+11-19-2023 20:58:49 Customer with ID 628 failed to purchase tickets for event with ID 58
+11-19-2023 20:58:49 Starting auto purchase with customer Joel
+11-19-2023 20:58:49 Invoice with confimation number 615203622 created for user purchase
+11-19-2023 20:58:49 Customer with name Joel purchased 2 tickets for event with ID 37 spending $101.34
+11-19-2023 20:58:49 Customer with name Joel current funds: $945.67
+11-19-2023 20:58:49 Available ticket type Silver for event ID 37 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Javier
+11-19-2023 20:58:49 Invoice with confimation number 1811323564 created for user purchase
+11-19-2023 20:58:49 Customer with name Javier purchased 3 tickets for event with ID 70 spending $2.43
+11-19-2023 20:58:49 Customer with name Javier current funds: $5585.68
+11-19-2023 20:58:49 Available ticket type Silver for event ID 70 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Michele
+11-19-2023 20:58:49 Invoice with confimation number -638980373 created for user purchase
+11-19-2023 20:58:49 Customer with name Michele purchased 3 tickets for event with ID 1 spending $188.87
+11-19-2023 20:58:49 Customer with name Michele current funds: $5663.31
+11-19-2023 20:58:49 Available ticket type VIP for event ID 1 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Lisa
+11-19-2023 20:58:49 Invoice with confimation number 828996564 created for user purchase
+11-19-2023 20:58:49 Customer with name Lisa purchased 4 tickets for event with ID 53 spending $142.47
+11-19-2023 20:58:49 Customer with name Lisa current funds: $1039.36
+11-19-2023 20:58:49 Available ticket type Bronze for event ID 53 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Joshua
+11-19-2023 20:58:49 Invoice with confimation number -174560427 created for user purchase
+11-19-2023 20:58:49 Customer with name Joshua purchased 4 tickets for event with ID 7 spending $239.44
+11-19-2023 20:58:49 Customer with name Joshua current funds: $2296.68
+11-19-2023 20:58:49 Available ticket type Gold for event ID 7 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Kenneth
+11-19-2023 20:58:49 Invoice with confimation number 1834592238 created for user purchase
+11-19-2023 20:58:49 Customer with name Kenneth purchased 4 tickets for event with ID 53 spending $243.08
+11-19-2023 20:58:49 Customer with name Kenneth current funds: $5830.32
+11-19-2023 20:58:49 Available ticket type Gold for event ID 53 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Richard
+11-19-2023 20:58:49 Invoice with confimation number -6901870 created for user purchase
+11-19-2023 20:58:49 Customer with name Richard purchased 2 tickets for event with ID 70 spending $2.70
+11-19-2023 20:58:49 Customer with name Richard current funds: $4880.53
+11-19-2023 20:58:49 Available ticket type General Admission for event ID 70 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Kelly
+11-19-2023 20:58:49 Invoice with confimation number -1548550531 created for user purchase
+11-19-2023 20:58:49 Customer with name Kelly purchased 4 tickets for event with ID 21 spending $134.22
+11-19-2023 20:58:49 Customer with name Kelly current funds: $5161.53
+11-19-2023 20:58:49 Available ticket type General Admission for event ID 21 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Ryan
+11-19-2023 20:58:49 Invoice with confimation number -51325146 created for user purchase
+11-19-2023 20:58:49 Customer with name Ryan purchased 3 tickets for event with ID 70 spending $2.70
+11-19-2023 20:58:49 Customer with name Ryan current funds: $5208.89
+11-19-2023 20:58:49 Available ticket type Silver for event ID 70 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Nicole
+11-19-2023 20:58:49 Invoice with confimation number 1720200271 created for user purchase
+11-19-2023 20:58:49 Customer with name Nicole purchased 5 tickets for event with ID 23 spending $249.31
+11-19-2023 20:58:49 Customer with name Nicole current funds: $4335.37
+11-19-2023 20:58:49 Available ticket type Silver for event ID 23 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Kristen
+11-19-2023 20:58:49 Invoice with confimation number -1383801638 created for user purchase
+11-19-2023 20:58:49 Customer with name Kristen purchased 5 tickets for event with ID 19 spending $298.63
+11-19-2023 20:58:49 Customer with name Kristen current funds: $4431.62
+11-19-2023 20:58:49 Available ticket type Gold for event ID 19 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Joanna
+11-19-2023 20:58:49 Invoice with confimation number -563502508 created for user purchase
+11-19-2023 20:58:49 Given customer has inufficient funds for this purchase
+11-19-2023 20:58:49 Customer with ID 657 failed to purchase tickets for event with ID 67
+11-19-2023 20:58:49 Starting auto purchase with customer Denise
+11-19-2023 20:58:49 Invoice with confimation number 1111079042 created for user purchase
+11-19-2023 20:58:49 Customer with name Denise purchased 2 tickets for event with ID 4 spending $126.72
+11-19-2023 20:58:49 Customer with name Denise current funds: $4498.11
+11-19-2023 20:58:49 Available ticket type VIP for event ID 4 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Brittney
+11-19-2023 20:58:49 Invoice with confimation number -1356488681 created for user purchase
+11-19-2023 20:58:49 Customer with name Brittney purchased 2 tickets for event with ID 68 spending $2.43
+11-19-2023 20:58:49 Customer with name Brittney current funds: $3866.31
+11-19-2023 20:58:49 Available ticket type Bronze for event ID 68 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Jennifer
+11-19-2023 20:58:49 Invoice with confimation number -759143548 created for user purchase
+11-19-2023 20:58:49 Customer with name Jennifer purchased 4 tickets for event with ID 33 spending $199.99
+11-19-2023 20:58:49 Customer with name Jennifer current funds: $5331.44
+11-19-2023 20:58:49 Available ticket type Silver for event ID 33 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Erik
+11-19-2023 20:58:49 Invoice with confimation number -151995591 created for user purchase
+11-19-2023 20:58:49 Customer with name Erik purchased 6 tickets for event with ID 54 spending $326.95
+11-19-2023 20:58:49 Customer with name Erik current funds: $829.19
+11-19-2023 20:58:49 Available ticket type Gold for event ID 54 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Kyle
+11-19-2023 20:58:49 Invoice with confimation number -67700005 created for user purchase
+11-19-2023 20:58:49 Customer with name Kyle purchased 2 tickets for event with ID 14 spending $88.19
+11-19-2023 20:58:49 Customer with name Kyle current funds: $1262.27
+11-19-2023 20:58:49 Available ticket type Bronze for event ID 14 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Paul
+11-19-2023 20:58:49 Invoice with confimation number -69229697 created for user purchase
+11-19-2023 20:58:49 Customer with name Paul purchased 3 tickets for event with ID 70 spending $2.70
+11-19-2023 20:58:49 Customer with name Paul current funds: $3535.33
+11-19-2023 20:58:49 Available ticket type General Admission for event ID 70 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Jeff
+11-19-2023 20:58:49 Invoice with confimation number -176761390 created for user purchase
+11-19-2023 20:58:49 Customer with name Jeff purchased 5 tickets for event with ID 34 spending $298.63
+11-19-2023 20:58:49 Customer with name Jeff current funds: $2911.90
+11-19-2023 20:58:49 Available ticket type Gold for event ID 34 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Kristina
+11-19-2023 20:58:49 Invoice with confimation number -713856307 created for user purchase
+11-19-2023 20:58:49 Customer with name Kristina purchased 3 tickets for event with ID 52 spending $182.99
+11-19-2023 20:58:49 Customer with name Kristina current funds: $3937.65
+11-19-2023 20:58:49 Available ticket type Gold for event ID 52 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Lauren
+11-19-2023 20:58:49 Invoice with confimation number -764697555 created for user purchase
+11-19-2023 20:58:49 Customer with name Lauren purchased 3 tickets for event with ID 45 spending $275.22
+11-19-2023 20:58:49 Customer with name Lauren current funds: $1928.42
+11-19-2023 20:58:49 Available ticket type VIP for event ID 45 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Darlene
+11-19-2023 20:58:49 Invoice with confimation number 1716120133 created for user purchase
+11-19-2023 20:58:49 Customer with name Darlene purchased 2 tickets for event with ID 70 spending $2.43
+11-19-2023 20:58:49 Customer with name Darlene current funds: $2097.49
+11-19-2023 20:58:49 Available ticket type General Admission for event ID 70 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Dennis
+11-19-2023 20:58:49 Invoice with confimation number 543941274 created for user purchase
+11-19-2023 20:58:49 Customer with name Dennis purchased 6 tickets for event with ID 51 spending $321.32
+11-19-2023 20:58:49 Customer with name Dennis current funds: $5482.30
+11-19-2023 20:58:49 Available ticket type Silver for event ID 51 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Shannon
+11-19-2023 20:58:49 Invoice with confimation number -1799557879 created for user purchase
+11-19-2023 20:58:49 Customer with name Shannon purchased 3 tickets for event with ID 19 spending $188.87
+11-19-2023 20:58:49 Customer with name Shannon current funds: $6237.31
+11-19-2023 20:58:49 Available ticket type VIP for event ID 19 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Kylie
+11-19-2023 20:58:49 Invoice with confimation number -1329446826 created for user purchase
+11-19-2023 20:58:49 Customer with name Kylie purchased 3 tickets for event with ID 28 spending $135.60
+11-19-2023 20:58:49 Customer with name Kylie current funds: $3663.45
+11-19-2023 20:58:49 Available ticket type Silver for event ID 28 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Thomas
+11-19-2023 20:58:49 Invoice with confimation number -2010057597 created for user purchase
+11-19-2023 20:58:49 Customer with name Thomas purchased 5 tickets for event with ID 15 spending $167.11
+11-19-2023 20:58:49 Customer with name Thomas current funds: $6301.61
+11-19-2023 20:58:49 Available ticket type General Admission for event ID 15 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Beast
+11-19-2023 20:58:49 Invoice with confimation number -1506864728 created for user purchase
+11-19-2023 20:58:49 Customer with name Beast purchased 6 tickets for event with ID 44 spending $357.82
+11-19-2023 20:58:49 Customer with name Beast current funds: $4870.72
+11-19-2023 20:58:49 Available ticket type Gold for event ID 44 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Barbara
+11-19-2023 20:58:49 Invoice with confimation number -1837154774 created for user purchase
+11-19-2023 20:58:49 Customer with name Barbara purchased 3 tickets for event with ID 16 spending $117.84
+11-19-2023 20:58:49 Customer with name Barbara current funds: $1472.79
+11-19-2023 20:58:49 Available ticket type Bronze for event ID 16 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Amy
+11-19-2023 20:58:49 Invoice with confimation number 571610522 created for user purchase
+11-19-2023 20:58:49 Customer with name Amy purchased 4 tickets for event with ID 27 spending $199.99
+11-19-2023 20:58:49 Customer with name Amy current funds: $6058.55
+11-19-2023 20:58:49 Available ticket type Silver for event ID 27 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Minnie
+11-19-2023 20:58:49 Invoice with confimation number -1474102658 created for user purchase
+11-19-2023 20:58:49 Given customer has inufficient funds for this purchase
+11-19-2023 20:58:49 Customer with ID 3 failed to purchase tickets for event with ID 58
+11-19-2023 20:58:49 Starting auto purchase with customer Ariana
+11-19-2023 20:58:49 Invoice with confimation number -1732347991 created for user purchase
+11-19-2023 20:58:49 Customer with name Ariana purchased 5 tickets for event with ID 31 spending $268.77
+11-19-2023 20:58:49 Customer with name Ariana current funds: $833.65
+11-19-2023 20:58:49 Available ticket type Gold for event ID 31 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Benjamin
+11-19-2023 20:58:49 Invoice with confimation number -192216614 created for user purchase
+11-19-2023 20:58:49 Customer with name Benjamin purchased 3 tickets for event with ID 46 spending $247.70
+11-19-2023 20:58:49 Customer with name Benjamin current funds: $3416.81
+11-19-2023 20:58:49 Available ticket type VIP for event ID 46 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Dennis
+11-19-2023 20:58:49 Invoice with confimation number 603179250 created for user purchase
+11-19-2023 20:58:49 Given customer has inufficient funds for this purchase
+11-19-2023 20:58:49 Customer with ID 541 failed to purchase tickets for event with ID 64
+11-19-2023 20:58:49 Starting auto purchase with customer Monica
+11-19-2023 20:58:49 Invoice with confimation number -549078909 created for user purchase
+11-19-2023 20:58:49 Customer with name Monica purchased 4 tickets for event with ID 40 spending $173.68
+11-19-2023 20:58:49 Customer with name Monica current funds: $5689.44
+11-19-2023 20:58:49 Available ticket type Bronze for event ID 40 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer William
+11-19-2023 20:58:49 Invoice with confimation number -881051516 created for user purchase
+11-19-2023 20:58:49 Customer with name William purchased 5 tickets for event with ID 51 spending $65.32
+11-19-2023 20:58:49 Customer with name William current funds: $1010.88
+11-19-2023 20:58:49 Available ticket type General Admission for event ID 51 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Tonya
+11-19-2023 20:58:49 Invoice with confimation number 1030830216 created for user purchase
+11-19-2023 20:58:49 Customer with name Tonya purchased 6 tickets for event with ID 1 spending $179.99
+11-19-2023 20:58:49 Customer with name Tonya current funds: $6264.38
+11-19-2023 20:58:49 Available ticket type General Admission for event ID 1 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Deanna
+11-19-2023 20:58:49 Invoice with confimation number -193987118 created for user purchase
+11-19-2023 20:58:49 Customer with name Deanna purchased 3 tickets for event with ID 44 spending $209.85
+11-19-2023 20:58:49 Customer with name Deanna current funds: $5261.28
+11-19-2023 20:58:49 Available ticket type VIP for event ID 44 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer John
+11-19-2023 20:58:49 Invoice with confimation number -1322315104 created for user purchase
+11-19-2023 20:58:49 Customer with name John purchased 6 tickets for event with ID 6 spending $417.00
+11-19-2023 20:58:49 Customer with name John current funds: $3764.16
+11-19-2023 20:58:49 Available ticket type VIP for event ID 6 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Donald
+11-19-2023 20:58:49 Invoice with confimation number 1387338234 created for user purchase
+11-19-2023 20:58:49 Customer with name Donald purchased 5 tickets for event with ID 13 spending $249.31
+11-19-2023 20:58:49 Customer with name Donald current funds: $2330.16
+11-19-2023 20:58:49 Available ticket type Silver for event ID 13 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Natasha
+11-19-2023 20:58:49 Invoice with confimation number -391783716 created for user purchase
+11-19-2023 20:58:49 Given customer has inufficient funds for this purchase
+11-19-2023 20:58:49 Customer with ID 378 failed to purchase tickets for event with ID 64
+11-19-2023 20:58:49 Starting auto purchase with customer Kimberly
+11-19-2023 20:58:49 Invoice with confimation number 856120912 created for user purchase
+11-19-2023 20:58:49 Customer with name Kimberly purchased 5 tickets for event with ID 2 spending $167.11
+11-19-2023 20:58:49 Customer with name Kimberly current funds: $2093.10
+11-19-2023 20:58:49 Available ticket type General Admission for event ID 2 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Shane
+11-19-2023 20:58:49 Invoice with confimation number 395688594 created for user purchase
+11-19-2023 20:58:49 Customer with name Shane purchased 4 tickets for event with ID 2 spending $199.99
+11-19-2023 20:58:49 Customer with name Shane current funds: $1110.22
+11-19-2023 20:58:49 Available ticket type Silver for event ID 2 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Michael
+11-19-2023 20:58:49 Invoice with confimation number 977004150 created for user purchase
+11-19-2023 20:58:49 Customer with name Michael purchased 3 tickets for event with ID 5 spending $180.26
+11-19-2023 20:58:49 Customer with name Michael current funds: $2299.30
+11-19-2023 20:58:49 Available ticket type Gold for event ID 5 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Travis
+11-19-2023 20:58:49 Invoice with confimation number -1835763384 created for user purchase
+11-19-2023 20:58:49 Customer with name Travis purchased 6 tickets for event with ID 22 spending $233.25
+11-19-2023 20:58:49 Customer with name Travis current funds: $5420.24
+11-19-2023 20:58:49 Available ticket type Bronze for event ID 22 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Debra
+11-19-2023 20:58:49 Invoice with confimation number 897176271 created for user purchase
+11-19-2023 20:58:49 Customer with name Debra purchased 4 tickets for event with ID 21 spending $173.68
+11-19-2023 20:58:49 Customer with name Debra current funds: $2008.17
+11-19-2023 20:58:49 Available ticket type Bronze for event ID 21 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Salvador
+11-19-2023 20:58:49 Invoice with confimation number 42800698 created for user purchase
+11-19-2023 20:58:49 Customer with name Salvador purchased 5 tickets for event with ID 27 spending $194.78
+11-19-2023 20:58:49 Customer with name Salvador current funds: $5213.31
+11-19-2023 20:58:49 Available ticket type Bronze for event ID 27 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Christopher
+11-19-2023 20:58:49 Invoice with confimation number -1480077083 created for user purchase
+11-19-2023 20:58:49 Given customer has inufficient funds for this purchase
+11-19-2023 20:58:49 Customer with ID 572 failed to purchase tickets for event with ID 59
+11-19-2023 20:58:49 Starting auto purchase with customer Kathryn
+11-19-2023 20:58:49 Invoice with confimation number -1577751313 created for user purchase
+11-19-2023 20:58:49 Customer with name Kathryn purchased 4 tickets for event with ID 56 spending $366.06
+11-19-2023 20:58:49 Customer with name Kathryn current funds: $2959.62
+11-19-2023 20:58:49 Available ticket type VIP for event ID 56 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Ursela
+11-19-2023 20:58:49 Invoice with confimation number 1381283716 created for user purchase
+11-19-2023 20:58:49 Given customer has inufficient funds for this purchase
+11-19-2023 20:58:49 Customer with ID 19 failed to purchase tickets for event with ID 63
+11-19-2023 20:58:49 Starting auto purchase with customer Rebecca
+11-19-2023 20:58:49 Invoice with confimation number 1833682384 created for user purchase
+11-19-2023 20:58:49 Customer with name Rebecca purchased 4 tickets for event with ID 43 spending $156.31
+11-19-2023 20:58:49 Customer with name Rebecca current funds: $2748.86
+11-19-2023 20:58:49 Available ticket type Bronze for event ID 43 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Sarah
+11-19-2023 20:58:49 Invoice with confimation number 1296233312 created for user purchase
+11-19-2023 20:58:49 Customer with name Sarah purchased 5 tickets for event with ID 29 spending $216.43
+11-19-2023 20:58:49 Customer with name Sarah current funds: $4414.04
+11-19-2023 20:58:49 Available ticket type Bronze for event ID 29 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Anthony
+11-19-2023 20:58:49 Invoice with confimation number -696920076 created for user purchase
+11-19-2023 20:58:49 Customer with name Anthony purchased 6 tickets for event with ID 21 spending $268.77
+11-19-2023 20:58:49 Customer with name Anthony current funds: $6007.45
+11-19-2023 20:58:49 Available ticket type Silver for event ID 21 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Destiny
+11-19-2023 20:58:49 Invoice with confimation number 886616161 created for user purchase
+11-19-2023 20:58:49 Customer with name Destiny purchased 5 tickets for event with ID 25 spending $216.43
+11-19-2023 20:58:49 Customer with name Destiny current funds: $4698.35
+11-19-2023 20:58:49 Available ticket type Bronze for event ID 25 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Ann
+11-19-2023 20:58:49 Invoice with confimation number -1204975412 created for user purchase
+11-19-2023 20:58:49 Customer with name Ann purchased 2 tickets for event with ID 20 spending $126.72
+11-19-2023 20:58:49 Customer with name Ann current funds: $3290.56
+11-19-2023 20:58:49 Available ticket type VIP for event ID 20 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Nathan
+11-19-2023 20:58:49 Invoice with confimation number 1623267860 created for user purchase
+11-19-2023 20:58:49 Customer with name Nathan purchased 2 tickets for event with ID 34 spending $121.07
+11-19-2023 20:58:49 Customer with name Nathan current funds: $1246.67
+11-19-2023 20:58:49 Available ticket type Gold for event ID 34 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Cesar
+11-19-2023 20:58:49 Invoice with confimation number 201338901 created for user purchase
+11-19-2023 20:58:49 Customer with name Cesar purchased 3 tickets for event with ID 35 spending $130.94
+11-19-2023 20:58:49 Customer with name Cesar current funds: $4862.61
+11-19-2023 20:58:49 Available ticket type Bronze for event ID 35 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Misty
+11-19-2023 20:58:49 Invoice with confimation number 586076664 created for user purchase
+11-19-2023 20:58:49 Customer with name Misty purchased 2 tickets for event with ID 2 spending $108.96
+11-19-2023 20:58:49 Customer with name Misty current funds: $2927.84
+11-19-2023 20:58:49 Available ticket type Gold for event ID 2 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Carlos
+11-19-2023 20:58:49 Invoice with confimation number 1335015516 created for user purchase
+11-19-2023 20:58:49 Customer with name Carlos purchased 3 tickets for event with ID 30 spending $91.21
+11-19-2023 20:58:49 Customer with name Carlos current funds: $4466.84
+11-19-2023 20:58:49 Available ticket type General Admission for event ID 30 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Tyler
+11-19-2023 20:58:49 Invoice with confimation number 579162238 created for user purchase
+11-19-2023 20:58:49 Customer with name Tyler purchased 2 tickets for event with ID 23 spending $101.34
+11-19-2023 20:58:49 Customer with name Tyler current funds: $5912.99
+11-19-2023 20:58:49 Available ticket type Silver for event ID 23 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Jeffrey
+11-19-2023 20:58:49 Invoice with confimation number 812264642 created for user purchase
+11-19-2023 20:58:49 Customer with name Jeffrey purchased 4 tickets for event with ID 14 spending $156.31
+11-19-2023 20:58:49 Customer with name Jeffrey current funds: $3510.01
+11-19-2023 20:58:49 Available ticket type Bronze for event ID 14 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer George
+11-19-2023 20:58:49 Invoice with confimation number 223947821 created for user purchase
+11-19-2023 20:58:49 Customer with name George purchased 4 tickets for event with ID 23 spending $199.99
+11-19-2023 20:58:49 Customer with name George current funds: $1929.22
+11-19-2023 20:58:49 Available ticket type Silver for event ID 23 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Kelly
+11-19-2023 20:58:49 Invoice with confimation number -1641990823 created for user purchase
+11-19-2023 20:58:49 Customer with name Kelly purchased 4 tickets for event with ID 40 spending $134.22
+11-19-2023 20:58:49 Customer with name Kelly current funds: $2315.11
+11-19-2023 20:58:49 Available ticket type General Admission for event ID 40 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Peggy
+11-19-2023 20:58:49 Invoice with confimation number 112320600 created for user purchase
+11-19-2023 20:58:49 Customer with name Peggy purchased 4 tickets for event with ID 15 spending $134.22
+11-19-2023 20:58:49 Customer with name Peggy current funds: $2158.55
+11-19-2023 20:58:49 Available ticket type General Admission for event ID 15 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Kelly
+11-19-2023 20:58:49 Invoice with confimation number 1570468137 created for user purchase
+11-19-2023 20:58:49 Given customer has inufficient funds for this purchase
+11-19-2023 20:58:49 Customer with ID 894 failed to purchase tickets for event with ID 64
+11-19-2023 20:58:49 Starting auto purchase with customer John
+11-19-2023 20:58:49 Invoice with confimation number 1949467305 created for user purchase
+11-19-2023 20:58:49 Customer with name John purchased 3 tickets for event with ID 68 spending $2.43
+11-19-2023 20:58:49 Customer with name John current funds: $6412.31
+11-19-2023 20:58:49 Available ticket type Bronze for event ID 68 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Kendra
+11-19-2023 20:58:49 Invoice with confimation number -761657057 created for user purchase
+11-19-2023 20:58:49 Given customer has inufficient funds for this purchase
+11-19-2023 20:58:49 Customer with ID 1047 failed to purchase tickets for event with ID 60
+11-19-2023 20:58:49 Starting auto purchase with customer Christopher
+11-19-2023 20:58:49 Invoice with confimation number 1618678772 created for user purchase
+11-19-2023 20:58:49 Customer with name Christopher purchased 4 tickets for event with ID 16 spending $156.31
+11-19-2023 20:58:49 Customer with name Christopher current funds: $3066.92
+11-19-2023 20:58:49 Available ticket type Bronze for event ID 16 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Joshua
+11-19-2023 20:58:49 Invoice with confimation number -36255853 created for user purchase
+11-19-2023 20:58:49 Given customer has inufficient funds for this purchase
+11-19-2023 20:58:49 Customer with ID 854 failed to purchase tickets for event with ID 61
+11-19-2023 20:58:49 Starting auto purchase with customer Sherri
+11-19-2023 20:58:49 Invoice with confimation number -297828082 created for user purchase
+11-19-2023 20:58:49 Customer with name Sherri purchased 3 tickets for event with ID 43 spending $150.67
+11-19-2023 20:58:49 Customer with name Sherri current funds: $2106.21
+11-19-2023 20:58:49 Available ticket type Silver for event ID 43 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Kylie
+11-19-2023 20:58:49 Invoice with confimation number 1434844939 created for user purchase
+11-19-2023 20:58:49 Given customer has inufficient funds for this purchase
+11-19-2023 20:58:49 Customer with ID 946 failed to purchase tickets for event with ID 64
+11-19-2023 20:58:49 Starting auto purchase with customer Cruella
+11-19-2023 20:58:49 Invoice with confimation number -762346920 created for user purchase
+11-19-2023 20:58:49 Customer with name Cruella purchased 3 tickets for event with ID 39 spending $135.60
+11-19-2023 20:58:49 Customer with name Cruella current funds: $3554.52
+11-19-2023 20:58:49 Available ticket type Silver for event ID 39 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Joseph
+11-19-2023 20:58:49 Invoice with confimation number 1008440983 created for user purchase
+11-19-2023 20:58:49 Customer with name Joseph purchased 4 tickets for event with ID 27 spending $179.99
+11-19-2023 20:58:49 Customer with name Joseph current funds: $4773.17
+11-19-2023 20:58:49 Available ticket type Silver for event ID 27 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Donald
+11-19-2023 20:58:49 Invoice with confimation number 1454101920 created for user purchase
+11-19-2023 20:58:49 Customer with name Donald purchased 3 tickets for event with ID 39 spending $150.67
+11-19-2023 20:58:49 Customer with name Donald current funds: $2740.61
+11-19-2023 20:58:49 Available ticket type Silver for event ID 39 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Alexis
+11-19-2023 20:58:49 Invoice with confimation number -206306372 created for user purchase
+11-19-2023 20:58:49 Customer with name Alexis purchased 2 tickets for event with ID 66 spending $1186.14
+11-19-2023 20:58:49 Customer with name Alexis current funds: $1433.39
+11-19-2023 20:58:49 Available ticket type General Admission for event ID 66 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Mark
+11-19-2023 20:58:49 Invoice with confimation number 1650452971 created for user purchase
+11-19-2023 20:58:49 Customer with name Mark purchased 6 tickets for event with ID 26 spending $179.99
+11-19-2023 20:58:49 Customer with name Mark current funds: $5737.53
+11-19-2023 20:58:49 Available ticket type General Admission for event ID 26 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Richard
+11-19-2023 20:58:49 Invoice with confimation number 832487270 created for user purchase
+11-19-2023 20:58:49 Customer with name Richard purchased 3 tickets for event with ID 37 spending $130.94
+11-19-2023 20:58:49 Customer with name Richard current funds: $6087.53
+11-19-2023 20:58:49 Available ticket type Bronze for event ID 37 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Megan
+11-19-2023 20:58:49 Invoice with confimation number 1039056614 created for user purchase
+11-19-2023 20:58:49 Customer with name Megan purchased 6 tickets for event with ID 43 spending $322.03
+11-19-2023 20:58:49 Customer with name Megan current funds: $4282.79
+11-19-2023 20:58:49 Available ticket type Gold for event ID 43 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Amanda
+11-19-2023 20:58:49 Invoice with confimation number 1855166664 created for user purchase
+11-19-2023 20:58:49 Customer with name Amanda purchased 2 tickets for event with ID 45 spending $27.58
+11-19-2023 20:58:49 Customer with name Amanda current funds: $2327.10
+11-19-2023 20:58:49 Available ticket type General Admission for event ID 45 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Stephen
+11-19-2023 20:58:49 Invoice with confimation number -1722648292 created for user purchase
+11-19-2023 20:58:49 Customer with name Stephen purchased 2 tickets for event with ID 56 spending $110.60
+11-19-2023 20:58:49 Customer with name Stephen current funds: $3100.98
+11-19-2023 20:58:49 Available ticket type Gold for event ID 56 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Denise
+11-19-2023 20:58:49 Invoice with confimation number 1127498527 created for user purchase
+11-19-2023 20:58:49 Customer with name Denise purchased 5 tickets for event with ID 29 spending $224.38
+11-19-2023 20:58:49 Customer with name Denise current funds: $4273.73
+11-19-2023 20:58:49 Available ticket type Silver for event ID 29 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Emma
+11-19-2023 20:58:49 Invoice with confimation number -1746660610 created for user purchase
+11-19-2023 20:58:49 Customer with name Emma purchased 4 tickets for event with ID 53 spending $218.77
+11-19-2023 20:58:49 Customer with name Emma current funds: $5874.46
+11-19-2023 20:58:49 Available ticket type Gold for event ID 53 is now tickets
+11-19-2023 20:58:49 Starting auto purchase with customer Barbara
+11-19-2023 20:58:49 Invoice with confimation number 1476568194 created for user purchase
+11-19-2023 20:58:49 Customer with name Barbara purchased 6 tickets for event with ID 13 spending $199.99
+11-19-2023 20:58:49 Customer with name Barbara current funds: $3028.67
+11-19-2023 20:58:49 Available ticket type General Admission for event ID 13 is now tickets
+11-19-2023 20:58:49 Old Auto-Purchase-Invoices directory found and deleted
+11-19-2023 20:58:49 Auto-Purchase-Invoices directory created
+11-19-2023 20:58:49 All auto purchase invoices have been saved
+11-19-2023 20:58:49 Auto purchase complete and all invoices saved
+11-19-2023 20:58:53 Admin terminated the program
+11-19-2023 20:58:53 Starting the login process
+11-19-2023 20:58:55 User terminated the program
+11-19-2023 20:58:55 Updated Event and Customer csv made
