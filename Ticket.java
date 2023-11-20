@@ -1,11 +1,11 @@
 /**
  * @author Ian Gutierrez & Erik LaNeave
- *         Date: 10/21/2023
+ *         Date: 11/19/2023
  *         Course: CS 3331 - Advanced Object Oriented Programming
  *         Instructor: Dr. Daniel Mejia
- *         Programming Assignment 3
- *         Lab Description: This program is an extension of PA2, with added tax
- *         and discount functionality. It is also merged with a teammate.
+ *         Programming Assignment 5
+ *         Lab Description: This program is an extension of PA4, with added
+ *         admin and customer functionality.
  *         Honesty Statement: I completed this work entirely on my own without
  *         any outside sources including peers, experts, online sources, or the
  *         like. The only assistance I received was from the instructor, TA, or

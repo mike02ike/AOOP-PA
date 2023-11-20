@@ -20,6 +20,7 @@ import java.util.LinkedHashMap;
  * <p>
  * Last Change: 11/17/2023
  *
+ * @author Ian Gutierrez
  * @author Erik LaNeave
  * @version 2.5
  */
