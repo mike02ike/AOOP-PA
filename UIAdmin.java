@@ -260,6 +260,8 @@ public class UIAdmin {
     }
 
     /**
+     * Sets fireworks for events if admin selects them
+     * 
      * @param newEvent
      */
     public void fireWorks(Event newEvent) {
@@ -314,6 +316,12 @@ public class UIAdmin {
         }
     }
 
+    /**
+     * Returns the name of chosen venue
+     * 
+     * @param newEvent
+     * @return Name of chosen venue
+     */
     public String chooseVenue(Event newEvent) {
         String venueType = newEvent.getVenue().getVenueType();
 
@@ -335,6 +343,12 @@ public class UIAdmin {
         }
     }
 
+    /**
+     * Returns the name of the chosen stadium
+     * 
+     * @param newEvent
+     * @return chosen stadium
+     */
     public String chooseStadium(Event newEvent) {
         while (true) {
             try {
@@ -357,6 +371,12 @@ public class UIAdmin {
         }
     }
 
+    /**
+     * Returns the name of the chosen arena
+     * 
+     * @param newEvent
+     * @return chosen arena
+     */
     public String chooseArena(Event newEvent) {
         while (true) {
             try {
@@ -379,6 +399,12 @@ public class UIAdmin {
         }
     }
 
+    /**
+     * Returns the name of the chosen auditorium
+     * 
+     * @param newEvent
+     * @return chosen auditorium
+     */
     public String chooseAuditorium(Event newEvent) {
         while (true) {
             try {
@@ -401,6 +427,12 @@ public class UIAdmin {
         }
     }
 
+    /**
+     * Returns the name of the chosen open air venue
+     * 
+     * @param newEvent
+     * @return chosen open air venue
+     */
     public String chooseOpenAir(Event newEvent) {
         while (true) {
             try {
