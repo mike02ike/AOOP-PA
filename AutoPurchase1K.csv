@@ -1,0 +1,980 @@
+First,Last,Action,Event ID,Event Name,Ticket Quantity,Ticket Type
+Pluto,Disney,Buy,69,UTEP Commencement 1,3,VIP
+Adrian,Rocha,Buy,4,UTEP Football 4,3,Silver
+Zachary,Ellison,Buy,11,UTEP Football 11,6,Gold
+John,Sanders,Buy,6,UTEP Football 6,5,Bronze
+Anthony,Hunter,Buy,44,UTEP Basketball 31,4,Bronze
+Michelle,Maynard,Buy,17,UTEP Basketball 4,2,General Admission
+Elizabeth,Reyes,Buy,45,UTEP Wind Symphony 1,6,Bronze
+Tiffany,May,Buy,4,UTEP Football 4,2,General Admission
+Edward,Molina,Buy,64,Justin Timberlake Live,2,Gold
+Angela,Carney,Buy,64,Justin Timberlake Live,6,Bronze
+Donna,Travis,Buy,63,Shakira Live,6,VIP
+Andrew,Garcia,Buy,59,Bad Bunny Live,6,Gold
+Alondra,Gonzalez,Buy,28,UTEP Basketball 15,2,Bronze
+Kristina,Patrick,Buy,26,UTEP Basketball 13,4,VIP
+Christina,Wheeler,Buy,59,Bad Bunny Live,2,Silver
+Shane,Arnold,Buy,66,Coachella 2,4,Gold
+Erica,Harrison,Buy,36,UTEP Basketball 23,3,Bronze
+Jacob,Williams,Buy,48,UTEP Wind Symphony 4,3,Silver
+Stephen,Ellis,Buy,30,UTEP Basketball 17,4,VIP
+Tyler,Baxter,Buy,42,UTEP Basketball 29,6,Bronze
+Colleen,Torres,Buy,31,UTEP Basketball 18,4,Gold
+Lisa,Spencer,Buy,22,UTEP Basketball 9,5,Gold
+Beth,Sharp,Buy,17,UTEP Basketball 4,5,VIP
+Justin,Hawkins,Buy,67,ACL,2,General Admission
+Kylie,Summers,Buy,12,UTEP Football 12,3,Bronze
+Anthony,Moore,Buy,70,UTEP Commencement 2,2,General Admission
+Michael,Ike,Buy,55,UTEP Wind Symphony 11,2,Gold
+Kylie,King,Buy,44,UTEP Basketball 31,4,Bronze
+Brandon,Flores,Buy,49,UTEP Wind Symphony 5,3,Bronze
+Alexander,Kelly,Buy,44,UTEP Basketball 31,6,Bronze
+Paul,Harmon,Buy,35,UTEP Basketball 22,2,Bronze
+David,Gross,Buy,52,UTEP Wind Symphony 8,6,General Admission
+Christopher,Contreras,Buy,65,Coachella 1,6,Silver
+Kenneth,House,Buy,38,UTEP Basketball 25,4,General Admission
+Krista,Lambert,Buy,49,UTEP Wind Symphony 5,4,Gold
+Grace,Kelley,Buy,48,UTEP Wind Symphony 4,2,VIP
+Katherine,Evans,Buy,35,UTEP Basketball 22,2,Bronze
+Brian,Lopez,Buy,1,UTEP Football 1,4,Gold
+Austin,Lewis,Buy,65,Coachella 1,4,VIP
+Brandon,Miller,Buy,64,Justin Timberlake Live,2,Gold
+Lisa,Miller,Buy,56,UTEP Wind Symphony 12,2,Gold
+Alison,Hicks,Buy,70,UTEP Commencement 2,2,Bronze
+Bungein,Cheng,Buy,22,UTEP Basketball 9,2,Gold
+Donna,Allen,Buy,51,UTEP Wind Symphony 7,6,Bronze
+Nicholas,Copeland,Buy,26,UTEP Basketball 13,3,General Admission
+Michelle,Ray,Buy,5,UTEP Football 5,3,General Admission
+Kristine,Smith,Buy,39,UTEP Basketball 26,6,Silver
+Jennifer,Guzman,Buy,21,UTEP Basketball 8,3,Bronze
+James,Morgan,Buy,33,UTEP Basketball 20,3,Gold
+Michael,Morton,Buy,9,UTEP Football 9,5,Gold
+Raul,Pallares,Buy,58,Drake Live,3,General Admission
+Philip,Chaney,Buy,21,UTEP Basketball 8,3,Bronze
+David,Johnson,Buy,21,UTEP Basketball 8,3,Silver
+Emily,Jackson,Buy,15,UTEP Basketball 2,2,Silver
+Mark,Rogers,Buy,37,UTEP Basketball 24,6,Gold
+Ashley,Romero,Buy,24,UTEP Basketball 11,4,Silver
+Jennifer,Davidson,Buy,64,Justin Timberlake Live,3,Silver
+Philip,Chaney,Buy,64,Justin Timberlake Live,3,Silver
+Megan,Smith,Buy,67,ACL,4,Bronze
+Stephanie,Williams,Buy,45,UTEP Wind Symphony 1,3,General Admission
+Linda,Alexander,Buy,24,UTEP Basketball 11,4,Bronze
+Maria,Young,Buy,5,UTEP Football 5,4,General Admission
+Kelly,Herring,Buy,16,UTEP Basketball 3,3,Bronze
+Timothy,Bernard,Buy,57,Taylor Swift Live,2,Gold
+Christopher,Norris,Buy,49,UTEP Wind Symphony 5,3,VIP
+Ryan,Brown,Buy,51,UTEP Wind Symphony 7,2,Gold
+Debra,Blackwell,Buy,61,RBD Live,2,Silver
+Kimberly,Kocian,Buy,31,UTEP Basketball 18,2,General Admission
+Kathleen,Small,Buy,59,Bad Bunny Live,5,General Admission
+Nathan,Coleman,Buy,11,UTEP Football 11,2,General Admission
+Kelly,Wilson,Buy,25,UTEP Basketball 12,6,Bronze
+Nicole,Rowland,Buy,55,UTEP Wind Symphony 11,4,Gold
+Richard,Paul,Buy,61,RBD Live,6,Gold
+April,Lopez,Buy,34,UTEP Basketball 21,3,Silver
+Barbara,Lane,Buy,3,UTEP Football 3,4,Silver
+Jade,Crawford,Buy,58,Drake Live,6,Bronze
+Becky,Gray,Buy,5,UTEP Football 5,6,VIP
+Christopher,Foster,Buy,49,UTEP Wind Symphony 5,2,Gold
+Cruella,DeVil,Buy,33,UTEP Basketball 20,5,Silver
+Megan,Smith,Buy,34,UTEP Basketball 21,5,Bronze
+Samuel,Burton,Buy,50,UTEP Wind Symphony 6,6,VIP
+Paul,Harmon,Buy,69,UTEP Commencement 1,3,Bronze
+David,Gross,Buy,38,UTEP Basketball 25,6,Gold
+Patrick,Henderson,Buy,49,UTEP Wind Symphony 5,5,Bronze
+William,Evans,Buy,37,UTEP Basketball 24,5,Silver
+Philip,Holt,Buy,54,UTEP Wind Symphony 10,6,Silver
+Tanya,Davis,Buy,26,UTEP Basketball 13,5,General Admission
+Lisa,Gaines,Buy,49,UTEP Wind Symphony 5,6,VIP
+April,Turner,Buy,58,Drake Live,3,Silver
+Anthony,Hardin,Buy,42,UTEP Basketball 29,5,VIP
+Ray,Huynh,Buy,15,UTEP Basketball 2,2,Silver
+Caroline,Torres,Buy,29,UTEP Basketball 16,2,Gold
+Sonia,Durham,Buy,42,UTEP Basketball 29,2,Silver
+Michael,Robinson,Buy,9,UTEP Football 9,3,VIP
+Tom,Perez,Buy,41,UTEP Basketball 28,4,Gold
+Brett,Mathis,Buy,62,Olivia Rodrigo Live,4,VIP
+Craig,Oconnell,Buy,28,UTEP Basketball 15,4,Gold
+Elizabeth,Medina,Buy,40,UTEP Basketball 27,6,General Admission
+Joshua,Banks,Buy,7,UTEP Football 7,2,Silver
+Sarah,Cline,Buy,41,UTEP Basketball 28,6,Bronze
+Diego,Pedraza,Buy,3,UTEP Football 3,5,Bronze
+Gaston,Disney,Buy,18,UTEP Basketball 5,5,Silver
+Michelle,Oliver,Buy,44,UTEP Basketball 31,2,Silver
+Alondra,Gonzalez,Buy,3,UTEP Football 3,5,Bronze
+Anthony,Brooks,Buy,34,UTEP Basketball 21,5,Silver
+Ashley,Morales,Buy,24,UTEP Basketball 11,4,VIP
+Matthew,Khan,Buy,42,UTEP Basketball 29,2,Bronze
+Chris,Jones,Buy,12,UTEP Football 12,6,Silver
+Kimberly,Kocian,Buy,43,UTEP Basketball 30,5,General Admission
+Christopher,Berry,Buy,39,UTEP Basketball 26,2,General Admission
+Anita,Fletcher,Buy,23,UTEP Basketball 10,6,Silver
+Darrell,Jones,Buy,1,UTEP Football 1,6,Gold
+Jeremy,Foster,Buy,14,UTEP Basketball 1,6,General Admission
+Melissa,Holt,Buy,57,Taylor Swift Live,3,General Admission
+Christopher,Fields,Buy,5,UTEP Football 5,5,Silver
+Jacob,Norton,Buy,62,Olivia Rodrigo Live,3,Bronze
+Pluto,Disney,Buy,70,UTEP Commencement 2,3,Bronze
+Justin,Martinez,Buy,29,UTEP Basketball 16,6,VIP
+Sean,Roberts,Buy,69,UTEP Commencement 1,4,Silver
+Vanessa,Watson,Buy,56,UTEP Wind Symphony 12,6,Gold
+Ashley,Romero,Buy,54,UTEP Wind Symphony 10,2,VIP
+Jenna,Chase,Buy,60,Karol G Live,2,General Admission
+Joshua,Banks,Buy,70,UTEP Commencement 2,5,Silver
+Ricardo,Rodriguez,Buy,58,Drake Live,5,Silver
+Carlos,Irwin,Buy,38,UTEP Basketball 25,3,Bronze
+Darin,Baker,Buy,11,UTEP Football 11,2,VIP
+Theresa,Hardy,Buy,37,UTEP Basketball 24,3,VIP
+Jessica,Frye,Buy,47,UTEP Wind Symphony 3,5,VIP
+Joanna,Trevino,Buy,60,Karol G Live,2,Gold
+Matthew,Mason,Buy,45,UTEP Wind Symphony 1,4,Gold
+Ronald,Kent,Buy,5,UTEP Football 5,4,General Admission
+Javier,Vazquez,Buy,57,Taylor Swift Live,2,Silver
+Melissa,Evans,Buy,59,Bad Bunny Live,6,Silver
+Sharon,Castillo,Buy,67,ACL,6,General Admission
+Jennifer,Davidson,Buy,28,UTEP Basketball 15,6,Gold
+David,Costa,Buy,54,UTEP Wind Symphony 10,4,Silver
+Erik,Laneave,Buy,58,Drake Live,5,Silver
+Gary,Mckenzie,Buy,9,UTEP Football 9,2,Gold
+Kylie,King,Buy,55,UTEP Wind Symphony 11,6,Silver
+Sabas,Rojas,Buy,54,UTEP Wind Symphony 10,2,VIP
+Ray,Booth,Buy,59,Bad Bunny Live,5,General Admission
+Matthew,Mason,Buy,7,UTEP Football 7,4,VIP
+Michelle,Wood,Buy,48,UTEP Wind Symphony 4,3,VIP
+Jose,Farley,Buy,31,UTEP Basketball 18,6,Silver
+Terri,Strickland,Buy,18,UTEP Basketball 5,6,Bronze
+Brittany,Hawkins,Buy,46,UTEP Wind Symphony 2,3,VIP
+Brittney,Daniel,Buy,32,UTEP Basketball 19,5,Gold
+Stephanie,Harris,Buy,1,UTEP Football 1,5,VIP
+Leonard,King,Buy,45,UTEP Wind Symphony 1,4,Bronze
+Anita,Fletcher,Buy,1,UTEP Football 1,2,General Admission
+Justin,Wilson,Buy,63,Shakira Live,3,VIP
+Crystal,Rice,Buy,69,UTEP Commencement 1,3,Silver
+Paula,Wyatt,Buy,16,UTEP Basketball 3,5,Silver
+Sandra,Rogers,Buy,26,UTEP Basketball 13,4,Bronze
+Rhonda,Kane,Buy,55,UTEP Wind Symphony 11,6,Gold
+Dana,Miller,Buy,1,UTEP Football 1,6,Gold
+Brooke,Maxwell,Buy,58,Drake Live,4,General Admission
+Brandon,Neal,Buy,38,UTEP Basketball 25,2,VIP
+Jeffrey,Marquez,Buy,68,Minerpalooza,5,VIP
+Mark,Lozano,Buy,68,Minerpalooza,3,Silver
+Danielle,Gardner,Buy,18,UTEP Basketball 5,6,VIP
+James,Nolan,Buy,11,UTEP Football 11,4,Silver
+Anthony,Hunter,Buy,35,UTEP Basketball 22,5,Bronze
+Katherine,Evans,Buy,43,UTEP Basketball 30,2,Silver
+Sarah,Stanton,Buy,55,UTEP Wind Symphony 11,5,Gold
+Brett,Higgins,Buy,47,UTEP Wind Symphony 3,4,General Admission
+Alyssa,Smith,Buy,20,UTEP Basketball 7,2,Gold
+Michelle,Maldonado,Buy,45,UTEP Wind Symphony 1,5,Silver
+Christin,Moreno,Buy,68,Minerpalooza,2,Gold
+Phillip,Richardson,Buy,58,Drake Live,6,General Admission
+Prince,Eric,Buy,37,UTEP Basketball 24,3,Silver
+Mark,Lozano,Buy,60,Karol G Live,2,VIP
+Anthony,Dalton,Buy,53,UTEP Wind Symphony 9,3,Silver
+Paul,Herman,Buy,33,UTEP Basketball 20,2,VIP
+Mary,Stevens,Buy,53,UTEP Wind Symphony 9,5,Gold
+Roger,Casey,Buy,62,Olivia Rodrigo Live,6,General Admission
+Woody,Disney,Buy,39,UTEP Basketball 26,4,Gold
+Edgar,Ruiz,Buy,10,UTEP Football 10,2,Bronze
+Anthony,Sanchez,Buy,42,UTEP Basketball 29,5,General Admission
+Samuel,Burton,Buy,2,UTEP Football 2,5,Silver
+Victor,Harris,Buy,22,UTEP Basketball 9,4,Gold
+Sandra,Rogers,Buy,11,UTEP Football 11,4,Bronze
+Jake,Mitchell,Buy,3,UTEP Football 3,2,Gold
+Elizabeth,Torres,Buy,32,UTEP Basketball 19,2,Gold
+Kimberly,Harris,Buy,45,UTEP Wind Symphony 1,6,Silver
+Carol,Elliott,Buy,28,UTEP Basketball 15,2,Silver
+Samantha,Thomas,Buy,69,UTEP Commencement 1,5,VIP
+Krista,Lambert,Buy,13,UTEP Football 13,2,Silver
+Amy,Chase,Buy,60,Karol G Live,5,VIP
+Jesse,Dunn,Buy,31,UTEP Basketball 18,2,Bronze
+Gregory,Maxwell,Buy,60,Karol G Live,2,General Admission
+Shane,Arnold,Buy,52,UTEP Wind Symphony 8,2,General Admission
+Felicia,Carlson,Buy,13,UTEP Football 13,4,VIP
+Cesar,Alvarez,Buy,67,ACL,2,Bronze
+Jeremy,Rocha,Buy,43,UTEP Basketball 30,5,Silver
+Kimberly,Mejia,Buy,53,UTEP Wind Symphony 9,6,Bronze
+Lisa,Spencer,Buy,63,Shakira Live,4,Gold
+Erika,Lopez,Buy,40,UTEP Basketball 27,4,Silver
+Edgar,Ruiz,Buy,55,UTEP Wind Symphony 11,6,General Admission
+Sean,Medina,Buy,68,Minerpalooza,5,Bronze
+Courtney,Johnson,Buy,22,UTEP Basketball 9,3,Silver
+Donald,Ramirez,Buy,17,UTEP Basketball 4,2,Silver
+Carlos,Lynch,Buy,31,UTEP Basketball 18,2,VIP
+Jennifer,Williams,Buy,28,UTEP Basketball 15,3,VIP
+Rita,Owens,Buy,57,Taylor Swift Live,6,Bronze
+Micheal,Sanders,Buy,60,Karol G Live,6,Gold
+Alexandra,Simpson,Buy,65,Coachella 1,5,Bronze
+Bungein,Cheng,Buy,49,UTEP Wind Symphony 5,4,Bronze
+Jamie,Hernandez,Buy,59,Bad Bunny Live,3,VIP
+Theresa,Clark,Buy,67,ACL,3,Silver
+Michael,King,Buy,21,UTEP Basketball 8,4,Gold
+Ryan,Sullivan,Buy,21,UTEP Basketball 8,4,VIP
+Alondra,Gonzalez,Buy,14,UTEP Basketball 1,5,General Admission
+Brittany,Nielsen,Buy,39,UTEP Basketball 26,4,Silver
+Karl,Davis,Buy,60,Karol G Live,4,General Admission
+Colleen,Sanchez,Buy,26,UTEP Basketball 13,4,VIP
+Katherine,Evans,Buy,2,UTEP Football 2,3,Silver
+Edward,Johnson,Buy,21,UTEP Basketball 8,3,Silver
+Kimberly,Martinez,Buy,14,UTEP Basketball 1,2,VIP
+Robert,Leblanc,Buy,34,UTEP Basketball 21,4,Silver
+Angel,Aguayo,Buy,49,UTEP Wind Symphony 5,5,Bronze
+Christopher,Lucero,Buy,20,UTEP Basketball 7,5,General Admission
+Michelle,Maynard,Buy,38,UTEP Basketball 25,6,Bronze
+Julie,Alexander,Buy,30,UTEP Basketball 17,4,Silver
+Megan,Smith,Buy,65,Coachella 1,2,General Admission
+Jake,Mitchell,Buy,21,UTEP Basketball 8,5,Gold
+Robin,Watson,Buy,2,UTEP Football 2,4,Silver
+Robert,Kennedy,Buy,21,UTEP Basketball 8,3,General Admission
+Alexandra,Robinson,Buy,48,UTEP Wind Symphony 4,2,VIP
+Christopher,Robinson,Buy,68,Minerpalooza,5,General Admission
+John,Sanders,Buy,13,UTEP Football 13,6,Bronze
+Nancy,Robles,Buy,28,UTEP Basketball 15,5,Bronze
+Richard,Torres,Buy,69,UTEP Commencement 1,3,Bronze
+Matthew,Erickson,Buy,8,UTEP Football 8,3,Silver
+Denise,Johnson,Buy,63,Shakira Live,2,Silver
+Alexander,Carter,Buy,26,UTEP Basketball 13,4,Bronze
+Stephanie,Obrien,Buy,25,UTEP Basketball 12,3,VIP
+Christina,Dodson,Buy,55,UTEP Wind Symphony 11,5,VIP
+Christopher,Underwood,Buy,12,UTEP Football 12,2,General Admission
+Luis,Solomon,Buy,11,UTEP Football 11,6,Silver
+Thomas,Sanders,Buy,51,UTEP Wind Symphony 7,6,Silver
+Kayla,Smith,Buy,10,UTEP Football 10,5,Gold
+Patrick,Henderson,Buy,49,UTEP Wind Symphony 5,4,Bronze
+Ethan,Holmes,Buy,4,UTEP Football 4,6,VIP
+Jerry,Gamble,Buy,30,UTEP Basketball 17,4,VIP
+Amy,Bradley,Buy,18,UTEP Basketball 5,3,Silver
+Jennifer,Huang,Buy,32,UTEP Basketball 19,6,VIP
+Valerie,Moore,Buy,44,UTEP Basketball 31,5,VIP
+Theresa,Macias,Buy,25,UTEP Basketball 12,6,Gold
+Christopher,Ortega,Buy,54,UTEP Wind Symphony 10,2,VIP
+Amy,Morse,Buy,42,UTEP Basketball 29,2,Silver
+Jennifer,Guzman,Buy,51,UTEP Wind Symphony 7,6,Silver
+Saeefa,Nowmi,Buy,2,UTEP Football 2,2,Silver
+Dylan,Lopez,Buy,55,UTEP Wind Symphony 11,3,Silver
+Emily,Estes,Buy,2,UTEP Football 2,3,VIP
+Shawn,Santos,Buy,4,UTEP Football 4,6,Gold
+William,Adkins,Buy,20,UTEP Basketball 7,3,Gold
+Amanda,Miller,Buy,6,UTEP Football 6,2,Gold
+Donald,Tran,Buy,65,Coachella 1,3,Gold
+Alexander,Carter,Buy,46,UTEP Wind Symphony 2,6,Silver
+Olivia,Richardson,Buy,35,UTEP Basketball 22,2,Gold
+Megan,Smith,Buy,17,UTEP Basketball 4,5,Silver
+Destiny,Ferguson,Buy,47,UTEP Wind Symphony 3,2,Bronze
+Bradley,Bell,Buy,70,UTEP Commencement 2,5,VIP
+Ashley,Jones,Buy,56,UTEP Wind Symphony 12,5,Gold
+Goofy,Disney,Buy,34,UTEP Basketball 21,2,Silver
+Joshua,Meadows,Buy,33,UTEP Basketball 20,6,VIP
+Lance,Dominguez,Buy,20,UTEP Basketball 7,3,General Admission
+Michael,Clarke,Buy,37,UTEP Basketball 24,5,Silver
+Marko,Padilla,Buy,47,UTEP Wind Symphony 3,6,VIP
+Donald,Villanueva,Buy,7,UTEP Football 7,4,Bronze
+Christopher,Berry,Buy,62,Olivia Rodrigo Live,4,Bronze
+Adam,Maldonado,Buy,32,UTEP Basketball 19,3,Bronze
+Paula,Wyatt,Buy,12,UTEP Football 12,2,General Admission
+Norman,Freeman,Buy,27,UTEP Basketball 14,3,General Admission
+Jennifer,Preston,Buy,39,UTEP Basketball 26,4,Bronze
+Julia,Young,Buy,53,UTEP Wind Symphony 9,5,VIP
+Theresa,Macias,Buy,56,UTEP Wind Symphony 12,6,General Admission
+Ryan,Peterson,Buy,35,UTEP Basketball 22,2,Silver
+Cassandra,Cook,Buy,4,UTEP Football 4,6,Bronze
+Amanda,Shepherd,Buy,43,UTEP Basketball 30,6,Bronze
+Lauren,Coleman,Buy,58,Drake Live,4,VIP
+James,Hammond,Buy,10,UTEP Football 10,3,Gold
+Brittney,Daniel,Buy,18,UTEP Basketball 5,5,Bronze
+Michele,Cummings,Buy,7,UTEP Football 7,6,Bronze
+Jessica,Lloyd,Buy,66,Coachella 2,5,Gold
+Joseph,Fritz,Buy,58,Drake Live,5,VIP
+Matthew,Khan,Buy,54,UTEP Wind Symphony 10,6,Silver
+Brittany,Nielsen,Buy,28,UTEP Basketball 15,6,General Admission
+Alan,Holguin,Buy,43,UTEP Basketball 30,3,Silver
+David,Mills,Buy,28,UTEP Basketball 15,2,VIP
+Jason,Wolfe,Buy,25,UTEP Basketball 12,6,Bronze
+Samantha,Howell,Buy,49,UTEP Wind Symphony 5,5,General Admission
+Patrick,Bennett,Buy,56,UTEP Wind Symphony 12,3,VIP
+Becky,Gray,Buy,12,UTEP Football 12,2,Gold
+Cynthia,Powell,Buy,11,UTEP Football 11,3,General Admission
+Tonya,Elliott,Buy,2,UTEP Football 2,2,Silver
+Kevin,Gould,Buy,41,UTEP Basketball 28,6,Bronze
+Woody,Disney,Buy,34,UTEP Basketball 21,3,VIP
+Angela,Carney,Buy,46,UTEP Wind Symphony 2,2,VIP
+Anaiah,Quinn,Buy,22,UTEP Basketball 9,5,Gold
+Daniel,Foster,Buy,22,UTEP Basketball 9,3,VIP
+Heather,Robbins,Buy,65,Coachella 1,6,Silver
+Kyle,Taylor,Buy,62,Olivia Rodrigo Live,6,VIP
+Benjamin,Johnson,Buy,68,Minerpalooza,2,Gold
+Brooke,Maxwell,Buy,55,UTEP Wind Symphony 11,4,Gold
+Holly,Cruz,Buy,17,UTEP Basketball 4,4,Gold
+Rodney,Berg,Buy,60,Karol G Live,4,Silver
+David,Mills,Buy,44,UTEP Basketball 31,6,Gold
+Dana,Williams,Buy,33,UTEP Basketball 20,3,Silver
+Raul,Pallares,Buy,23,UTEP Basketball 10,3,Gold
+Sean,Roberts,Buy,66,Coachella 2,4,VIP
+Jasmine,Disney,Buy,12,UTEP Football 12,5,Silver
+Michael,Ike,Buy,50,UTEP Wind Symphony 6,3,VIP
+Sherri,Armstrong,Buy,42,UTEP Basketball 29,5,VIP
+Linda,Alexander,Buy,1,UTEP Football 1,3,Bronze
+Danielle,Dorsey,Buy,68,Minerpalooza,3,VIP
+Christine,Ellis,Buy,27,UTEP Basketball 14,3,Silver
+Christina,Villanueva,Buy,15,UTEP Basketball 2,6,Bronze
+Jody,Sanchez,Buy,69,UTEP Commencement 1,2,Bronze
+Richard,Paul,Buy,27,UTEP Basketball 14,5,Silver
+Steven,Carrillo,Buy,38,UTEP Basketball 25,6,Silver
+Jamie,Brown,Buy,53,UTEP Wind Symphony 9,3,Bronze
+Nathan,Thompson,Buy,68,Minerpalooza,5,Bronze
+William,Adkins,Buy,70,UTEP Commencement 2,4,VIP
+Brendan,Phillips,Buy,32,UTEP Basketball 19,3,Silver
+Sarah,Mosley,Buy,56,UTEP Wind Symphony 12,3,Silver
+Nancy,Robles,Buy,66,Coachella 2,4,General Admission
+Victor,Ross,Buy,11,UTEP Football 11,4,General Admission
+Victor,Anderson,Buy,4,UTEP Football 4,2,Bronze
+Robert,Park,Buy,38,UTEP Basketball 25,6,Bronze
+Jennifer,Carr,Buy,57,Taylor Swift Live,2,Bronze
+Sarah,Taylor,Buy,34,UTEP Basketball 21,6,Gold
+Darin,Baker,Buy,10,UTEP Football 10,6,VIP
+Mary,Cruz,Buy,69,UTEP Commencement 1,2,Gold
+Prince,Eric,Buy,58,Drake Live,6,Bronze
+Mufassa,Disney,Buy,12,UTEP Football 12,3,Silver
+Molly,Cohen,Buy,52,UTEP Wind Symphony 8,3,Gold
+William,Adkins,Buy,13,UTEP Football 13,6,VIP
+Christian,Rodriguez,Buy,24,UTEP Basketball 11,2,Silver
+Sarah,Jones,Buy,20,UTEP Basketball 7,2,General Admission
+Natalia,MestaValenzuela,Buy,21,UTEP Basketball 8,3,General Admission
+Kimberly,Garcia,Buy,52,UTEP Wind Symphony 8,6,Silver
+Deborah,Hunt,Buy,47,UTEP Wind Symphony 3,5,Bronze
+Douglas,Bryant,Buy,65,Coachella 1,6,Bronze
+Brittany,Nielsen,Buy,67,ACL,5,Bronze
+Tonya,Elliott,Buy,54,UTEP Wind Symphony 10,3,Silver
+Sean,Medina,Buy,56,UTEP Wind Symphony 12,2,VIP
+Karl,Davis,Buy,67,ACL,3,VIP
+Jason,Burke,Buy,9,UTEP Football 9,6,Bronze
+Holly,Schneider,Buy,14,UTEP Basketball 1,5,Silver
+Perry,Hill,Buy,63,Shakira Live,2,VIP
+Christina,Walker,Buy,28,UTEP Basketball 15,5,Gold
+Maria,Young,Buy,9,UTEP Football 9,2,Bronze
+Stephen,Peters,Buy,42,UTEP Basketball 29,6,Silver
+Roberto,Gutierrez,Buy,45,UTEP Wind Symphony 1,2,VIP
+Raul,BaezRamirez,Buy,31,UTEP Basketball 18,6,VIP
+Courtney,Olsen,Buy,9,UTEP Football 9,4,Silver
+Sarah,Anderson,Buy,17,UTEP Basketball 4,2,VIP
+Keith,Ortiz,Buy,23,UTEP Basketball 10,2,Bronze
+Thomas,Stevenson,Buy,24,UTEP Basketball 11,4,VIP
+Barbara,Jones,Buy,50,UTEP Wind Symphony 6,3,Gold
+Jennifer,Jones,Buy,15,UTEP Basketball 2,3,VIP
+Brandi,Daniel,Buy,32,UTEP Basketball 19,3,Silver
+Mary,Stevens,Buy,41,UTEP Basketball 28,4,General Admission
+Jerry,Gamble,Buy,46,UTEP Wind Symphony 2,4,Gold
+William,Adkins,Buy,48,UTEP Wind Symphony 4,5,VIP
+Kylie,King,Buy,29,UTEP Basketball 16,3,Gold
+Brett,Wallace,Buy,18,UTEP Basketball 5,6,Gold
+Dana,Miller,Buy,2,UTEP Football 2,3,VIP
+Michael,Clarke,Buy,29,UTEP Basketball 16,5,General Admission
+Phillip,Richardson,Buy,61,RBD Live,6,General Admission
+Erin,Barton,Buy,34,UTEP Basketball 21,5,Silver
+Cassandra,Cook,Buy,38,UTEP Basketball 25,6,Gold
+Kevin,Larson,Buy,19,UTEP Basketball 6,2,Bronze
+Ronald,Kent,Buy,9,UTEP Football 9,6,Silver
+Amy,Rodriguez,Buy,44,UTEP Basketball 31,2,General Admission
+James,Mitchell,Buy,18,UTEP Basketball 5,6,Bronze
+Erin,Barton,Buy,65,Coachella 1,5,VIP
+Craig,Espinoza,Buy,23,UTEP Basketball 10,4,Silver
+Crystal,Hudson,Buy,33,UTEP Basketball 20,4,VIP
+Amanda,Miller,Buy,39,UTEP Basketball 26,3,General Admission
+Derek,Gomez,Buy,57,Taylor Swift Live,5,VIP
+Phillip,Meyer,Buy,38,UTEP Basketball 25,5,General Admission
+Tyrone,Alvarado,Buy,55,UTEP Wind Symphony 11,5,Gold
+Dakota,Harper,Buy,43,UTEP Basketball 30,3,VIP
+Joshua,Banks,Buy,34,UTEP Basketball 21,6,Gold
+Debra,Raymond,Buy,8,UTEP Football 8,4,Silver
+Robert,Preston,Buy,41,UTEP Basketball 28,2,VIP
+Michelle,Maynard,Buy,13,UTEP Football 13,2,Silver
+Kylie,King,Buy,17,UTEP Basketball 4,3,VIP
+Jessica,Frye,Buy,40,UTEP Basketball 27,2,General Admission
+Hector,Diaz,Buy,63,Shakira Live,4,General Admission
+Amanda,Vang,Buy,31,UTEP Basketball 18,3,Silver
+Donna,Travis,Buy,22,UTEP Basketball 9,2,Bronze
+Brandi,Gordon,Buy,22,UTEP Basketball 9,5,Gold
+Crystal,Young,Buy,44,UTEP Basketball 31,6,Gold
+Lori,Livingston,Buy,26,UTEP Basketball 13,2,Gold
+Jack,Morgan,Buy,58,Drake Live,3,Bronze
+Kim,Buckley,Buy,33,UTEP Basketball 20,6,VIP
+Chris,Jones,Buy,35,UTEP Basketball 22,5,Bronze
+Nicole,Lloyd,Buy,18,UTEP Basketball 5,3,Silver
+Victor,Harris,Buy,39,UTEP Basketball 26,4,Bronze
+Kenneth,Smith,Buy,21,UTEP Basketball 8,6,Silver
+Patrick,Henderson,Buy,38,UTEP Basketball 25,6,General Admission
+Karen,Zhang,Buy,66,Coachella 2,4,Bronze
+Joe,Cochran,Buy,59,Bad Bunny Live,4,Gold
+Christopher,Coleman,Buy,53,UTEP Wind Symphony 9,2,Silver
+Carolyn,Dunn,Buy,62,Olivia Rodrigo Live,4,General Admission
+David,Thomas,Buy,60,Karol G Live,5,General Admission
+Becky,Simpson,Buy,6,UTEP Football 6,4,General Admission
+Amber,Brown,Buy,56,UTEP Wind Symphony 12,4,Gold
+Tracy,Fitzgerald,Buy,32,UTEP Basketball 19,4,General Admission
+Sandra,Sutton,Buy,34,UTEP Basketball 21,4,Gold
+Jennifer,Evans,Buy,10,UTEP Football 10,2,Silver
+Philip,Zamora,Buy,34,UTEP Basketball 21,5,VIP
+Rebecca,Nguyen,Buy,9,UTEP Football 9,2,General Admission
+Kevin,Gould,Buy,23,UTEP Basketball 10,6,VIP
+Bobby,Bennett,Buy,27,UTEP Basketball 14,6,Silver
+Wesley,Williamson,Buy,15,UTEP Basketball 2,3,General Admission
+Jennifer,Preston,Buy,13,UTEP Football 13,3,Silver
+Shane,Arnold,Buy,14,UTEP Basketball 1,3,General Admission
+Elizabeth,Medina,Buy,14,UTEP Basketball 1,3,Silver
+Vincent,Harrison,Buy,34,UTEP Basketball 21,5,VIP
+Sean,Klein,Buy,24,UTEP Basketball 11,5,General Admission
+Gerald,Baker,Buy,5,UTEP Football 5,6,VIP
+Tracy,Fitzgerald,Buy,37,UTEP Basketball 24,3,VIP
+Thomas,Hall,Buy,41,UTEP Basketball 28,3,Bronze
+Jeff,Ray,Buy,29,UTEP Basketball 16,3,General Admission
+Jeffrey,Rodriguez,Buy,62,Olivia Rodrigo Live,2,General Admission
+Courtney,Johnson,Buy,31,UTEP Basketball 18,6,Gold
+Norman,Freeman,Buy,70,UTEP Commencement 2,4,General Admission
+Derek,Irwin,Buy,35,UTEP Basketball 22,6,Silver
+Kimberly,Roberts,Buy,34,UTEP Basketball 21,3,Silver
+Brandon,Miller,Buy,25,UTEP Basketball 12,2,General Admission
+Luis,Johnson,Buy,54,UTEP Wind Symphony 10,3,VIP
+Stitch,Disney,Buy,7,UTEP Football 7,3,Silver
+Karl,Davis,Buy,23,UTEP Basketball 10,2,Bronze
+Ryan,Bowman,Buy,27,UTEP Basketball 14,2,Silver
+Christian,Odom,Buy,14,UTEP Basketball 1,5,Gold
+Christopher,Wright,Buy,70,UTEP Commencement 2,3,Gold
+Andrew,Hall,Buy,41,UTEP Basketball 28,6,Bronze
+Marco,GarciaFernandez,Buy,40,UTEP Basketball 27,5,General Admission
+Theresa,Hardy,Buy,28,UTEP Basketball 15,3,Silver
+Erin,Barton,Buy,36,UTEP Basketball 23,3,VIP
+Thomas,Clark,Buy,28,UTEP Basketball 15,3,General Admission
+Katherine,Mcdonald,Buy,30,UTEP Basketball 17,3,VIP
+Kathleen,Hines,Buy,53,UTEP Wind Symphony 9,4,VIP
+Susan,Humphrey,Buy,57,Taylor Swift Live,5,Bronze
+Michelle,Walsh,Buy,33,UTEP Basketball 20,3,Bronze
+Michael,Williamson,Buy,5,UTEP Football 5,5,General Admission
+Richard,Vargas,Buy,42,UTEP Basketball 29,5,VIP
+Tanya,Turner,Buy,61,RBD Live,3,General Admission
+Shannon,White,Buy,65,Coachella 1,5,VIP
+Kaa,Disney,Buy,28,UTEP Basketball 15,5,VIP
+Travis,Ruiz,Buy,38,UTEP Basketball 25,3,Bronze
+Marissa,Henry,Buy,70,UTEP Commencement 2,4,Silver
+Kim,Craig,Buy,49,UTEP Wind Symphony 5,2,Silver
+Theresa,Hardy,Buy,45,UTEP Wind Symphony 1,5,Silver
+Ruben,Edwards,Buy,53,UTEP Wind Symphony 9,2,Gold
+Alexis,Ford,Buy,46,UTEP Wind Symphony 2,4,Gold
+Sean,Klein,Buy,18,UTEP Basketball 5,5,Silver
+Michael,Castillo,Buy,43,UTEP Basketball 30,2,Bronze
+Miranda,Walker,Buy,32,UTEP Basketball 19,4,Silver
+Elizabeth,Cruz,Buy,3,UTEP Football 3,5,Bronze
+Keith,Ortiz,Buy,5,UTEP Football 5,5,Silver
+Chris,Holden,Buy,24,UTEP Basketball 11,5,VIP
+Debra,Raymond,Buy,7,UTEP Football 7,2,General Admission
+Shawn,Santos,Buy,36,UTEP Basketball 23,4,VIP
+Fernando,Sepulveda,Buy,26,UTEP Basketball 13,5,General Admission
+Chase,Miller,Buy,31,UTEP Basketball 18,4,General Admission
+Gabriela,Canizales,Buy,67,ACL,4,Gold
+Richard,Edwards,Buy,53,UTEP Wind Symphony 9,3,Silver
+Joel,Arellano,Buy,6,UTEP Football 6,3,Bronze
+Cinderella,Disney,Buy,53,UTEP Wind Symphony 9,2,Bronze
+Mary,Cruz,Buy,30,UTEP Basketball 17,4,Gold
+Bradley,Rodriguez,Buy,36,UTEP Basketball 23,6,General Admission
+Gerald,Beltran,Buy,68,Minerpalooza,3,General Admission
+Kevin,Guerra,Buy,58,Drake Live,4,VIP
+Christopher,Melendez,Buy,48,UTEP Wind Symphony 4,4,Gold
+Timothy,Wagner,Buy,32,UTEP Basketball 19,3,Silver
+Kaylee,Hale,Buy,45,UTEP Wind Symphony 1,3,VIP
+Mark,Stewart,Buy,13,UTEP Football 13,2,Gold
+Joshua,Hickman,Buy,62,Olivia Rodrigo Live,3,General Admission
+Christopher,Sanford,Buy,55,UTEP Wind Symphony 11,4,VIP
+Tanya,Johnson,Buy,1,UTEP Football 1,4,Gold
+Douglas,Hernandez,Buy,32,UTEP Basketball 19,3,Bronze
+Jorge,Garcia,Buy,47,UTEP Wind Symphony 3,6,Gold
+Elizabeth,Cordova,Buy,61,RBD Live,5,Gold
+Benjamin,Johnson,Buy,1,UTEP Football 1,3,Silver
+Tiffany,Davis,Buy,66,Coachella 2,2,Bronze
+John,Morris,Buy,9,UTEP Football 9,5,Gold
+Raul,Pallares,Buy,38,UTEP Basketball 25,6,Bronze
+Keith,Ellis,Buy,52,UTEP Wind Symphony 8,3,VIP
+Michael,Johnson,Buy,4,UTEP Football 4,3,Gold
+Nicole,Rowland,Buy,67,ACL,6,Bronze
+Tyrone,Alvarado,Buy,38,UTEP Basketball 25,5,VIP
+Anthony,Carson,Buy,5,UTEP Football 5,5,Gold
+Christopher,Osborne,Buy,48,UTEP Wind Symphony 4,5,Silver
+Cynthia,Ellis,Buy,3,UTEP Football 3,3,General Admission
+Dylan,Lopez,Buy,2,UTEP Football 2,5,VIP
+Elizabeth,Alvarez,Buy,68,Minerpalooza,5,Bronze
+Jesse,Montgomery,Buy,1,UTEP Football 1,6,Gold
+Rachel,Phillips,Buy,59,Bad Bunny Live,4,Silver
+Jeffrey,Best,Buy,38,UTEP Basketball 25,6,Bronze
+Bradley,Rodriguez,Buy,21,UTEP Basketball 8,4,Bronze
+Megan,Noble,Buy,56,UTEP Wind Symphony 12,5,Bronze
+Ernest,Bentley,Buy,58,Drake Live,4,Silver
+Felicia,Carlson,Buy,23,UTEP Basketball 10,6,VIP
+Eric,Gardea,Buy,29,UTEP Basketball 16,4,Gold
+Jorge,Jaquez,Buy,22,UTEP Basketball 9,2,Silver
+Sarah,Anderson,Buy,12,UTEP Football 12,4,Bronze
+Craig,Oconnell,Buy,42,UTEP Basketball 29,6,Silver
+Stephen,Villegas,Buy,3,UTEP Football 3,6,Silver
+Christopher,Underwood,Buy,36,UTEP Basketball 23,2,VIP
+Gary,Mckenzie,Buy,66,Coachella 2,6,General Admission
+Shannon,White,Buy,26,UTEP Basketball 13,5,Silver
+Brittney,Daniel,Buy,69,UTEP Commencement 1,4,Bronze
+Lauren,Neal,Buy,33,UTEP Basketball 20,6,VIP
+Crystal,Hayes,Buy,41,UTEP Basketball 28,2,General Admission
+Anthony,Sims,Buy,68,Minerpalooza,3,Gold
+Kaylee,Hale,Buy,70,UTEP Commencement 2,3,Gold
+Craig,Brown,Buy,29,UTEP Basketball 16,4,Gold
+Philip,Holt,Buy,69,UTEP Commencement 1,3,VIP
+Marissa,Oconnell,Buy,7,UTEP Football 7,3,Gold
+Jerry,Curtis,Buy,11,UTEP Football 11,3,Bronze
+Cruella,DeVil,Buy,28,UTEP Basketball 15,5,Bronze
+Kim,Contreras,Buy,3,UTEP Football 3,4,General Admission
+Mary,Cruz,Buy,54,UTEP Wind Symphony 10,4,VIP
+Sherry,Mora,Buy,43,UTEP Basketball 30,2,Silver
+Heather,Cunningham,Buy,29,UTEP Basketball 16,2,Silver
+Cody,Scott,Buy,70,UTEP Commencement 2,4,Gold
+Sarah,Jones,Buy,57,Taylor Swift Live,4,General Admission
+Jamie,Conner,Buy,70,UTEP Commencement 2,2,Bronze
+Austin,Lewis,Buy,41,UTEP Basketball 28,4,VIP
+Vanessa,Carson,Buy,49,UTEP Wind Symphony 5,4,Silver
+Ryan,Wilkins,Buy,61,RBD Live,5,Silver
+Kendra,Sawyer,Buy,48,UTEP Wind Symphony 4,6,General Admission
+Brandon,Neal,Buy,35,UTEP Basketball 22,5,Gold
+Michelle,Griffin,Buy,29,UTEP Basketball 16,3,VIP
+Heather,Cunningham,Buy,5,UTEP Football 5,5,General Admission
+Joel,Welch,Buy,31,UTEP Basketball 18,6,Silver
+Goofy,Disney,Buy,11,UTEP Football 11,5,General Admission
+Christina,Carter,Buy,33,UTEP Basketball 20,6,VIP
+Crystal,Rice,Buy,19,UTEP Basketball 6,6,Bronze
+Luis,Solomon,Buy,18,UTEP Basketball 5,3,Silver
+Angela,Carney,Buy,66,Coachella 2,4,Gold
+Mark,Stewart,Buy,19,UTEP Basketball 6,6,Gold
+Dana,Williams,Buy,17,UTEP Basketball 4,4,Gold
+Craig,Oconnell,Buy,36,UTEP Basketball 23,4,VIP
+Linda,Rodriguez,Buy,39,UTEP Basketball 26,2,VIP
+Robert,Kennedy,Buy,40,UTEP Basketball 27,3,General Admission
+Marco,GarciaFernandez,Buy,4,UTEP Football 4,4,Silver
+Kimberly,Johnson,Buy,15,UTEP Basketball 2,5,Bronze
+Steven,Carrillo,Buy,38,UTEP Basketball 25,5,General Admission
+Ashley,Frye,Buy,21,UTEP Basketball 8,2,Gold
+Kimberly,Harris,Buy,2,UTEP Football 2,4,Bronze
+Steven,Hartman,Buy,63,Shakira Live,5,General Admission
+Holly,Davidson,Buy,31,UTEP Basketball 18,2,Gold
+Mercedes,Nichols,Buy,54,UTEP Wind Symphony 10,3,Gold
+Kayla,Mahoney,Buy,65,Coachella 1,6,Gold
+Valerie,Moore,Buy,41,UTEP Basketball 28,4,Bronze
+Vanessa,Watson,Buy,29,UTEP Basketball 16,2,Bronze
+Renee,Bradley,Buy,38,UTEP Basketball 25,5,Bronze
+Shannon,White,Buy,50,UTEP Wind Symphony 6,2,Silver
+Gary,Smith,Buy,41,UTEP Basketball 28,2,VIP
+James,Morgan,Buy,45,UTEP Wind Symphony 1,4,General Admission
+Daniel,Smith,Buy,56,UTEP Wind Symphony 12,6,General Admission
+Alison,Hicks,Buy,25,UTEP Basketball 12,5,General Admission
+Raul,BaezRamirez,Buy,10,UTEP Football 10,2,Silver
+Colleen,Torres,Buy,40,UTEP Basketball 27,5,Bronze
+Kathleen,Small,Buy,45,UTEP Wind Symphony 1,4,Gold
+Sean,Roberts,Buy,52,UTEP Wind Symphony 8,2,Gold
+Danielle,Chavez,Buy,60,Karol G Live,4,Bronze
+Matthew,Porter,Buy,31,UTEP Basketball 18,3,Gold
+Anthony,Byrd,Buy,56,UTEP Wind Symphony 12,5,VIP
+Andrew,Garcia,Buy,20,UTEP Basketball 7,6,Gold
+Scott,Dunn,Buy,68,Minerpalooza,3,Bronze
+Travis,Mcdonald,Buy,16,UTEP Basketball 3,6,VIP
+Captaiin,Hook,Buy,25,UTEP Basketball 12,5,Bronze
+Christopher,Underwood,Buy,47,UTEP Wind Symphony 3,3,Gold
+Ashley,Walker,Buy,66,Coachella 2,2,Gold
+Kimberly,Roberts,Buy,43,UTEP Basketball 30,3,Silver
+Michael,Robinson,Buy,48,UTEP Wind Symphony 4,3,General Admission
+Willie,Hobbs,Buy,64,Justin Timberlake Live,2,Bronze
+Brittney,Daniel,Buy,16,UTEP Basketball 3,3,Gold
+Christopher,Robinson,Buy,43,UTEP Basketball 30,6,VIP
+Prince,Eric,Buy,46,UTEP Wind Symphony 2,3,Bronze
+Brittany,Richard,Buy,27,UTEP Basketball 14,3,Silver
+Lilo,Disney,Buy,50,UTEP Wind Symphony 6,6,General Admission
+Chad,Clark,Buy,53,UTEP Wind Symphony 9,6,VIP
+Michael,Morton,Buy,1,UTEP Football 1,2,Gold
+Henry,Salazar,Buy,2,UTEP Football 2,6,Bronze
+Goofy,Disney,Buy,66,Coachella 2,6,Silver
+Jennifer,Huang,Buy,47,UTEP Wind Symphony 3,4,Silver
+Rodney,Moss,Buy,1,UTEP Football 1,6,Gold
+Kenneth,Boyd,Buy,35,UTEP Basketball 22,4,Bronze
+Allison,Cross,Buy,14,UTEP Basketball 1,6,Bronze
+Beth,Sharp,Buy,49,UTEP Wind Symphony 5,4,General Admission
+Keith,Christensen,Buy,57,Taylor Swift Live,3,VIP
+Stephanie,Kirby,Buy,5,UTEP Football 5,4,General Admission
+Nicole,Rowland,Buy,45,UTEP Wind Symphony 1,6,General Admission
+Timothy,Jones,Buy,8,UTEP Football 8,4,Bronze
+Kelly,Jordan,Buy,56,UTEP Wind Symphony 12,2,Silver
+Sean,Medina,Buy,62,Olivia Rodrigo Live,3,General Admission
+Pamela,Carter,Buy,1,UTEP Football 1,4,Bronze
+Janet,Hughes,Buy,29,UTEP Basketball 16,4,Gold
+Brooke,Padilla,Buy,1,UTEP Football 1,4,VIP
+Danielle,Dorsey,Buy,48,UTEP Wind Symphony 4,5,Silver
+Richard,Paul,Buy,7,UTEP Football 7,6,VIP
+Sean,Klein,Buy,49,UTEP Wind Symphony 5,4,Gold
+Philip,Collins,Buy,2,UTEP Football 2,5,Silver
+Gina,Swanson,Buy,35,UTEP Basketball 22,5,General Admission
+Anita,Fletcher,Buy,21,UTEP Basketball 8,2,General Admission
+Sandy,Blackwell,Buy,9,UTEP Football 9,2,Silver
+Sherri,Velasquez,Buy,50,UTEP Wind Symphony 6,3,Gold
+Carrie,Bennett,Buy,45,UTEP Wind Symphony 1,4,General Admission
+Alexis,Black,Buy,17,UTEP Basketball 4,3,VIP
+Kaylee,Patterson,Buy,52,UTEP Wind Symphony 8,6,Gold
+Phillip,Brown,Buy,40,UTEP Basketball 27,2,VIP
+Donald,Ramirez,Buy,22,UTEP Basketball 9,4,Bronze
+Dustin,Oliver,Buy,56,UTEP Wind Symphony 12,2,Gold
+Douglas,Hernandez,Buy,16,UTEP Basketball 3,4,Bronze
+Michelle,Oliver,Buy,31,UTEP Basketball 18,2,General Admission
+Jessica,Frye,Buy,5,UTEP Football 5,4,Bronze
+Timothy,Jones,Buy,15,UTEP Basketball 2,5,Silver
+Bryan,Fields,Buy,23,UTEP Basketball 10,5,VIP
+Barbara,Robertson,Buy,69,UTEP Commencement 1,5,VIP
+Christopher,Craig,Buy,9,UTEP Football 9,3,Bronze
+Melissa,Mccormick,Buy,61,RBD Live,5,Bronze
+Kelly,Bell,Buy,54,UTEP Wind Symphony 10,4,VIP
+Samantha,Cooper,Buy,52,UTEP Wind Symphony 8,4,Silver
+Rachel,Hart,Buy,34,UTEP Basketball 21,5,Gold
+Travis,Burton,Buy,42,UTEP Basketball 29,4,Bronze
+Pinocchio,Disney,Buy,6,UTEP Football 6,4,VIP
+Erika,Lopez,Buy,5,UTEP Football 5,4,Gold
+Edward,Johnson,Buy,27,UTEP Basketball 14,2,Gold
+Michael,Ike,Buy,45,UTEP Wind Symphony 1,2,Silver
+Jesse,Montgomery,Buy,47,UTEP Wind Symphony 3,2,Gold
+Jennifer,Carr,Buy,13,UTEP Football 13,3,Bronze
+Shane,Miller,Buy,19,UTEP Basketball 6,3,Silver
+Scott,Rose,Buy,31,UTEP Basketball 18,4,Silver
+Sean,Hull,Buy,15,UTEP Basketball 2,4,Bronze
+Wendy,Phillips,Buy,31,UTEP Basketball 18,5,General Admission
+Pamela,Carter,Buy,51,UTEP Wind Symphony 7,2,Silver
+Raul,BaezRamirez,Buy,55,UTEP Wind Symphony 11,3,Silver
+Simba,Disney,Buy,17,UTEP Basketball 4,6,Bronze
+Christina,Walker,Buy,25,UTEP Basketball 12,5,Bronze
+Sarah,Mosley,Buy,35,UTEP Basketball 22,5,General Admission
+Mark,Butler,Buy,46,UTEP Wind Symphony 2,5,General Admission
+James,Brennan,Buy,69,UTEP Commencement 1,3,VIP
+Stephanie,Kirby,Buy,46,UTEP Wind Symphony 2,4,General Admission
+Alexis,Shea,Buy,46,UTEP Wind Symphony 2,4,Gold
+Cinderella,Disney,Buy,70,UTEP Commencement 2,5,Gold
+Brittany,Andrews,Buy,59,Bad Bunny Live,2,Silver
+Alexis,Ford,Buy,30,UTEP Basketball 17,2,Gold
+Ashley,Morales,Buy,33,UTEP Basketball 20,4,Silver
+Melissa,Mccormick,Buy,13,UTEP Football 13,3,Silver
+Michelle,Wood,Buy,52,UTEP Wind Symphony 8,4,VIP
+Mindy,Ross,Buy,1,UTEP Football 1,2,Gold
+Jacob,Norton,Buy,40,UTEP Basketball 27,2,Gold
+Devin,Lara,Buy,68,Minerpalooza,5,General Admission
+Emily,Chang,Buy,35,UTEP Basketball 22,3,Silver
+Kevin,Boone,Buy,12,UTEP Football 12,5,Silver
+Brittany,Nielsen,Buy,16,UTEP Basketball 3,2,Silver
+Holly,Davidson,Buy,35,UTEP Basketball 22,4,General Admission
+Amber,Long,Buy,63,Shakira Live,6,Gold
+Robert,Kennedy,Buy,16,UTEP Basketball 3,4,Gold
+Wendy,Phillips,Buy,49,UTEP Wind Symphony 5,5,Gold
+Christina,Jones,Buy,68,Minerpalooza,4,Gold
+John,Davis,Buy,23,UTEP Basketball 10,6,General Admission
+David,Hayes,Buy,59,Bad Bunny Live,4,Bronze
+Olivia,Richardson,Buy,68,Minerpalooza,2,Silver
+Doris,Moore,Buy,67,ACL,6,General Admission
+Amber,Long,Buy,57,Taylor Swift Live,4,VIP
+Jeremiah,Williamson,Buy,56,UTEP Wind Symphony 12,2,Bronze
+Ray,Huynh,Buy,12,UTEP Football 12,4,General Admission
+Michael,King,Buy,8,UTEP Football 8,2,Bronze
+Francisco,Moore,Buy,65,Coachella 1,4,Bronze
+Michael,Sanchez,Buy,46,UTEP Wind Symphony 2,6,Gold
+Alejandra,Morris,Buy,33,UTEP Basketball 20,3,General Admission
+Emily,Estes,Buy,43,UTEP Basketball 30,5,Bronze
+Angel,Aguayo,Buy,54,UTEP Wind Symphony 10,6,VIP
+Keith,Ellis,Buy,32,UTEP Basketball 19,2,General Admission
+John,Hansen,Buy,41,UTEP Basketball 28,6,Silver
+Sarah,Anderson,Buy,9,UTEP Football 9,4,Bronze
+Alan,Holguin,Buy,53,UTEP Wind Symphony 9,4,General Admission
+Brian,Andrews,Buy,12,UTEP Football 12,4,VIP
+Erin,Mejia,Buy,18,UTEP Basketball 5,6,VIP
+Matthew,Mason,Buy,55,UTEP Wind Symphony 11,4,VIP
+David,Clark,Buy,40,UTEP Basketball 27,3,Silver
+William,Adkins,Buy,64,Justin Timberlake Live,5,Bronze
+Victoria,White,Buy,16,UTEP Basketball 3,2,VIP
+Mary,Gonzalez,Buy,68,Minerpalooza,6,Bronze
+Ryan,Peterson,Buy,4,UTEP Football 4,2,Gold
+Kenneth,Davis,Buy,27,UTEP Basketball 14,4,Gold
+Colleen,Sanchez,Buy,32,UTEP Basketball 19,2,Bronze
+Mary,Chapman,Buy,54,UTEP Wind Symphony 10,2,Gold
+Barbara,Jones,Buy,7,UTEP Football 7,5,Gold
+Cynthia,Giles,Buy,12,UTEP Football 12,2,Gold
+Shannon,Avery,Buy,67,ACL,5,VIP
+Timothy,Romero,Buy,46,UTEP Wind Symphony 2,3,General Admission
+Stephen,Villegas,Buy,35,UTEP Basketball 22,4,Bronze
+Lori,Livingston,Buy,6,UTEP Football 6,6,VIP
+Christopher,Wright,Buy,54,UTEP Wind Symphony 10,5,Bronze
+Kenneth,House,Buy,32,UTEP Basketball 19,6,Bronze
+Christopher,Berry,Buy,37,UTEP Basketball 24,6,General Admission
+Thomas,Elliott,Buy,31,UTEP Basketball 18,2,General Admission
+Christina,Wheeler,Buy,68,Minerpalooza,4,Silver
+Edgar,Ruiz,Buy,67,ACL,3,Bronze
+David,Costa,Buy,25,UTEP Basketball 12,3,Bronze
+Anthony,Sanchez,Buy,12,UTEP Football 12,2,Bronze
+Luis,Quinones,Buy,44,UTEP Basketball 31,2,Bronze
+Matthew,Campbell,Buy,37,UTEP Basketball 24,4,Bronze
+Walter,Wawra,Buy,24,UTEP Basketball 11,2,VIP
+Charles,Chambers,Buy,31,UTEP Basketball 18,2,VIP
+James,Brennan,Buy,24,UTEP Basketball 11,5,VIP
+Kimberly,Johnson,Buy,1,UTEP Football 1,3,General Admission
+Wendy,Phillips,Buy,46,UTEP Wind Symphony 2,4,VIP
+Jessica,Martin,Buy,41,UTEP Basketball 28,4,Gold
+Brendan,Phillips,Buy,25,UTEP Basketball 12,6,Gold
+Carrie,Bennett,Buy,33,UTEP Basketball 20,6,Bronze
+Julie,Alexander,Buy,69,UTEP Commencement 1,6,VIP
+Kimberly,Kocian,Buy,13,UTEP Football 13,2,VIP
+Travis,Ruiz,Buy,42,UTEP Basketball 29,5,Gold
+Gary,Miller,Buy,19,UTEP Basketball 6,6,General Admission
+Luis,Quinones,Buy,11,UTEP Football 11,5,VIP
+Maria,Kelly,Buy,33,UTEP Basketball 20,5,Silver
+Michelle,Ortiz,Buy,48,UTEP Wind Symphony 4,5,General Admission
+Gerald,Baker,Buy,60,Karol G Live,5,General Admission
+Ashley,Walker,Buy,2,UTEP Football 2,4,Silver
+Daniel,Hampton,Buy,47,UTEP Wind Symphony 3,3,VIP
+Marko,Padilla,Buy,45,UTEP Wind Symphony 1,2,Bronze
+Alyssa,Reese,Buy,5,UTEP Football 5,4,Gold
+William,Staker,Buy,67,ACL,4,Gold
+Susan,Davis,Buy,15,UTEP Basketball 2,2,Silver
+Angela,Mcintyre,Buy,27,UTEP Basketball 14,6,Bronze
+Amanda,Shepherd,Buy,8,UTEP Football 8,3,Gold
+Jennifer,Schultz,Buy,9,UTEP Football 9,5,VIP
+Donald,Duck,Buy,4,UTEP Football 4,6,Gold
+Martha,Perry,Buy,61,RBD Live,4,Silver
+Christopher,Johnson,Buy,23,UTEP Basketball 10,4,Gold
+Heather,Little,Buy,3,UTEP Football 3,5,Gold
+Aladdin,Disney,Buy,12,UTEP Football 12,4,Gold
+Cody,Scott,Buy,67,ACL,4,Gold
+Mark,Ramos,Buy,64,Justin Timberlake Live,4,VIP
+Megan,Noble,Buy,3,UTEP Football 3,2,Bronze
+Barbara,Robertson,Buy,17,UTEP Basketball 4,2,Bronze
+Thomas,Elliott,Buy,19,UTEP Basketball 6,4,Silver
+Andrew,Marshall,Buy,27,UTEP Basketball 14,3,Bronze
+Catherine,Mann,Buy,41,UTEP Basketball 28,2,VIP
+Mary,Gonzalez,Buy,5,UTEP Football 5,2,VIP
+Lauren,Neal,Buy,42,UTEP Basketball 29,6,VIP
+Mary,Lee,Buy,13,UTEP Football 13,4,VIP
+Kelly,Jordan,Buy,35,UTEP Basketball 22,6,VIP
+Ashley,Romero,Buy,27,UTEP Basketball 14,4,Silver
+Brandon,Miller,Buy,57,Taylor Swift Live,5,Bronze
+Alyssa,Smith,Buy,26,UTEP Basketball 13,5,General Admission
+Monica,Craig,Buy,47,UTEP Wind Symphony 3,6,Bronze
+Adam,Maldonado,Buy,28,UTEP Basketball 15,2,Gold
+Robert,Park,Buy,51,UTEP Wind Symphony 7,5,Gold
+Nancy,Robles,Buy,20,UTEP Basketball 7,6,Gold
+Colleen,Hall,Buy,41,UTEP Basketball 28,5,General Admission
+Jenny,Henry,Buy,31,UTEP Basketball 18,2,Gold
+Philip,Holt,Buy,10,UTEP Football 10,2,General Admission
+Amanda,Baker,Buy,43,UTEP Basketball 30,4,VIP
+Beverly,Johnson,Buy,38,UTEP Basketball 25,4,Gold
+Thomas,Bonilla,Buy,41,UTEP Basketball 28,3,Silver
+Jose,Evans,Buy,59,Bad Bunny Live,4,Silver
+James,Nolan,Buy,7,UTEP Football 7,6,General Admission
+Wesley,Williamson,Buy,41,UTEP Basketball 28,5,VIP
+Michelle,Griffin,Buy,21,UTEP Basketball 8,6,Silver
+Kirsten,Robinson,Buy,1,UTEP Football 1,5,Bronze
+Jessica,Anderson,Buy,19,UTEP Basketball 6,5,Silver
+Courtney,Olsen,Buy,20,UTEP Basketball 7,4,Gold
+Jose,Farley,Buy,30,UTEP Basketball 17,6,General Admission
+Thomas,Sanders,Buy,33,UTEP Basketball 20,3,VIP
+Barbara,Jones,Buy,54,UTEP Wind Symphony 10,6,VIP
+Stephanie,Harris,Buy,10,UTEP Football 10,2,Gold
+Sandra,Sutton,Buy,7,UTEP Football 7,2,General Admission
+Brandon,Miller,Buy,60,Karol G Live,4,Gold
+Robert,Lyons,Buy,2,UTEP Football 2,4,Silver
+Dylan,Lopez,Buy,60,Karol G Live,5,Silver
+Angela,Lang,Buy,32,UTEP Basketball 19,2,Bronze
+Melissa,Mccormick,Buy,57,Taylor Swift Live,5,Silver
+Chelsea,Gallagher,Buy,14,UTEP Basketball 1,6,Bronze
+Brian,Hayes,Buy,5,UTEP Football 5,3,Gold
+Michelle,Holland,Buy,30,UTEP Basketball 17,6,VIP
+Barbara,Jones,Buy,19,UTEP Basketball 6,3,General Admission
+Gregory,Maxwell,Buy,69,UTEP Commencement 1,3,Silver
+Victor,Anderson,Buy,38,UTEP Basketball 25,4,Gold
+Craig,Oconnell,Buy,52,UTEP Wind Symphony 8,3,Bronze
+Austin,Griffin,Buy,2,UTEP Football 2,5,Bronze
+Ariana,Lara,Buy,66,Coachella 2,6,Gold
+Ethan,Holmes,Buy,39,UTEP Basketball 26,5,Silver
+James,Mitchell,Buy,52,UTEP Wind Symphony 8,3,VIP
+Alexandra,Cook,Buy,14,UTEP Basketball 1,6,Bronze
+Robert,Kennedy,Buy,29,UTEP Basketball 16,3,Bronze
+Maria,Mitchell,Buy,31,UTEP Basketball 18,2,Bronze
+Anthony,Dalton,Buy,3,UTEP Football 3,2,Bronze
+Jared,Perry,Buy,9,UTEP Football 9,6,Bronze
+Christina,Walker,Buy,16,UTEP Basketball 3,2,Silver
+Sean,Klein,Buy,49,UTEP Wind Symphony 5,2,VIP
+Hayden,Mcdaniel,Buy,35,UTEP Basketball 22,2,Bronze
+Karl,Davis,Buy,30,UTEP Basketball 17,6,General Admission
+Marco,GarciaFernandez,Buy,33,UTEP Basketball 20,4,Silver
+Wendy,Campos,Buy,56,UTEP Wind Symphony 12,5,Gold
+Becky,Gray,Buy,38,UTEP Basketball 25,4,Silver
+Joseph,Fritz,Buy,70,UTEP Commencement 2,6,General Admission
+Brandy,Valenzuela,Buy,48,UTEP Wind Symphony 4,5,VIP
+Brandy,Valenzuela,Buy,17,UTEP Basketball 4,6,Silver
+Joseph,Lewis,Buy,43,UTEP Basketball 30,2,Bronze
+Timothy,Jones,Buy,55,UTEP Wind Symphony 11,3,Gold
+Robert,Kennedy,Buy,29,UTEP Basketball 16,4,General Admission
+Cesar,DiazCaraveo,Buy,39,UTEP Basketball 26,3,Gold
+Danielle,Gardner,Buy,44,UTEP Basketball 31,5,Gold
+Angel,UrbinaAraiza,Buy,9,UTEP Football 9,3,VIP
+Sarah,Taylor,Buy,30,UTEP Basketball 17,6,Silver
+Donald,Villanueva,Buy,8,UTEP Football 8,4,Bronze
+Sarah,Stanton,Buy,46,UTEP Wind Symphony 2,6,VIP
+Carlos,Irwin,Buy,60,Karol G Live,4,Gold
+Gabriela,Canizales,Buy,5,UTEP Football 5,4,Bronze
+Kimberly,Miller,Buy,57,Taylor Swift Live,4,VIP
+Mark,Thompson,Buy,20,UTEP Basketball 7,6,Silver
+Andrew,Norris,Buy,27,UTEP Basketball 14,3,Bronze
+Michelle,Maldonado,Buy,7,UTEP Football 7,3,Gold
+Beth,Moss,Buy,30,UTEP Basketball 17,2,Bronze
+Robert,Park,Buy,46,UTEP Wind Symphony 2,3,VIP
+Jacob,Norton,Buy,20,UTEP Basketball 7,6,Silver
+Christopher,Davis,Buy,55,UTEP Wind Symphony 11,5,Gold
+Tammy,Thomas,Buy,35,UTEP Basketball 22,6,Gold
+David,Cox,Buy,64,Justin Timberlake Live,2,Bronze
+Brett,Higgins,Buy,5,UTEP Football 5,4,Bronze
+David,Hayes,Buy,66,Coachella 2,6,Gold
+Joseph,Hanna,Buy,48,UTEP Wind Symphony 4,4,General Admission
+Deborah,Scott,Buy,6,UTEP Football 6,4,Bronze
+Andrew,Hall,Buy,63,Shakira Live,5,General Admission
+Erin,Mejia,Buy,26,UTEP Basketball 13,4,Silver
+Kenneth,Smith,Buy,27,UTEP Basketball 14,4,General Admission
+Timothy,Wagner,Buy,62,Olivia Rodrigo Live,6,VIP
+Diana,Rivera,Buy,68,Minerpalooza,3,VIP
+Todd,Brooks,Buy,65,Coachella 1,5,Bronze
+Shane,Arnold,Buy,24,UTEP Basketball 11,6,Bronze
+Philip,Collins,Buy,63,Shakira Live,6,VIP
+Lisa,Miller,Buy,10,UTEP Football 10,3,Silver
+David,Costa,Buy,42,UTEP Basketball 29,6,Silver
+Darin,Porter,Buy,53,UTEP Wind Symphony 9,5,Silver
+Matthew,Erickson,Buy,23,UTEP Basketball 10,5,Gold
+Matthew,Erickson,Buy,22,UTEP Basketball 9,5,Gold
+Mindy,Ross,Buy,63,Shakira Live,2,VIP
+Rick,Parrish,Buy,26,UTEP Basketball 13,6,Gold
+Sharon,Gillespie,Buy,32,UTEP Basketball 19,3,Bronze
+Kevin,Larson,Buy,70,UTEP Commencement 2,3,Bronze
+Louis,Boone,Buy,44,UTEP Basketball 31,4,VIP
+Robin,Wilson,Buy,53,UTEP Wind Symphony 9,5,VIP
+Steven,Cabrera,Buy,61,RBD Live,3,Gold
+Paul,Salas,Buy,10,UTEP Football 10,5,General Admission
+Rachel,Hart,Buy,32,UTEP Basketball 19,5,General Admission
+Misty,Jimenez,Buy,45,UTEP Wind Symphony 1,2,General Admission
+Thomas,Bonilla,Buy,51,UTEP Wind Symphony 7,5,VIP
+Christopher,Berry,Buy,4,UTEP Football 4,3,VIP
+Kylie,King,Buy,19,UTEP Basketball 6,2,General Admission
+Jerry,Hampton,Buy,14,UTEP Basketball 1,3,Bronze
+Jared,Scott,Buy,29,UTEP Basketball 16,6,Bronze
+Christopher,Ortega,Buy,58,Drake Live,2,General Admission
+Anthony,Adams,Buy,22,UTEP Basketball 9,6,VIP
+Bobby,Gonzales,Buy,16,UTEP Basketball 3,5,VIP
+Laura,Smith,Buy,12,UTEP Football 12,6,Silver
+Daniel,Romero,Buy,69,UTEP Commencement 1,3,Bronze
+Isabella,Garcia,Buy,27,UTEP Basketball 14,3,Gold
+Michael,White,Buy,10,UTEP Football 10,5,VIP
+Teresa,Taylor,Buy,7,UTEP Football 7,5,Bronze
+James,King,Buy,52,UTEP Wind Symphony 8,4,Silver
+Elizabeth,Kim,Buy,47,UTEP Wind Symphony 3,4,Bronze
+Andre,Ramos,Buy,34,UTEP Basketball 21,2,General Admission
+Keith,Christensen,Buy,36,UTEP Basketball 23,3,General Admission
+Kayla,Morgan,Buy,45,UTEP Wind Symphony 1,2,Gold
+Robert,Davis,Buy,12,UTEP Football 12,3,VIP
+Matthew,Porter,Buy,20,UTEP Basketball 7,6,VIP
+Anthony,Moore,Buy,68,Minerpalooza,4,Silver
+Derek,Macias,Buy,36,UTEP Basketball 23,6,VIP
+Jennifer,Huang,Buy,42,UTEP Basketball 29,3,Silver
+Joshua,Meadows,Buy,6,UTEP Football 6,3,General Admission
+Derek,Macias,Buy,53,UTEP Wind Symphony 9,5,Silver
+Derek,Macias,Buy,38,UTEP Basketball 25,3,VIP
+Steven,Owens,Buy,5,UTEP Football 5,2,VIP
+Susan,Garcia,Buy,42,UTEP Basketball 29,6,VIP
+Roger,Casey,Buy,39,UTEP Basketball 26,5,General Admission
+David,Brown,Buy,41,UTEP Basketball 28,4,General Admission
+Kaylee,Hale,Buy,12,UTEP Football 12,3,Silver
+William,Staker,Buy,24,UTEP Basketball 11,5,Gold
+Sebastian,Mercado,Buy,57,Taylor Swift Live,2,VIP
+Gregory,Maxwell,Buy,5,UTEP Football 5,6,Bronze
+Jessica,Olsen,Buy,58,Drake Live,2,Bronze
+John,White,Buy,54,UTEP Wind Symphony 10,3,VIP
+Courtney,Tran,Buy,39,UTEP Basketball 26,6,VIP
+Ronald,Parker,Buy,16,UTEP Basketball 3,4,Gold
+Amber,Brown,Buy,19,UTEP Basketball 6,2,VIP
+Michael,Clarke,Buy,14,UTEP Basketball 1,3,Silver
+Robin,Wilson,Buy,63,Shakira Live,5,Silver
+Casey,Navarro,Buy,35,UTEP Basketball 22,6,Gold
+Dakota,Harper,Buy,67,ACL,4,Silver
+Crystal,Young,Buy,35,UTEP Basketball 22,5,General Admission
+Michelle,Ray,Buy,29,UTEP Basketball 16,5,Gold
+Tami,Weaver,Buy,24,UTEP Basketball 11,3,Bronze
+Haley,Moss,Buy,34,UTEP Basketball 21,3,General Admission
+Chris,Holden,Buy,42,UTEP Basketball 29,4,Bronze
+Ashley,Romero,Buy,46,UTEP Wind Symphony 2,2,Bronze
+Alyssa,Kelly,Buy,28,UTEP Basketball 15,5,Bronze
+Justin,Davis,Buy,55,UTEP Wind Symphony 11,2,General Admission
+Timothy,Wagner,Buy,17,UTEP Basketball 4,4,Silver
+David,Mills,Buy,58,Drake Live,4,Silver
+Courtney,Olsen,Buy,50,UTEP Wind Symphony 6,3,Gold
+Kenneth,Davis,Buy,23,UTEP Basketball 10,6,Silver
+William,Rice,Buy,57,Taylor Swift Live,6,Bronze
+Jacqueline,Dunn,Buy,15,UTEP Basketball 2,5,VIP
+Melissa,Johnson,Buy,52,UTEP Wind Symphony 8,2,VIP
+Mark,Lozano,Buy,43,UTEP Basketball 30,6,VIP
+Loretta,Phillips,Buy,55,UTEP Wind Symphony 11,5,Bronze
+Christina,Jones,Buy,15,UTEP Basketball 2,2,Silver
+Heather,Cunningham,Buy,32,UTEP Basketball 19,3,Bronze
+Heather,Robbins,Buy,63,Shakira Live,4,General Admission
+Gaston,Disney,Buy,70,UTEP Commencement 2,2,General Admission
+Ana,Andrade,Buy,8,UTEP Football 8,2,General Admission
+Miranda,Mason,Buy,56,UTEP Wind Symphony 12,4,VIP
+Ashley,Wilcox,Buy,68,Minerpalooza,5,VIP
+Jose,Farley,Buy,36,UTEP Basketball 23,5,General Admission
+Dylan,Harris,Buy,13,UTEP Football 13,4,General Admission
+Nicholas,Anderson,Buy,45,UTEP Wind Symphony 1,4,Gold
+Tammy,Martinez,Buy,11,UTEP Football 11,6,VIP
+Robert,Flores,Buy,6,UTEP Football 6,5,VIP
+Howard,Davenport,Buy,59,Bad Bunny Live,5,VIP
+Marissa,Oconnell,Buy,31,UTEP Basketball 18,3,Gold
+John,Sanders,Buy,10,UTEP Football 10,3,General Admission
+Matthew,Mason,Buy,49,UTEP Wind Symphony 5,5,Bronze
+Tammy,Thomas,Buy,57,Taylor Swift Live,4,Bronze
+Michael,Nunez,Buy,53,UTEP Wind Symphony 9,6,Bronze
+Hercules,Disney,Buy,20,UTEP Basketball 7,5,Bronze
+Mary,Stevens,Buy,4,UTEP Football 4,3,Gold
+Pluto,Disney,Buy,61,RBD Live,4,Gold
+Carrie,Bennett,Buy,20,UTEP Basketball 7,5,General Admission
+Lauren,Hall,Buy,45,UTEP Wind Symphony 1,5,Bronze
+Lauren,Coleman,Buy,44,UTEP Basketball 31,5,Silver
+Barbara,Lane,Buy,29,UTEP Basketball 16,2,General Admission
+Jody,Sanchez,Buy,29,UTEP Basketball 16,6,Bronze
+Christopher,Coleman,Buy,12,UTEP Football 12,5,General Admission
+Angelica,Bruce,Buy,60,Karol G Live,3,Gold
+Victoria,Ellis,Buy,37,UTEP Basketball 24,3,VIP
+Justin,Wilson,Buy,16,UTEP Basketball 3,2,VIP
+Jorge,Garcia,Buy,63,Shakira Live,4,Bronze
+Martin,Vallecillo,Buy,57,Taylor Swift Live,2,Gold
+Daniel,Mejia,Buy,37,UTEP Basketball 24,6,General Admission
+Michael,Sanchez,Buy,33,UTEP Basketball 20,5,Silver
+Jessica,Fernandez,Buy,45,UTEP Wind Symphony 1,3,Bronze
+James,Morgan,Buy,13,UTEP Football 13,6,Bronze
+Captaiin,Hook,Buy,18,UTEP Basketball 5,4,Gold
+Douglas,Hernandez,Buy,31,UTEP Basketball 18,3,Bronze
+Jose,Farley,Buy,37,UTEP Basketball 24,3,General Admission
+Joel,Arellano,Buy,53,UTEP Wind Symphony 9,4,General Admission
+Deborah,Hunt,Buy,29,UTEP Basketball 16,4,Silver
+Natalia,MestaValenzuela,Buy,33,UTEP Basketball 20,6,Bronze
+Christine,Ellis,Buy,38,UTEP Basketball 25,6,General Admission
+Kimberly,Kocian,Buy,42,UTEP Basketball 29,6,Silver
+Lisa,Peters,Buy,2,UTEP Football 2,2,Gold
+Craig,Schaefer,Buy,34,UTEP Basketball 21,5,Bronze
+Rodney,Mcneil,Buy,47,UTEP Wind Symphony 3,2,Gold
+Samantha,Cooper,Buy,39,UTEP Basketball 26,2,Bronze
+Catherine,Mann,Buy,56,UTEP Wind Symphony 12,4,VIP
+Philip,Zamora,Buy,67,ACL,2,General Admission
+Jeffrey,Sloan,Buy,24,UTEP Basketball 11,6,Silver
+Kathryn,Perez,Buy,9,UTEP Football 9,3,Bronze
+Dustin,Oliver,Buy,50,UTEP Wind Symphony 6,4,VIP
+Tami,Alexander,Buy,69,UTEP Commencement 1,2,VIP
+Joshua,Gomez,Buy,55,UTEP Wind Symphony 11,5,Bronze
+Anthony,Adams,Buy,60,Karol G Live,3,Silver
+Daniel,Hampton,Buy,21,UTEP Basketball 8,2,Bronze
+Alexis,Ford,Buy,30,UTEP Basketball 17,2,VIP
+Jose,Farley,Buy,64,Justin Timberlake Live,5,Gold
+Cody,Scott,Buy,13,UTEP Football 13,3,VIP
