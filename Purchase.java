@@ -16,10 +16,10 @@ import java.util.Scanner;
  * <p>
  * Class Purpose: Handles the purchase process for both customer and admin
  * <p>
- * Last Change: 11/19/2023
+ * Last Change: 11/26/2023
  * @author Ian Gutierrez
  * @author Erik LaNeave
- * @version 2.5
+ * @version 2.6
  * <p>
  * @since 11/15/2023
  * @author Michael Ike
@@ -98,11 +98,13 @@ public class Purchase {
             return;
         } catch (CheckTicketAvaException e) {
             // Catches when event does not have tickets for purchase
+            logFile.save(logFile.time() + " Throws CheckTicketAvaException");
             logFile.save(logFile.time() + " Given ticket amount exceeds ticket type amount for event\n");
             logFile.save(logFile.time() + " Customer with ID " + currentCustomer.getId()
                     + " failed to purchase tickets for event with ID " + currentEvent.getId() + "\n");
         } catch (CustomerMoneyException e) {
             // Catches when customer does not have funds for purchase
+            logFile.save(logFile.time() + " Throws CustomerMoneyException");
             logFile.save(logFile.time() + " Given customer has inufficient funds for this purchase\n");
             logFile.save(logFile.time() + " Customer with ID " + currentCustomer.getId()
                     + " failed to purchase tickets for event with ID " + currentEvent.getId() + "\n");
@@ -159,6 +161,7 @@ public class Purchase {
             return;
         } catch (CheckTicketAvaException e) {
             // Catches when event does not have tickets for purchase
+            logFile.save(logFile.time() + " Throws CheckTicketAvaException");
             logFile.save(logFile.time() + " User input exceeds ticket type amount for event\n");
             logFile.save(logFile.time() + " User with ID " + currentCustomer.getId()
                     + " failed to purchase tickets for event with ID " + currentEvent.getId() + "\n");
@@ -173,6 +176,7 @@ public class Purchase {
             purchaseTicketsCustomer();
         } catch (CustomerMoneyException e) {
             // Catches when customer does not have funds for purchase
+            logFile.save(logFile.time() + " Throws CustomerMoneyException");
             logFile.save(logFile.time() + " User has inufficient funds for this purchase\n");
             logFile.save(logFile.time() + " User with ID " + currentCustomer.getId()
                     + " failed to purchase tickets for event with ID " + currentEvent.getId() + "\n");
@@ -227,12 +231,14 @@ public class Purchase {
             ticketAmountCheck(inputInt);
             return inputInt;
         } catch (TicketInputException e) {
+            logFile.save(logFile.time() + " Throws TicketInputException");
             logFile.save(logFile.time() + " Ticket input amount was not in range from 1 to 6\n");
             System.out.println(e.getMessage());
             // Ask user to enter ticket to be purchased again
             return getTicketNumUser();
         } catch (NumberFormatException e) {
             // Catches the String to int exception
+            logFile.save(logFile.time() + " Throws NumberFormatException");
             logFile.save(logFile.time() + " User with ID " + currentCustomer.getId()
                     + " failed to enter an integer for ticket amount\n");
             System.out.println("Please enter an integer for ticket amount");

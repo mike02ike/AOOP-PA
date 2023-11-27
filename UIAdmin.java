@@ -20,9 +20,9 @@ import java.util.Map.Entry;
  * @author Anaiah Quinn
  * @version 3.1
  *          <p>
- * @since 11/19/2023
+ * @since 11/26/2023
  * @author Erik LaNeave
- * @version 3.1
+ * @version 3.2
  *          <p>
  * @since 10/25/2023
  * @author Michael Ike
@@ -87,7 +87,7 @@ public class UIAdmin {
             System.out.print("Enter \"Exit\" to return to login\n--> ");
 
             // Only takes in strings to help with exceptions
-            String inputUser = myScanner.next();
+            String inputUser = myScanner.nextLine();
             // switch case used to cut down on possible exceptions and clean look
             switch (inputUser.toLowerCase()) {
                 case "1": // 1 - inquire event by ID
@@ -198,7 +198,6 @@ public class UIAdmin {
                 }
             } catch (NumberFormatException e) {
                 System.out.println("Invalid input! Please enter a number");
-                // myScanner.next();
             }
         }
     }
@@ -353,8 +352,9 @@ public class UIAdmin {
         while (true) {
             try {
                 System.out.println("\nChoose a stadium (Enter it's corresponding number)");
-                System.out.println("1. Sun Bowl Stadium");
-                int input = myScanner.nextInt();
+                System.out.print("1. Sun Bowl Stadium\n--> ");
+                String inputString = myScanner.nextLine();
+                int input = Integer.parseInt(inputString);
 
                 if (input == 1) {
                     newEvent.getVenue().setCapacity(58000);
@@ -364,9 +364,8 @@ public class UIAdmin {
 
                 System.out.println("\nStadium does not exist! Try again");
 
-            } catch (InputMismatchException e) {
+            } catch (NumberFormatException e) {
                 System.out.println("\nInvalid input! Input must be a number.");
-                myScanner.next();
             }
         }
     }
@@ -381,8 +380,9 @@ public class UIAdmin {
         while (true) {
             try {
                 System.out.println("\nChoose a arena (Enter it's corresponding number)");
-                System.out.println("1. Don Haskins Center");
-                int input = myScanner.nextInt();
+                System.out.print("1. Don Haskins Center\n--> ");
+                String inputString = myScanner.nextLine();
+                int input = Integer.parseInt(inputString);
 
                 if (input == 1) {
                     newEvent.getVenue().setCapacity(12800);
@@ -392,9 +392,8 @@ public class UIAdmin {
 
                 System.out.println("\nArena does not exist! Try again");
 
-            } catch (InputMismatchException e) {
+            } catch (NumberFormatException e) {
                 System.out.println("\nInvalid input! Input must be a number.");
-                myScanner.next();
             }
         }
     }
@@ -409,8 +408,9 @@ public class UIAdmin {
         while (true) {
             try {
                 System.out.println("\nChoose an auditorium (Enter it's corresponding number)");
-                System.out.println("1. Magoffin Auditorium");
-                int input = myScanner.nextInt();
+                System.out.print("1. Magoffin Auditorium\n--> ");
+                String inputString = myScanner.nextLine();
+                int input = Integer.parseInt(inputString);
 
                 if (input == 1) {
                     newEvent.getVenue().setCapacity(1521);
@@ -420,9 +420,8 @@ public class UIAdmin {
 
                 System.out.println("\nAuditorium does not exist! Try again");
 
-            } catch (InputMismatchException e) {
+            } catch (NumberFormatException e) {
                 System.out.println("\nInvalid input! Input must be a number.");
-                myScanner.next();
             }
         }
     }
@@ -438,8 +437,9 @@ public class UIAdmin {
             try {
                 System.out.println("\nChoose an open air venue (Enter it's corresponding number)");
                 System.out.println("1. San Jacinto Plaza");
-                System.out.println("2. Centennial Plaza");
-                int input = myScanner.nextInt();
+                System.out.print("2. Centennial Plaza\n--> ");
+                String inputString = myScanner.nextLine();
+                int input = Integer.parseInt(inputString);
 
                 if (input == 1) {
                     newEvent.getVenue().setCapacity(15000);
@@ -453,9 +453,8 @@ public class UIAdmin {
 
                 System.out.println("\nOpen air venue does not exist! Try again");
 
-            } catch (InputMismatchException e) {
+            } catch (NumberFormatException e) {
                 System.out.println("\nInvalid input! Input must be a number.");
-                myScanner.next();
             }
         }
     }
@@ -768,7 +767,7 @@ public class UIAdmin {
         try {
             AutoPurchaseReader autoPurchaseReader = new AutoPurchaseReader();
             ArrayList<AutoPurchaseInstruction> autoPurchases = new ArrayList<>();
-            autoPurchases = autoPurchaseReader.readFile("AutoPurchase5M.csv");
+            autoPurchases = autoPurchaseReader.readFile("AutoPurchase1K.csv");
             return autoPurchases;
         } catch (FileNotFoundException e) {
             System.out.println("\nAuto Purchase file can't be found");
