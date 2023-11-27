@@ -459,51 +459,6 @@ public class UIAdmin {
         }
     }
 
-    // public String chooseVenue(Event newEvent) {
-    // Scanner scn = new Scanner(System.in);
-
-    // e (true) {
-    // System.out.println("\nSelect the venue you would like to use");
-    // System.out.println("1. Sun Bowl Stadium");
-    // System.out.println("2. Don Haskins Center");
-    // System.out.println("3. Magoffin Auditorium");
-    // System.out.println("4. San Jacinto Plaza");
-    // System.out.print("5. Centennial Plaza\n--> ");
-
-    //
-    // ng input = scn.nextLine();
-    // t.equals("1") || input.equals("2") || input.equals("3") || input.equals("4")
-    // || input.equals("5")) {
-    // input) {
-    // "1":
-    // newEvent.getVenue().setCapacity(58000);
-    // newEvent.getVenue().setCost(681500);
-    // return "Sun Bowl Stadium";
-
-    // "2":
-    // newEvent.getVenue().setCapacity(12800);
-    // newEvent.getVenue().setCost(150400);
-    // return "Don Haskins Center";
-
-    // "3":
-    // newEvent.getVenue().setCapacity(1521);
-    // newEvent.getVenue().setCost(13536);
-    // return "Magoffin Auditorium";
-
-    // "4":
-    // newEvent.getVenue().setCapacity(15000);
-    // newEvent.getVenue().setCost(176250);
-    // return "San Jacinto Plaza";
-
-    // "5":
-    // newEvent.getVenue().setCapacity(5000);
-    // newEvent.getVenue().setCost(58750);
-    // return "Centennial Plaza";
-    // }
-    // }
-
-    //
-
     /**
      * Creates a blank event depending on admin selection
      * 
